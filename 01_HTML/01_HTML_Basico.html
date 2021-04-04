@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML Básico</title>
+    </head>
+
+    <body>
+        <!-- comentario: Lo que vaya aqui no sera procesado por el navegador -->
+        <!-- La etiqueta "p" es para mostrar un parrafo y luego un salgo de linea-->
+        <p>HOLA MI PRIMERA PÁGINA HTML EN MAYUSCULAS</p>
+
+        <!-- Hay etiquetas que se autocierran, es decir, que la apertura y el cierre están en la misma
+            etiqueta. Son etiquetas que no necesitan de ningun contenido.
+            Por ejemplo tenemos la etiqueta "br" que es para hacer saltos de linea-->
+        <br/>
+        <!-- 
+            Caracteres especiales:
+            Es muy importante usar en la cabecera la etiqueta meta con el atributo charset="utf-8"
+            ya que "UTF-8" es una codifiación de caracteres que incluyen caracteres como tildes o 
+            la "Ñ". Si no usamos esa codificación y queremos poner caracteres especiales debemos
+            de usar conbinaciones como la siguiente
+
+            Para más informacion sobre los caracteres especiales
+            https://ascii.cl/es/codigos-html.htm
+        -->
+        <p>hola mi primera p&aacute;gina web en minusculas. Feliz a&ntilde;o </p>
+        <p>ESTO ES una mezcla</p>
+        <p>Si teneis instalada la extension "open in browse", podeis pulsar</p>
+        <p>alt+b para que se os abra automaticamente en un buscador</p>
+
+        <!-- La etiqueta "h" es para poner encabezados, tenemos 6 niveles de encabezado-->
+        <h1>Esta etiqueta sirve para escribir titulos</h1>
+        <h2>Esta etiqueta sirve para escribir titulos</h2>
+        <h3>Esta etiqueta sirve para escribir titulos</h3>
+        <h4>Esta etiqueta sirve para escribir titulos</h4>
+        <h5>Esta etiqueta sirve para escribir titulos</h5>
+        <h6>Esta etiqueta sirve para escribir titulos</h6>
+        <!-- Tambien tenemos la etiqueta "hr" que hacer una linea y luego un salto de line-->
+        <hr/>
+
+        <!--
+        ATRIBUTOS
+        ---------
+        Las etiquetas pueden tener atributos.
+
+        Los atributos sirven para dotar al elemento de propiedades que tienen que ver con la marca 
+        en la que están contenidos.
+
+        La forma de representar dichas propiedades es a través de pares nombre/valor separados por 
+        un signo de igual (=), normalmente se escriben después de la etiqueta de comienzo de un 
+        elemento.
+
+        El valor que va asociado al atributo suele ir encerrado entre comillas dobles o simples.
+            
+        En este caso, "src" seria un atributo propio de la etiqueta img, que lo que dice es donde
+        se encuentra la foto que tiene que mostrar. 
+
+        Pododemos consultar los atributos globales a todas las etiquetas en la siguiente pagina
+        https://www.w3schools.com/tags/ref_standardattributes.asp
+
+        En este ejemplo "id" sería el identificador del elemento en la página. Muy util cuando se 
+        combina con JavaScript
+
+        "title" es un atributo que hace que salga un pequeño "tooltip" cuando dejamos el raton encima
+        del contenido
+
+        Más adelante se verán otros atributos como "style" o "class" usados en CSS
+        -->
+        <p id="p1" title="El id de este elemento es 'p1'">Parrafo especial, con id y con title</p>
+
+        <!-- 
+            Por ejemplo, estos serían atributos especiales de la etiqueta "hr", que solo se pueden usar
+            en esta etiqueta
+        -->
+        <hr width="50%" size="8px" color="red" />
+        <!-- La etiqueta "pre" sirve para escribir un texto tal y como vaya dentro de la etiqueta
+            Se respetan saltos de linea, tabulaciones, etc. No es muy utilizada
+        -->
+        <pre>
+                Esto seria un texto
+                tal y como lo pongamos
+                con tabulaciones y saltos
+                de linea
+        </pre>
+
+        <!-- La etiqueta "b" es para poner en negrita, pero es mejor usar CSS y esta en desuso
+            Normalmente, todo lo que tenga que ver con estilos es mejor hacerlo con CSS
+        -->
+        <b>Este texto seria en negrita</b>
+        <!-- Etiquetas para poner subbrayado, pero es mejor usar CSS y esta en desuso-->
+        <u>este texto estaria subrayado</u>
+        <!-- Etiquetas para poner tachado, pero es mejor usar CSS y esta en desuso-->
+        <del>Este texto estaria tachado</del>
+        <!-- Es muy habitual poner etiquetas dentro de otras para conbinar efectos -->
+        <b><u>Este texto estaria subrayado y en negrito</u></b>
+        <!-- Etiqueta que hace que el texto se mueva. Esta en desuso pero cuando empezaron las
+        paginas html se usaba bastante -->
+        <marquee>
+            <h1>Esta etiqueta se mueve :) :) :)</h1>
+        </marquee>
+
+        <!-- La etiqueta "font" podemos cambiar los tipos, tamaños, etc de las letras. 
+        Es mejor usar CSS (notese que sale en rojo, VSC detecta que NO se debe usar) -->
+        <font face="Arial" size="6" color="blue">Esta etiqueta esta en desuso desde HTML5</font>
+        <font face="Arial" size="6" color="#deeb34">Esta etiqueta esta en desuso desde HTML5</font>
+
+        <!--Com style podemos trabajar con atributos css, que es como marca el estandar que hay
+            que hacer los estilos de la página-->
+        <h1 style="text-align: center;">Esta etiqueta esta centrada</h1>
+        <h1 style="color: aquamarine;">Esta etiqueta esta a la izquierda</h1>
+        <h1 style="color: red;text-align: right;">Esta etiqueta esta en rojo y a la derecha</h1>
+
+        <!-- blockquote sirve para hacer sangrados -->
+        <blockquote> Texto con sangrado </blockquote>
+    </body>
+
+</html>

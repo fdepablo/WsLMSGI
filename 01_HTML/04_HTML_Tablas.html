@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tablas</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <!--
+        Las tablas son muy utilies para dar estructura a elementos o para presentar información
+        <table> define una tabla en HTML. Cada <tr> define una fila y cada <td> define una celda.
+    -->
+    <h1>Ejemplo de table</h1>
+    <table>
+        <tr>
+            <th>Titulo</th>
+            <th>Director</th>
+            <th>Año</th>    
+        </tr>
+        <tr>
+            <td>Harry Potter y la piedra filosofal</td>
+            <td>Ron</td>
+            <td>1999</td>    
+        </tr>
+        <tr>
+            <td>Harry Potter y el prisionero de alcatraz</td>
+            <td>Ernion</td>
+            <td>2004</td>    
+        </tr>
+        <tr>
+            <td>Lo que el viento se llevo</td>
+            <td>Marry Poppins</td>
+            <td>1989</td>    
+        </tr>
+    </table>
+
+    <!--
+        Otros Elementos
+        ---------------
+        1) Etiqueta Caption
+        <caption> sirve para definir el título de la tabla, saldrá al principio de la tabla. 
+        
+        2) Table puede tener atributo "border", y su valor puede ser "1" o "".
+
+        3) Agrupaciones. Para formatear una tabla se utilizan los estilos de CSS, pero también 
+        existen marcas para agrupar y aplicar estilos como estas:
+
+            a) <thead>. Agrupa elementos de la cabecera de la tabla.
+            b) <tbody>. Agrupa elementos del cuerpo de la tabla.
+            c) <tfoot>. Agrupa elementos del pie de la tabla.
+    -->
+    <table border="1">
+        <caption><h4>Peliculas que tengo en mi biblioteca</h4></caption>
+        <thead>
+            <tr>
+                <th>Titulo</th>
+                <th>Director</th>
+                <th>Año</th>    
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Harry Potter y la piedra filosofal</td>
+                <td>Ron</td>
+                <td>1999</td>   
+            </tr>
+            <tr>
+                <td>Harry Potter y el prisionero de alcatraz</td>
+                <td>Ernion</td>
+                <td>2004</td>    
+            </tr>
+            <tr>
+                <td>Lo que el viento se llevo</td>
+                <td>Marry Poppins</td>
+                <td>1989</td>    
+            </tr>
+        </tbody>
+        <!-- <tfoot>Tabla1. Listado de peliculas</tfoot> -->
+    </table>
+
+    <!--
+        Atributos Colspan y rowspan
+        ---------------------------
+        En ocasiones queremos formar tablas donde una celda abarque más que otras, para ello 
+        utilizaremos colspan y rowspan.
+
+        1) rowspan: indica el número de celdas que ocupará horizontalmente en la fila.
+        2) colspan: indica el número de columnas que ocupará la celda.
+
+        De esta forma, si ponemos <td colspan=”2”> quiere decir que la celda actual se extiende en 
+        el ancho de dos celdas.
+
+        Algo parecido ocurre si ponemos <td rowspan=”3”>, la celda ocupará el alto de 3 celdas 
+        normales.
+    -->
+
+    <table border="1">
+        <tr>
+            <td>elemento 1</td>
+            <td>elemento 2</td>
+            <td>elemento 3</td>
+        </tr>
+        <tr>
+            <td>Elemento 4</td>
+            <td colspan="2">Elemento 5</td>
+        </tr>
+    </table>
+    <br/>
+    <table border="1">
+        <tr>
+            <td rowspan="2">elemento 1</td>
+            <td>elemento 2</td>
+            <td>elemento 3</td>
+        </tr>
+        <tr>
+            <td>Elemento 4</td>
+            <td>Elemento 5</td>
+        </tr>
+    </table>
+    
+    <br>
+
+    <!-- 
+        Atributos Cellspacing y Cellpadding
+        -----------------------------------
+        Cellspacing: especifica el espacio entre las celdas. 
+        Cellpadding: especifica el espacio entre el borde de una celda y su contenido. 
+     -->
+    <table border="1" cellspacing="10" cellspadding="20">
+        <caption><h4>Peliculas que tengo en mi biblioteca</h4></caption>
+        <thead>
+            <tr>
+                <th>Titulo</th>
+                <th>Director</th>
+                <th>Año</th>    
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Harry Potter y la piedra filosofal</td>
+                <td>Ron</td>
+                <td>1999</td>    
+            </tr>
+            <tr>
+                <td>Harry Potter y el prisionero de alcatraz</td>
+                <td>Ernion</td>
+                <td>2004</td>    
+            </tr>
+            <tr>
+                <td>Lo que el viento se llevo</td>
+                <td>Marry Poppins</td>
+                <td>1989</td>    
+            </tr>
+        </tbody>
+        <!-- <tfoot>Tabla1. Listado de peliculas</tfoot> -->
+    </table>
+</html>
