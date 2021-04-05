@@ -8,13 +8,13 @@ Enlace para descargar: [https://code.visualstudio.com/download](https://code.vis
 
 ## Extensiones de Visual Studio Code
 
-Las siguientes extensiones son recomendables instalar en VSC
+Se recomienda instalar las siguientes extensiones en VSC
 
-1. Beautify
-2. Open in Browser
-3. XML
-4. XML Tools
-5. Live Server
+1. Beautify, para trabajar con HTML y CSS
+2. Open in Browser, para poder abrir carpetas desde VSC
+3. XML, para poder trabajar con XML principalmente
+4. XML Tools, para poder trabajar con XPATH principalmente
+5. Live Server, para poder arrancar un servidor ligero de manera sencilla
 6. Markdown Preview Enhanced, para ver los ficheros con extensión MD
 
 ## Otros enlaces de interes
