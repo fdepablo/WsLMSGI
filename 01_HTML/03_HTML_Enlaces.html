@@ -16,7 +16,8 @@
         estándar URI "Uniform Resource Identifier", en español identificador uniforme de recurso.
 
         El recurso tiene una dirección única disponible en Internet. El formato general de una URL es:
-        esquema://máquina/directorio/archivo
+        esquema://dirección_máquina/directorio/archivo
+        Ej: http://www.mipaginaweb.com/index.html
 
         <a> es la etiqueta usada para enlazar con recursos a través de una URL.
 
@@ -31,7 +32,7 @@
         indicarán la dirección raíz del sitio, por ejemplo www.misitio.com. Si es necesario acceder 
         a un recurso como “fichero.html”, alojado en una carpeta o directorio hijo, por 
         ejemplo “/documentos/”, se añadirá a la dirección global de esta forma:
-        <a href=“www.misitio.com/documentos/pdf/fichero.html”>
+        <a href=“www.misitio.com/documentos/fichero.html”>Acceder</a>
 
         2) Relativa: Para hacer referencia a un recurso interno que forma parte del sitio web que 
         está por encima, por debajo o al mismo nivel en el árbol de directorio del sitio, usaremos 
@@ -39,24 +40,31 @@
 
         Si el sitio web es www.misitio.com y quiero hacer referencia a un recurso que está en el 
         directorio “/documentos/” y tengo que acceder a un recurso que cuelga de ese directorio, 
-        por ejemplo en “/documentos/pdf/fichero.html”, podré crear la dirección de esta forma:
-        <a href=“/documentos/pdf/fichero.html”>
+        por ejemplo en “/documentos/fichero.html”, podré crear la dirección de esta forma:
+        <a href=“/documentos/fichero.html”>
 
     -->
-    <a href="http://www.google.es">Ir a goolgle</a>
+    <a href="https://www.google.es">Ir a goolgle</a>
     <br/>
     <!-- Podemos hacer que vaya a una pagina local de manera relativa de donde se encuentra
     esta pagina
     -->
     <a href="02_HTML_Listas.html">Ir a la pagina de Listas</a>
+    <!-- Manera absoluta
+    <a href="C:/Users/vened/Telefonica/20_Asignaturas/1_LMSGI/WsLMSGI/01_HTML/02_HTML_Listas.html">Ir a la pagina de Listas</a>
+    -->
     <br/>
     <a href="img/batman.jpg">Ir a la foto de batman</a>
-    <!-- podemos utilizar iconos o imagenes para hacer click sobre ellas-->
-    <br/>
-    <a href="img/batman.jpg"><img src="icon/iconfinder_Batman.png"/></a>
+
+    <!-- Podemos hacer enlaces a contenido de la propia página
+        poniendo un href con una almohadilla iremos al elemento con id que queramos
+    -->
     <br/>
     <a href="#enlaceLejano">Ir a enlace lejano</a>
     <br/>
+    <!-- Si estamos visualiziando la página web desde un dispositivo movil, podemos
+    poner dentro del href, el telefono y entonces el movil nos abrira la opción de
+    marcar dicho número -->
     <a href="tel:+3498765432">Ir a telefono</a>
     <br/>
     <!--  
@@ -64,7 +72,7 @@
         Antiguamente se usaba para indicar en qué división (frame) de la página queríamos que actuase 
         el enlace. Actualmente en HTML5 solo se usa la opción _blank para abrirlo en una ventana nueva.
     -->
-    <a href="batman.jpg" target="_blank">Abrir img de batman en otra pestaña</a>
+    <a href="img/batman.jpg" target="_blank">Abrir img de batman en otra pestaña</a>
     <br/>
     <br/>
     <br/>

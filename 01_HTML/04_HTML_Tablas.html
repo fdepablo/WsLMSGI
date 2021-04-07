@@ -8,10 +8,12 @@
 </head>
 <body>
     <!--
-        Las tablas son muy utilies para dar estructura a elementos o para presentar información
+        Las tablas son muy útiles para dar estructura a elementos o para presentar información
         <table> define una tabla en HTML. Cada <tr> define una fila y cada <td> define una celda.
+        Con <th> es igual que <td> pero pone la celda en negrita, se suele usar para cabeceras de
+        tabla
     -->
-    <h1>Ejemplo de table</h1>
+    <h1>Ejemplo de tabla películas</h1>
     <table>
         <tr>
             <th>Titulo</th>
@@ -30,8 +32,8 @@
         </tr>
         <tr>
             <td>Lo que el viento se llevo</td>
-            <td>Marry Poppins</td>
-            <td>1989</td>    
+            <td>Mary Poppins</td>
+            <td>1969</td>    
         </tr>
     </table>
 
@@ -41,7 +43,9 @@
         1) Etiqueta Caption
         <caption> sirve para definir el título de la tabla, saldrá al principio de la tabla. 
         
-        2) Table puede tener atributo "border", y su valor puede ser "1" o "".
+        2) Table puede tener atributo "border", y su valor puede ser "1" o "". Con ello pondremos
+        borde a la tabla. Pero no se debería usar ya que está obsoleto, habría que hacerlo con
+        CSS.
 
         3) Agrupaciones. Para formatear una tabla se utilizan los estilos de CSS, pero también 
         existen marcas para agrupar y aplicar estilos como estas:
@@ -94,12 +98,13 @@
         Algo parecido ocurre si ponemos <td rowspan=”3”>, la celda ocupará el alto de 3 celdas 
         normales.
     -->
-
+    <br/>
+    <br/>
     <table border="1">
         <tr>
-            <td>elemento 1</td>
-            <td>elemento 2</td>
-            <td>elemento 3</td>
+            <td>Elemento 1</td>
+            <td>Elemento 2</td>
+            <td>Elemento 3</td>
         </tr>
         <tr>
             <td>Elemento 4</td>
@@ -107,11 +112,12 @@
         </tr>
     </table>
     <br/>
+    <br/>
     <table border="1">
         <tr>
-            <td rowspan="2">elemento 1</td>
-            <td>elemento 2</td>
-            <td>elemento 3</td>
+            <td rowspan="2">Elemento 1</td>
+            <td>Elemento 2</td>
+            <td>Elemento 3</td>
         </tr>
         <tr>
             <td>Elemento 4</td>
