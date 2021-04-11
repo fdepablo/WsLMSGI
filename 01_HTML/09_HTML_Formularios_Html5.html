@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios HTML5</title>
+</head>
+<body>
+    <h1>Formulario HTML5</h1>
+    <!--
+        Los formularios son uno de los ejemplos más claros donde pueden apreciarse las 
+        mejoras que ha aportado HTML5, con nuevos atributos y nuevos tipos de campos.
+    -->
+    <form action="procesarPeticion.jsp" method="get">
+        <!--
+            Nuevos atributos
+            ----------------
+            placeholder, Un texto que se muestra al hacer clic sobre una caja de texto para guiar 
+            al usuario y que desaparece cuando se sitúa el cursor.
+        -->
+        <input type="text" name="edad" placeholder="Escribe tu edad"/>	
+        <br/>
+        <br/>
+        <!--
+            El campo al que se le añade el atributo autofocus será el que esté seleccionado por 
+            defecto al cargar la página, es decir, tendrá el cursor.
+        -->
+        <input type="text" name="nombre" autofocus/>
+        <br/>
+        <br/>
+        <!--
+           required, hace que el campo al que se le aplica sea obligatorio. No se podrá enviar el formulario 
+           sin rellenarlo.
+        -->
+        <input type="text" name="apellidos" required/>
+        <br/>
+        <br/>
+        <!-- 
+            Nuevos tipos de campos
+            ----------------------
+
+            Se trata de valores nuevos del atributo "type" que nacieron en HTML5 
+            Solo son compatibles con navegadores que soprtan HTML5, que son todos en la actualidad,
+            pero ojo, que pueden que dichos valores no funcionan con los navegadores más antiguos.
+            En caso de que el navegador no soporte los tipos, los tratará como "text".
+
+            El navegador validará la entrada de estos campos antes de enviar los datos al servidor.
+
+            Vamos a ver algunos de los más importantes
+        -->
+       
+        <!--
+            1) email, Campo que solo admite una dirección de correo electrónico (e-mail) correcta.
+        -->
+        <input type="email" name="email" required/>
+
+        <!--
+            2) number, Campo que solo admite numeros. Podemos configurarlo con los siguientes
+            atributos:
+
+                a) min, valor mínimo aceptado
+                b) max, valor máximo aceptado
+                c) step, es el valor que se suma y resta al utilizar los botones del slider
+        -->
+        <br/>
+        <br/>
+        <input type="number" min="18" max="120" step="5" name="edadNumber" placeholder="Escribe tu edad"/>
+    
+        <!--
+            3) tel, campo que solo admite numeros de telefono
+        -->
+        <br/>
+        <br/>
+        <input type="tel" name="telefono" placeholder="Escribe su número de telefono"/>
+    
+        <!--
+            4) url, solo admite una URL en el formato correcto.
+        -->
+        <br/>
+        <br/>
+        <input type="url" name="url" placeholder="Escribe su número de telefono"/>
+
+        <!--
+            5) color, despliega colores para elegir
+        -->
+        <br/>
+        <br/>
+        <input type="color" name="color" placeholder="Escribe su número de telefono"/>
+
+        <br/>
+        <br/>
+        <input type="submit" value="Enviar"/>
+
+        <!-- 
+            Nota, al final de la unidad 2.2 hay un video corto que es interesante que veáis
+            sobre la estructura de un documento HTML
+        -->
+    </form>
+</body>
+</html>

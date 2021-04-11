@@ -7,6 +7,148 @@
     <title>Formularios</title>
 </head>
 <body>
-    
+    <h1>Formulario de registro</h1>
+    <!--
+        Un formulario está situado dentro de la etiqueta <form> y encierra elementos de formulario que 
+        permiten al usuario interactuar. Estos elementos pueden ser: campos de texto, etiquetas, botones, 
+        listas desplegables, casillas de verificación, etc.
+
+        El atributo action determina el proceso al que se enviarán los datos introducidos por el usuario 
+        cuando se pulse el botón submit.
+
+        El atributo method determina la forma en que se enviarán los datos. Con el valor "get" los datos 
+        se envían en la cabecera de la petición HTTP, por lo que serán visibles en la URL. Este 
+        método no es recomendable si los datos son confidenciales. Con el valor "post" los datos se 
+        envían en el cuerpo de la petición HTTP (body), por lo que no serán visibles en la URL.
+    -->
+    <form action="procesarPeticion.jsp" method="get">
+        <!--
+            <fieldset> Genera un marco visible  que encierra los datos del formulario.
+            <legend> Colocado inmediatamente después de una etiqueta <fieldset>, permite colocarle 
+            una etiqueta de texto (título).
+        -->
+        <fieldset><legend>Datos personales:</legend>
+            <!--
+                <label> Define una etiqueta estática, que normalmente estará asociada con un elemento de 
+                campo de formulario que se identifica mediante el atributo for.
+            -->
+            <label for="nombre">Nombre: </label>
+            <!--
+                La etiqueta <input> define un elemento de campo de formulario. Estos son sus atributos más 
+                comunes:
+
+                1) type: tipo de campo. El valor más usual es text (caja de texto).
+
+                2) value: valor que tomará el campo cuando el usuario escriba en él.
+
+                3) readonly: solo lectura. No puede ser modificado por el usuario.
+
+                4) name: el valor de este atributo será el que usará el recurso de servidor para recuperar 
+                el valor del campo. Además si hay un label con el atributo "for" con el valor del
+                name, cuando pinchemos en ese label nos hara focus a dicho "input"
+            -->
+            <input type="text" name="nombre" />
+            <br />
+            <label for="edad">Edad: </label>
+            <input type="text" name="edad" />
+            <br/>
+            <label for="pass">Password: </label>
+            <input type="password" name="pass" />
+            <!-- 
+                <input type=”hidden”>, Campo oculto. Puede ser útil para enviar una información al 
+                servidor que no queremos que sea vista por el usuario.
+            -->
+            <br/>
+            <input id="identificador" type="hidden" value="123"/>
+            <br/>
+            <!--
+                input type="radio", Se representa como un botón de radio. 
+                Todos los botones de radio que tienen el mismo name pertenecen al mismo grupo y 
+                solamente uno de los elementos del grupo podrá ser seleccionado por el usuario.
+
+                El usuario solamente podrá seleccionar uno de los cuatro valores. 
+                La variable que recogerá el programa y enviará al servidor será
+                estado_civil y el valor enviado será S, C, V o D según el botón de radio seleccionado 
+                por el usuario.
+            -->
+            <label for="estado_civil">Estado civil: </label>
+            <br />	
+            <input type="radio" name="estado_civil" value="S" />Soltero<br />	
+            <input type="radio" name="estado_civil" value="C" />Casado<br />	
+            <input type="radio" name="estado_civil" value="V" />Viudo<br />	
+            <input type="radio" name="estado_civil" value="D" />Divorciado<br />	
+
+            <!--
+                input type="checkbox", Similar a type="radio" pero esta vez se permite seleccionar
+                varias opciones.
+            -->
+            <br/>
+            <label for="hobbies">Hobbies: </label>
+            <br />	
+            <input type="checkbox" name="hobbies" value="M" />Música<br />	
+            <input type="checkbox" name="hobbies" value="L" />Lectura<br />	
+            <input type="checkbox" name="hobbies" value="D" />Deportes<br />	
+            <input type="checkbox" name="hobbies" value="V" />Videojuegos<br />	
+            <br/>
+            <!--
+                <select><option>, La etiqueta <select> representa una lista desplegable de opciones 
+                definidas por medio de etiquetas <option>.
+                
+                El texto contenido en cada <option> es el valor visible para el usuario.
+                
+                El valor que se enviará al servidor es el que contiene el atributo value de la opción 
+                seleccionada por el usuario (LUN, MAR, MIE, JUE o VIE).
+
+                Por defecto se marcará el primer "option" pero tambien podemos usar el atributo 
+                "selected" para marcar el que nosotros queramos.
+
+                El comportamiento por defecto es muy parecido al del type="radio", solo se puede elegir
+                uno. Aunque tambien es posible permitir varias opciones con el atributo "multiple"
+                (no suele ser muy habitual)
+            -->
+            <label for="dia_nacimiento">Escoja el día en que nació: </label>
+            <select name="dia_nacimiento">
+                <option value="LUN">Lunes</option>
+                <option value="MAR">Martes</option>
+                <option value="MIE" selected>Miércoles</option>
+                <option value="JUE">Jueves</option>
+                <option value="VIE">Viernes</option>
+            </select>
+            <br />
+            <!--
+                <textarea>, Se representa como una caja de texto multilínea. Tiene los siguientes atributos:
+
+                    1) rows: número de filas visibles del campo.
+
+                    2) cols: ancho del campo.
+
+                    3) readonly: solo lectura. (este tambien se puede encontrar en los text y en otros)
+            -->
+            <br/>
+            <label for="observaciones">Observaciones: </label>
+            <br />	
+            <textarea rows="5" cols="80" name="observaciones"></textarea>
+             <!--
+                Un checkbox tambien es común para opciones simples de marcar o desmarcar
+            -->
+            <br/>
+            <br/>
+            <label for="terminos">Acepta los terminos de uso? </label>
+            <br/>	
+            He leido y acepto los terminos de uso <input type="checkbox" name="terminos" value="Y" />
+            <br/>	
+            <!--
+                input type="submit", Se representa como un botón y cuando el usuario hace clic en él, se 
+                realiza la petición HTTP al programa de servidor especificado en el atributo action.
+            -->
+            <br/>	
+            <input type="submit" value="Enviar datos" />
+            <!--
+                input type="reset", Se representa como un botón y cuando el usuario hace clic en él, se 
+                borra el contenido de todos los campos del formulario.
+            -->
+            <input type="reset" value="Limpiar formulario" />
+        </fieldset>
+    </form>
 </body>
 </html>
