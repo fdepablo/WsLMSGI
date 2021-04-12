@@ -13,44 +13,46 @@
         HTML cuya función suele servir para aplicar una seríe de estilos a un conjuto de etiquetas, sin
         necesidad de repetir código y hacer la aplicación más escalable
     -->
-    <div style="text-align: right;">
-        <p style="color: blue;">Esto es un parrafo</p>
-        <p style="color: blue;">Esto es otro parrafo</p>
-    </div>
-    <div style="color: blueviolet; text-align: center;">
+    <p style="color: blue;text-align: right;">Esto es un parrafo</p>
+    <p style="color: blue;text-align: right">Esto es otro parrafo</p>
+       
+    <!-- Repetimos la funcionalidad de arriba pero con una agrupación-->
+    <div style="color: rgb(245, 6, 6); text-align: center;">
         <p>Esto es otra seccion</p>
         <p>Esto es otro elemento de la otra seccion</p>
     </div>
 
     <hr/>
-    <p>Elementos de bloque y línea</p>
-		
+    <p>Elementos  de agrupación de bloque y línea</p>
+	<!-- Con div agrupamos en forma de bloque (saltos de linea)-->
     <div style="color:#ff0037">
         <h3>Encabezado de tipo 3</h3>
         <p>Párrafo con formato aplicado.</p>
     </div>
     
-    <div>
-        <p>Párrafo con formato <span style="color: blue">aplicado</span> a un elemento en línea</p>
-    </div>
-
-    <!-- Fiajos la diferencia de usar span y div -->
+     <!-- Fiajos la diferencia de usar span y div -->
+    <h3>Ejemplo de div</h3>
     <div>
         <p>Párrafo con formato <div style="color: blue">aplicado</div> a un elemento en línea</p>
+    </div>
+
+    <h3>Ejemplo de span</h3>
+    <div>
+        <p>Párrafo con formato <span style="color: blue">aplicado</span> a un elemento en línea</p>
     </div>
 
     <!-- 
         La etiqueta <span> se usa para realizar agrupaciones en línea de los elementos de un documento. 
         Esta etiqueta no cambia la visualización de un texto ella sola, necesitará de estilos de CSS 
         para realizarlo. Además, facilita añadir una clase a una parte específica de un texto o de 
-        una parte de un documento.        
+        una parte de un documento (se entenderá mejor cuando veamos CSS).        
     -->
 
     <p>Mi hermano tiene los ojos <span style="color:blue; font-weight:bold;">azules</span>. </p>
 
     <!--
         Aqui si usamos span en vez de div, podriamos pensar que me pone todos los elementos en linea,
-        pero no lo haria ya que la etiqueta span no previene el comportamiento de las etiquetas de 
+        pero ojo!, no lo haria ya que la etiqueta span no previene el comportamiento de las etiquetas de 
         dentro, por lo que h3 sseguiria haciendo su salto de linea así como la etiqueta "p" tambien 
         lo haria-->
     <span style="color:#ff0037">
@@ -60,17 +62,17 @@
     
     <hr/>
 
-    <div style="color: aqua;">
-        <h3>Esto es de color aqua</h3>
+    <div style="color: rgb(195, 0, 255);">
+        <h3>Esto es de color violeta</h3>
         <div style="text-align: right;">
-            <h3>Esto es de color aqua y esta a la derecha</h3>
-            <h3>Esto es de color aqua y esta a la derecha</h3>
-            <h3>Esto es de color aqua y esta a la derecha</h3>
+            <h3>Esto es de color violeta y esta a la derecha</h3>
+            <h3>Esto es de color violeta y esta a la derecha</h3>
+            <h3>Esto es de color violeta y esta a la derecha</h3>
         </div>
         <div style="text-align: center;">
-            <h3>Esto es de color aqua y esta centrado</h3>
-            <h3>Esto es de color aqua y esta centrado</h3>
-            <h3>Esto es de color aqua y esta centrado</h3>
+            <h3>Esto es de color violeta y esta centrado</h3>
+            <h3>Esto es de color violeta y esta centrado</h3>
+            <h3>Esto es de color violeta y esta centrado</h3>
         </div>
     </div>
 </body>
