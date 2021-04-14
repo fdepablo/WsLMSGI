@@ -67,7 +67,7 @@
                 servidor que no queremos que sea vista por el usuario.
             -->
             <br/>
-            <input id="identificador" type="hidden" value="123"/>
+            <input id="identificador" type="hidden" name="identificador" value="123"/>
             <br/>
             <!--
                 input type="radio", Se representa como un botón de radio. 
@@ -78,23 +78,27 @@
                 La variable que recogerá el programa y enviará al servidor será
                 estado_civil y el valor enviado será S, C, V o D según el botón de radio seleccionado 
                 por el usuario.
+
+                Con el atributo "checked", podemos poner cual queremos seleccionar por defecto
             -->
             <label for="estado_civil">Estado civil: </label>
             <br />	
             <input type="radio" name="estado_civil" value="S" />Soltero<br />	
             <input type="radio" name="estado_civil" value="C" />Casado<br />	
-            <input type="radio" name="estado_civil" value="V" />Viudo<br />	
+            <input type="radio" name="estado_civil" value="V" checked/>Viudo<br />	
             <input type="radio" name="estado_civil" value="D" />Divorciado<br />	
 
             <!--
                 input type="checkbox", Similar a type="radio" pero esta vez se permite seleccionar
                 varias opciones.
+
+                Tambien admite el atributo "checked"
             -->
             <br/>
             <label for="hobbies">Hobbies: </label>
             <br />	
-            <input type="checkbox" name="hobbies" value="M" />Música<br />	
-            <input type="checkbox" name="hobbies" value="L" />Lectura<br />	
+            <input type="checkbox" name="hobbies" value="M" checked/>Música<br />	
+            <input type="checkbox" name="hobbies" value="L" checked/>Lectura<br />	
             <input type="checkbox" name="hobbies" value="D" />Deportes<br />	
             <input type="checkbox" name="hobbies" value="V" />Videojuegos<br />	
             <br/>
@@ -116,15 +120,16 @@
             -->
             <label for="dia_nacimiento">Escoja el día en que nació: </label>
             <select name="dia_nacimiento">
-                <option value="LUN">Lunes</option>
-                <option value="MAR">Martes</option>
-                <option value="MIE" selected>Miércoles</option>
-                <option value="JUE">Jueves</option>
-                <option value="VIE">Viernes</option>
+                <option value="MON">Lunes</option>
+                <option value="TUE">Martes</option>
+                <option value="WED" selected>Miércoles</option>
+                <option value="THU">Jueves</option>
+                <option value="FRI">Viernes</option>
             </select>
             <br />
             <!--
-                <textarea>, Se representa como una caja de texto multilínea. Tiene los siguientes atributos:
+                <textarea>, Se representa como una caja de texto multilínea. Tiene los siguientes 
+                atributos:
 
                     1) rows: número de filas visibles del campo.
 
@@ -146,14 +151,14 @@
             He leido y acepto los terminos de uso <input type="checkbox" name="terminos" value="Y" />
             <br/>	
             <!--
-                input type="submit", Se representa como un botón y cuando el usuario hace clic en él, se 
-                realiza la petición HTTP al programa de servidor especificado en el atributo action.
+                input type="submit", Se representa como un botón y cuando el usuario hace clic en él, 
+                se realiza la petición HTTP al programa de servidor especificado en el atributo action.
             -->
             <br/>	
             <input type="submit" value="Enviar datos" />
             <!--
-                input type="reset", Se representa como un botón y cuando el usuario hace clic en él, se 
-                borra el contenido de todos los campos del formulario.
+                input type="reset", Se representa como un botón y cuando el usuario hace clic en él, 
+                se deja el formulario en su estado inicial (normalmente vacio)
             -->
             <input type="reset" value="Limpiar formulario" />
         </fieldset>

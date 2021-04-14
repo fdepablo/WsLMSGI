@@ -30,8 +30,8 @@
         <br/>
         <br/>
         <!--
-           required, hace que el campo al que se le aplica sea obligatorio. No se podrá enviar el formulario 
-           sin rellenarlo.
+           required, hace que el campo al que se le aplica sea obligatorio. No se podrá enviar 
+           el formulario sin rellenarlo.
         -->
         <input type="text" name="apellidos" required/>
         <br/>
@@ -61,11 +61,13 @@
 
                 a) min, valor mínimo aceptado
                 b) max, valor máximo aceptado
-                c) step, es el valor que se suma y resta al utilizar los botones del slider
+                c) step, es el valor que se suma y resta al utilizar los botones del slider.
+                Ojo, el numero que podemos enviar debe de ser multiplo de step
         -->
         <br/>
         <br/>
-        <input type="number" min="18" max="120" step="5" name="edadNumber" placeholder="Escribe tu edad"/>
+        <input type="number" min="18" max="120" step="5" name="edadNumber" 
+                placeholder="Edad" required/>
     
         <!--
             3) tel, campo que solo admite numeros de telefono
@@ -79,14 +81,21 @@
         -->
         <br/>
         <br/>
-        <input type="url" name="url" placeholder="Escribe su número de telefono"/>
+        <input type="url" name="url" placeholder="Escribe su url"/>
 
         <!--
             5) color, despliega colores para elegir
         -->
         <br/>
         <br/>
-        <input type="color" name="color" placeholder="Escribe su número de telefono"/>
+        <input type="color" name="color"/>
+
+        <!--
+            6) date, despliega un calendario
+        -->
+        <br/>
+        <br/>
+        <input type="date" name="color"/>
 
         <br/>
         <br/>
