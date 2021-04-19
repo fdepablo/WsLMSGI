@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Colores</title>
+    	<!-- 
+        Tenemos más de 140 colores preestrablecidos en CSS, los IDEs como VSC nos
+        ayudan con ellos.
+        https://www.w3schools.com/colors/colors_names.asp
+ 
+        Podemos ponerlos en diferentes propiedades:
+        1) background-color: para el fondo
+        2) color: para las letras
+        3) Tambien en otros sitios como el "border" (Se verá más adelante)
+    -->
+    <style type="text/css">
+        body {
+            /*
+            Además de colores tambien podemos poner imagenes sobre etiquetas, como la body
+            Teniendo además muchas propiedades asociadas a ellas
+            */
+            background-image: url("img/css.png");/* Ubicación de la imagen */
+            background-repeat: no-repeat;/* Si no queremos que se repita hay que decirlo*/
+            background-position: top right;/* Si queremos situarla en algún sitio especifico */
+        }
+    </style>
+</head>
+<body>
+
+	<h1 style="background-color: Aqua;">Hello World</h1>
+	<p style="color: Tomato;">Hello World</p>
+	<h1 style="border: 2px solid Violet;">Hello World</h1>
+
+	<!-- 
+        Para los no definidos podemos usar diferentes tipos de valores
+        1) rgb-> valores de red, green y blue, de 0 a 255. Debe empezar por rgb. Ej: rgb(0,255,0)
+        2) hexadecimal-> parecido al anterior pero con 2 digitos hexadecimales para cada
+        color. Debe empezar por "#". Ej: #00FF00
+        3) hsl, representado por 3 valores.
+            - El primero un grado del color de la rueda, entre 0 y 360. 0 sería el rojo,
+            120 el green y 240 el azul. 
+            - El segundo representa la saturación, en porcentaje. 100% sería el color completo
+            - El tercero representa la luz que le quieres dar al color, tambien en porcentaje. 
+            0% sería a oscuras y 100% con luz brillante.
+            
+        Debe empezar por hsl. Ej: hsl(120, 100%, 64%)
+        Mas información: 
+        https://www.w3schools.com/colors/colors_rgb.asp
+        https://www.w3schools.com/colors/colors_hexadecimal.asp
+        https://www.w3schools.com/colors/colors_hsl.asp
+	 -->
+
+	<h1 style="background-color: rgb(255, 99, 71);">...</h1>
+	<h1 style="background-color: #ff6347;">...</h1>
+	<h1 style="background-color: hsl(9, 100%, 64%);">...</h1>
+</body>
+</html>

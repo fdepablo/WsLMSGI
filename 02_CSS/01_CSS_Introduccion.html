@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Introducción</title>
+    <!-- Con la etiqueta Style podemos definir CSS en nuestra página-->
+    <style type="text/css">
+        /* Esto sería un comentario en CSS */
+        /*  
+            Aquí estamos declarando que todas las etiquetas H2 tendrán el color verde y estarán
+            alineadas en el centro
+        */
+        h2 {
+            color: rgb(0, 255, 64);
+            text-align: center;
+        }
+
+    </style>
+
+    <!-- 
+    Si queremos usar un fichero CSS, tenemos que importar dicho fichero mediante la etiqueta "link"
+    Suele ser mejor hacerlo de manera relativa
+    -->
+    <link rel="stylesheet" href="css/01_Introduccion.css">
+</head>
+<body>
+    <!-- Manera 1 de introducir CSS -->
+    <h1 style="color: red">Bienvenidos a nuestra pagina web de CSS</h1>
+    <h1 style="color: red;text-align: center;">Bienvenidos a nuestra pagina web de CSS</h1>
+
+    <!-- Manera 2 de introducir CSS mediante la etiqueta style -->
+    <h2>Bienvenidos a nuestra pagina web de CSS</h2>
+    <h2>Bienvenidos a nuestra pagina web de CSS</h2>
+    <h2>Bienvenidos a nuestra pagina web de CSS</h2>
+    
+    <!-- Otra manera (3) de introducir css es mediante fichero .css. 
+    Esta manera es la MEJOR-->
+    <h3>Bienvenidos a nuestra pagina web en CSS</h3>
+    <h3>Bienvenidos a nuestra pagina web en CSS</h3>
+    <h3>Bienvenidos a nuestra pagina web en CSS</h3>
+
+    <h4>Bienvenidos a nuestra pagina web en CSS</h4>
+    <h4>Bienvenidos a nuestra pagina web en CSS</h4>
+    <h4>Bienvenidos a nuestra pagina web en CSS</h4>
+</body>
+</html>

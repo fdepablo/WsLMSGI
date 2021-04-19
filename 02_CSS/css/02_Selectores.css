@@ -1,0 +1,74 @@
+
+/* 
+
+Vamos a ver los 3 principales selectores que podemos encontar en CSS
+
+SELECTOR POR ETIQUETA
+--------------------
+El selector más básico es el que ya hemos visto anterioremente. Afecta a todas las etiquetas que se
+llamen como el selector.
+
+En el siguiente ejemplo, decimos que todas nuestras etiquetas H4 vas a ser de color aguamarina, 
+centradas y con el color negro de fondo */
+h4 {
+    color: aquamarine;
+    text-align: center;
+    background-color: black;
+}
+
+/*
+SELECTOR POR ID
+-------------- 
+Si ponemos "#" podemos hacer el selector por "id", es decir, solo va a afectar al elemento
+cuyo atributo ID coincida con este
+
+El siguiente ejemplo solo el elemento con el atributo id="h5Especial" se le aplicará el color marrón
+*/
+#h5Especial {
+    color: rgb(165, 42, 149)
+}
+
+/* 
+SELECTOR POR CLASE
+-------------------
+Si hacemos que el selector empiece por "." entonces afectará a aquellas etiquetas que tengan
+el atributo class cuyo valor coincida con este selector.
+
+El siguiente ejempolo solo los elementos con el atributo class="rojo" se le aplicará el color 
+rojo
+*/
+
+.rojo{
+    color : red
+}
+
+.centrado {
+    text-align: center;
+}
+
+/*
+Los selectores se pueden combinar.
+
+Ejemplo de selector de etiquetas h1 con class='azul'
+*/
+h1.azul {
+	color:blue;
+}
+
+/*
+Ejemplo de selector de etiquetas h1 con class='derecha'
+*/
+h1.derecha{
+	text-align: right;
+}
+
+/*
+Podemos asociar varios selectores a un mismo bloque CSS, separando por ','
+*/
+h2, h3 {
+	color : darkmagenta;
+}
+
+h6, p.verde {
+	color : rgb(6, 252, 108);
+}

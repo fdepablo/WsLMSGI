@@ -1,0 +1,20 @@
+/* Esto es un comentario */
+
+/*
+Aqui podemos declarar todos nuestros selectores. Los selectores nos van a ayudar a acceder a los
+elementos HTML de nuestra página para aplicar los estilos.
+
+Aqui decimos que todas nuestras etiquetas H3 seran naranjas y estarán alineadas a la derecha
+*/
+h3 {
+    color: rgb(255, 0, 191);
+    text-align: right;
+}
+
+/* Aquí decimos que todas nuestras etiquetas H4 vas a ser de color aguamarina, centradas y con
+el color negro de fondo */
+h4 {
+    color: aquamarine;
+    text-align: center;
+    background-color: black;
+}
