@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Herencia</title>
+
+    <!--
+        Para facilitar la comprensión del concepto de herencia debemos entender que un documento HTML 
+        se puede representar como un árbol genealógico.
+
+        Algunas de las propiedades de las hojas de estilo se propagan por los descendientes de los 
+        elementos de manera automática, como por ejemplo el color. Para saber cuales son las
+        propiedades que se heredan y cuales no debemos de consultar página oficial:
+        https://www.w3.org/TR/CSS21/propidx.html
+
+        El orden básicamente hace que, si un elemento tiene dos reglas con el mismo peso, tenga 
+        preferencia la última que ha sido especificada.
+    -->
+    <style>
+        .rojo{
+            color : red 
+        }  
+
+        div{
+            color: blue; 
+            border-width: 2px;
+            border-style: solid;
+            border-color: rgb(255, 0, 0);
+        }
+        /* 
+        Por defecto heredamos el atributo color, si queremos heredar algún atributo que no
+        se haga por defecto, debemos de hacerlo mediante el valor "inherit"
+        */
+        p{
+            color:blueviolet;
+            border: inherit;
+            border-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 
+        Herencia, por defecto, heredamos el CSS del padre. Podemos sobreescribir el comportamiento
+        de algun atributo css, y nos quedariamos con el ultimo dado -->
+    <div class="rojo" style="text-align: center;color:black">
+        <h3>Esto será rojo??</h3>
+        <h3 style="color: blueviolet;">Y esto??</h3>
+    </div>
+
+    <br/>
+
+    <div>
+        <h1>Esto es una cabecera azul (por herencia de DIV)</h1>
+        <p>Esto es un parrafo</p>
+        <p>Esto es otro parrafo</p>
+    </div>
+</body>
+</html>

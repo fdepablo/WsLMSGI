@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Overflow</title>
+    <!--
+        Overflow
+        --------
+        
+        Normalmente las cajas HTML se ajustarán al contenido que tengan, pero en algunas 
+        ocasiones el contenido de un elemento no cabe dentro, dado que hemos definido un 
+        alto y ancho.
+
+        Con overflow podemos indicar el comportamiento que queremos que tenga el contenido.
+
+        Valores:
+
+        1. visible - Valor por defecto. El overflow no esta cortado. Si el texto no entra en la 
+        caja, sera renderizado fuera de ella
+        2. hidden - El overflow esta cortado y el resto del contenido será invisible
+        3. scroll -  El overflow esta cortado, y una scrollbar es añadida para ver el resto del
+        contenido.
+    -->
+    <style>
+       .caja1{
+            overflow:visible;
+            background-color: aqua;
+            display: inline-block;
+            width: 10%;
+            height: 50px;
+            margin: 20px;
+        }
+        
+        .caja2{
+            overflow:hidden;
+            background-color: rgb(192, 69, 96);
+            display: inline-block;
+            width: 10%;
+            height: 50px;
+            margin: 20px;
+        }
+        
+        .caja3{
+            overflow:scroll;
+            background-color: rgb(188, 209, 71);
+            display: inline-block;
+            width: 20%;
+            height: 100px;
+            margin: 20px;            
+        }
+    </style>
+</head>
+
+<body>
+    <div class="caja1">El fracaso es la niebla entre la cual vislumbramos el triunfo</div>
+    <div class="caja2">Pase lo que pase mañana, prométame algo: que seguirá siendo usted. 
+        No un soldado perfecto, sino un buen hombre
+    </div>
+    <div class="caja3">Hay cosas que nunca le pregunté a mi padre. Hay preguntas que me 
+        hubiera gustado hacerle: cómo se sentía por lo que hacía su empresa, si estaba 
+        conflictuado, si tenía dudas (…). Vi a jóvenes estadounidenses ser asesinados 
+        por las armas que creaba para defenderlos y protegerlos. Me di cuenta que era 
+        parte de un sistema que no rinde cuentas
+    </div>
+</body>
+
+</html>

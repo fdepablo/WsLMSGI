@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Margenes</title>
+    <!--
+    Margenes
+    --------
+
+    El margen es el espacio que hay entre el borde del elemento y los elementos que 
+    tiene alrededor, es decir, es un espacio que está en el exterior del elemento al 
+    que se aplica.
+
+    Ver imagen "img/boxmodel.png" o ejecutar la página en un navegador
+
+    -->
+    <style>
+        .margin1 {
+            border: 1px solid blue;
+            /*podemos poner unidades o en %*/
+            margin: 100px;
+            background-color: rgb(247, 78, 11);
+        }
+
+        .margin2 {
+            border: 1px solid black;
+            /*podemos poner unidades o en %*/
+            margin-top: 100px;
+            margin-bottom: 100px;
+            margin-right: 150px;
+            margin-left: 80px;
+            background-color: lightblue;
+        }
+
+        .margin3 {
+            /*Con la propiedad auto establecemos horizontalmente a center el elemento respecto a su contenedor*/
+            margin: auto;
+            width: 300px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="text-align: center;">
+        <h1 >Margenes</h1>
+        <h3 style="text-decoration:underline">Box Model Elementos HTML</h3>
+        <img src="img/boxmodel.png"/>
+    </div>
+    
+    <div class="margin1">Un gran poder implica una gran responsabilidad</div>
+    <div class="margin2">En un lugar de la mancha de cuyo nombre no quiero acordarme.</div>
+    <div class="margin3">En una galaxia muy lejana...</div>
+</body>
+
+</html>

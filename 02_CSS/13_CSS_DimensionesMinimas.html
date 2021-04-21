@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Dimensiones Minimas</title>
+    <!--
+    Dimensiones Minimas
+    -------------------
+
+    Hemos visto que cuando se establece el alto y ancho de un elemento en porcentaje, 
+    este se adapta al tamaño del dispositivo e incluso se redimensiona ajustándose al 
+    tamaño de una ventana del navegador. En ocasiones nos interesa que una capa tenga un 
+    tamaño mínimo pase lo que pase.
+
+    -->
+    <style>
+        /*
+        La capa ocupará un 50% de alto y un 50% de ancho, el otro 50% se reparte como margen, 
+        ya que dejamos un 25% arriba, un 25% abajo, y el 25% sobrante quedará a la derecha 
+        y abajo. Al redimensionar la ventana del navegador podrás apreciar cómo va cambiando 
+        la capa para adaptarse. Sin embargo, el tope está en los 200px de alto y ancho, 
+        en ningún caso la capa medirá menos que eso.
+
+        Por mucho que reduzcas el tamaño de la ventana, la capa nunca será menor de 200px de 
+        alto y de ancho.
+        */
+        #contenido {
+            position: absolute;
+            width: 50%;
+            min-width: 450px;
+            height: 50%;
+            min-height: 300px;
+            top: 25%;
+            left: 25%;
+            background-color: rgb(179, 177, 177);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="contenido">
+        <p>Un gran poder implica una gran responsabilidad</p>
+        <p>Yo soy Ironman</p>
+        <p>En una galaxia muy lejana...</p>
+    </div>
+</body>
+
+</html>

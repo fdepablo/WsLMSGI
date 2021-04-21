@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Capas y Posicionamiento</title>
+    <!--
+    Capas y Posicionamiento
+    -----------------------
+
+    Para gestionar la posición de los elementos dentro de su contenedor vamos a trabajar 
+    con las siguientes propiedades CSS.
+
+    1. position: determina el tipo de posicionamiento de los elementos en su contenedor. 
+    El contenedor de un elemento puede ser el cuerpo de la página (etiqueta <body>) o bien 
+    otro elemento (por ejemplo un <div>).
+    
+    Posibles valores:
+
+        - relative: Una capa con posicionamiento relativo se sitúa según el flujo secuencial 
+        de elementos dentro del contenedor (relativo a según sería su posición normal)
+
+        IMPORTANTE: Cuando el posicionamiento es relativo, las propiedades de posición
+        (top, botton, left y right) no van en relación a la esquina superior izquierda 
+        del documento (como sería en con la posición "absolute"), sino a partir de la 
+        posición natural que ocuparía el elemento dentro del flujo secuencial HTML.
+
+        ver imagen "img/posicionamiento_relativo"
+
+        - absolute: Una capa con posicionamiento absoluto se sitúa dentro de su contenedor 
+        por coordenadas fijas (top, left) a partir de la esquina superior izquierda. 
+        Dentro de una capa con posicionamiento relativo puede haber otra con posicionamiento 
+        absoluto o viceversa.
+
+        - fixed: Funciona como el posicionamiento absoluto (absolute) con la diferencia de 
+        que la capa siempre estará visible aunque se utilice la barra de desplazamiento.
+        Muy util para poner cabeceras de pagina que siempre queremos que sean visibles
+
+        - static: Es la posición por defecto de los elementos. No son afectados por las
+        propiedades top, left, right y botton. Un elemento "static" no es posicionado de
+        una manera especial, es posicionado según el flujo normal de la página web
+
+    2. top: posición del elemento desde arriba. 
+
+    3. left: posición del elemento desde la izquierda.
+    
+    4. right: posición del elemento desde arriba
+
+    5. botton: posición del elemento desde abajo
+
+    6. z-index: establece el orden de pila del elemento. Se verá más adelante
+
+    Las propiedades top, left, rigth y botton solo funcionan si tienen antes la propiedad
+    "position" (menos con static).
+
+    -->
+    <style>
+        /*
+        Observa que en el ejemplo los atributos height y width de las capas (<div>) están 
+        establecidos en píxeles, lo que significa que tienen un tamaño fijo independientemente 
+        del tamaño del dispositivo donde se muestre la página. También es posible establecer 
+        los valores de alto y ancho en porcentaje para que los elementos se adapten al tamaño 
+        del dispositivo, así nos vamos acercando a lo que se denomina un diseño "responsive".
+
+        Para el selector "#relativo3" se ha puesto el valor a 60% para lograr que cambien en 
+        función del tamaño de la ventana donde se visualizan. Luego puedes abrir la página 
+        con un navegador e ir redimensionando la ventana para ver el efecto.
+        */
+
+        #relativo1 {
+            position: relative;
+            /* en este caso seria relativo al body*/
+            background-color: aqua;
+            width: 300px;
+            /* ancho de la caja en pixeles*/
+            height: 100px;
+            /* alto de la caja en pixeles*/
+        }
+
+        #relativo2 {
+            position: relative;
+            /* en este caso seria relativo al div con id relativo1*/
+            background-color: rgb(207, 204, 204);
+            width: 400px;
+            height: 100px;
+        }
+
+        #relativo3 {
+            position: relative;
+            /* en este caso seria relativo al div con id relativo2*/
+            background-color: aqua;
+            width: 50%;
+            height: 100px;
+            top: 100px;
+            left: 100px;
+        }
+
+        #absoluto1 {
+            position: absolute;
+            background-color: rgb(43, 255, 0);
+            width: 200px;
+            /* ancho de la caja en pixeles*/
+            height: 100px;
+            /* alto de la caja en pixeles*/
+            /* En los absolutos debemos de dar un top y un left*/
+            top: 200px;
+            left: 900px;
+        }
+
+        #fijado1 {
+            position: fixed;
+            width: 100%;
+            height: 75px;
+            top: 0px;
+            left: 0px;
+            background-color: aqua;
+            z-index: 2;
+            text-align: center;
+            font-family: "Comic sans MS";
+            font-size: 25px;
+            padding-top: 25px;
+            /* Estos 25px se suman a la altura de del contenedor */
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+    <div id="fijado1">
+        Esta es la cabecera de la página y quiero que esté siempre visible.
+    </div>-->
+    <div id="relativo1">Este es el primer DIV relativo</div>
+    <div id="relativo2">Este es el segundo DIV relativo</div>
+    <div id="relativo3">Este es el tercer DIV relativo</div>
+    <div id="absoluto1">Este es el primer DIV absoluto</div>    
+
+</body>
+
+</html>

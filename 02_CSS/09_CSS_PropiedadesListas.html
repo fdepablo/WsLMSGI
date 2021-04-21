@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Propiedades Listas</title>
+    <!--
+    Propiedades de Listas
+    ---------------------
+
+    1. list-style-type, Para el tipo de símbolo (listas sin orden) o tipo de 
+    numeración (listas ordenadas) que precede a cada elemento de una lista.
+    Ej: circle;
+        disc;
+        square;
+        decimal;
+        lower-alpha;
+        lower-roman;
+        upper-alpha;
+        upper-roman;
+        none;
+    
+    2. list-style-image, Para utilizar una imagen como símbolo de elementos de una lista.
+    Ej: url (localización de la imagen);
+
+    3. list-style-position, Determina la forma de sangrado de las listas anidadas.
+    Ej: inside;
+        outside;
+
+    4. background-image, imagen de fondo
+    Ej: url (‘URL’).
+
+    -->
+    <style>
+        ul {
+            list-style-type: square;
+            list-style-position: inside;
+        }
+
+        ol {
+            list-style-type: lower-roman;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!--listas sin orden-->
+    <ul>
+        <li>Elemento de lista</li>
+        <li>Elemento de lista</li>
+    </ul>
+
+    <!--listas ordenadas-->
+    <ol>
+        <li>Elemento de lista</li>
+        <li>Elemento de lista</li>
+    </ol>
+
+
+</body>
+
+</html>

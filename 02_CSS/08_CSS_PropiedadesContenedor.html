@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Propiedades Contenedor</title>
+    <!--
+    Propiedades de Contenedor
+    -------------------------
+
+    1. border, Para el borde de los elementos, en la misma regla podemos indicar la 
+    anchura (width), el color (color) y el tipo (style).
+    Ej: border: 1px #000 dashed;
+    También podemos dar aspecto a cada uno de los cuatro bordes por separado. 
+    Para cada borde se puede establecer su anchura, su color y su estilo.
+    
+    2. width y height, Ancho y alto de la caja.
+    Ej: 2px, 10%
+
+    3. background-color, color de fondo
+    Ej: red; rgb(255,0,0)
+
+    4. background-image, imagen de fondo
+    Ej: url (‘URL’).
+
+    -->
+    <style>
+        div {
+            border: 1px #000 dashed;
+            margin: 25px;
+            padding: 30px;
+            font-size: 20px;
+            font-family: arial;
+            text-align: center;
+            width: 100%;
+            height: 30px;
+        }
+
+        #caja1 {
+            border-top-color: #CC0000;
+            border-right-color: blue;
+            border-bottom-color: #00FF00;
+            border-left-color: #CCC;
+            border-top-width: 3px;
+            border-right-width: 4px;
+            border-bottom-width: 5px;
+            border-left-width: 6px;
+        }
+
+        #caja2 {
+            border-top-style: dashed;
+            border-right-style: double;
+            border-bottom-style: dotted;
+            border-left-style: solid;
+            background-color: #e4e4e4;
+        }
+
+        #caja3 {
+            border-width: 5px 4px 10px 6px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="caja1"> Caja 1 </div>
+    <div id="caja2"> Caja 2 </div>
+    <div id="caja3"> Caja 3 </div>
+</body>
+
+</html>

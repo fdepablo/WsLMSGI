@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display</title>
+    <!--
+        Display
+        -------
+        La propiedad display determina cómo se disponen los elementos a lo largo de la página.
+
+        display: block
+        --------------
+
+        Los elementos se disponen en bloque uno debajo de otro y ocupando todo el ancho, a no 
+        ser que se especifique un valor para la propiedad width. Solo tiene efecto si el 
+        posicionamiento es relativo o estático. Las etiquetas <p> y <div> tienen este tipo 
+        de posicionamiento por defecto, este es el motivo de que siempre ocupen todo el ancho, 
+        aunque su contenido sea una simple palabra.
+
+        Algunas etiquetas tienen un tipo de visualización inline por defecto, este es el caso de 
+        las etiquetas <p> o <div>
+
+        display: inline
+        ---------------
+        Los elementos se disponen en línea uno a continuación de otro, el tamaño se ajusta 
+        al contenido, luego no tienen ningún efecto las propiedades width y height.
+
+        Algunas etiquetas tienen un tipo de visualización inline por defecto, este es el caso 
+        de las etiquetas <a> (enlace) o <span>.
+
+        display: inline-block
+        ---------------------
+        Los elementos se disponen en línea y en bloque, uno a continuación de otro, el 
+        tamaño es el establecido por los atributos height y width.
+    -->
+    <style>
+        .parrafo_block {
+            background-color: aqua;
+        }
+
+        .parrafo_inline {
+            background-color: rgb(228, 175, 201);
+            display: inline;
+        }
+
+        .parrafo_inline_block{
+            display: inline-block;
+	        background-color: rgb(0, 255, 157);
+        	margin: 20px;
+            width: 200px;
+	        height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Ejemplo de Display: block-->
+    <p class="parrafo_block">Un gran poder implica una gran responsabilidad</p>
+    <!-- Ejemplo de Display: inline-->
+    <p class="parrafo_inline">Yo soy Ironman</p>
+    <br/>
+    <!-- Ejemplo de Display: inline-block-->
+    <div class="parrafo_inline_block">Tony Stark</div>
+    <div class="parrafo_inline_block">Steve Rogers</div>
+    <div class="parrafo_inline_block">Bruce Banner</div>
+    <div class="parrafo_inline_block">Thor</div>
+</body>
+
+</html>

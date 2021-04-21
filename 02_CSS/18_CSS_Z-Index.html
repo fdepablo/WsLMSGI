@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Z-INDEX</title>
+    <!--
+        Z-INDEX
+        -------
+
+        Con la propiedad z-index podemos determinar el orden de las capas.
+
+        La propiedad CSS z-index indica el orden de un elemento posicionado y sus descendientes. 
+        Cuando varios elementos se superponen, los elementos con mayor valor z-index cubren 
+        aquellos con menor valor.
+
+        El valor representa como de cerca esta la caja respecto a nuestra vis
+    -->
+    <style>
+        div {
+            position: absolute;
+        }
+
+        .caja1 {
+            z-index: 5;
+            top: 1em;
+            left: 8em;
+            background-color: aqua;
+            display: inline-block;
+            width: 20%;
+            height: 20%;
+        }
+
+        .caja2 {
+            z-index: 15;
+            top: 5em;
+            left: 5em;
+            background-color: rgb(192, 69, 96);
+            display: inline-block;
+            width: 20%;
+        }
+
+        .caja3 {
+            z-index: 25;
+            top: 2em;
+            left: 2em;
+            background-color: rgb(188, 209, 71);
+            display: inline-block;
+            width: 20%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="caja1">El fracaso es la niebla entre la cual vislumbramos el triunfo</div>
+    <div class="caja2">Pase lo que pase mañana, prométame algo: que seguirá siendo usted.
+        No un soldado perfecto, sino un buen hombre
+    </div>
+    <div class="caja3">Hay cosas que nunca le pregunté a mi padre. Hay preguntas que me
+        hubiera gustado hacerle: cómo se sentía por lo que hacía su empresa, si estaba
+        conflictuado, si tenía dudas (…). Vi a jóvenes estadounidenses ser asesinados
+        por las armas que creaba para defenderlos y protegerlos. Me di cuenta que era
+        parte de un sistema que no rinde cuentas
+    </div>
+</body>
+
+</html>

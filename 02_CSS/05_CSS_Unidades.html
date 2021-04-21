@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Unidades</title>
+    <!--
+        Vamos a ver algunas propiedades CSS
+    -->
+    <style>
+        .divazul {
+            color: blue;
+            border-width: 2px;
+            border-style: solid;
+            border-color: rgb(255, 0, 0);
+            width: 50%;
+        }
+
+        .uncm {
+            font-size: 1cm;
+        }
+
+        .parent {
+            font-size: 20px;
+        }
+
+        .child {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="divazul">
+        <h1>Esto es una cabecera azul (por herencia de DIV)</h1>
+        <p class="uncm">Esto es un parrafo</p>
+        <p>Esto es otro parrafo</p>
+    </div>
+
+    <!-- Ejemplo em -->
+    <!-- En este caso el tamaño de letra es 20px-->
+    <div class="parent">        
+        <p>Parent</p>
+        <!-- En este caso el tamaño es 1.5 veces el padre (20px)-> 1.5 * 20 = 30px -->
+        <div class="child">            
+            <p>Outer child</p>
+            <!-- En este caso el tamaño es 1.5 veces el padre (30px)-> 1.5 * 30 = 45px -->
+            <div class="child">
+                <p>Inner child</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
