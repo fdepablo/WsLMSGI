@@ -6,24 +6,30 @@
     <title>CSS Herencia</title>
 
     <!--
-        Para facilitar la comprensión del concepto de herencia debemos entender que un documento HTML 
-        se puede representar como un árbol genealógico.
+        Para facilitar la comprensión del concepto de herencia debemos entender que un documento 
+        HTML se puede representar como un árbol genealógico.
 
         Algunas de las propiedades de las hojas de estilo se propagan por los descendientes de los 
         elementos de manera automática, como por ejemplo el color. Para saber cuales son las
         propiedades que se heredan y cuales no debemos de consultar página oficial:
         https://www.w3.org/TR/CSS21/propidx.html
 
-        El orden básicamente hace que, si un elemento tiene dos reglas con el mismo peso, tenga 
+        El orden es que si un elemento tiene dos reglas con el mismo peso, tenga 
         preferencia la última que ha sido especificada.
     -->
     <style>
         .rojo{
-            color : red 
+            color : red; 
         }  
 
         div{
-            color: blue; 
+            /*
+            Si tenemos colision en una etiqueta, como puede ser "<h3>Esto será rojo??</h3>
+            de tal manera que por el selector ".rojo" el color sea rojo, y el selector
+            "div" sea azul, podemos poner la palabra "!important" para elegir la que nosotros
+            queramos
+            */
+            color: blue !important;
             border-width: 2px;
             border-style: solid;
             border-color: rgb(255, 0, 0);
@@ -42,9 +48,9 @@
 <body>
 
     <!-- 
-        Herencia, por defecto, heredamos el CSS del padre. Podemos sobreescribir el comportamiento
+        Por defecto heredamos el CSS del padre. Podemos sobreescribir el comportamiento
         de algun atributo css, y nos quedariamos con el ultimo dado -->
-    <div class="rojo" style="text-align: center;color:black">
+    <div class="rojo">
         <h3>Esto será rojo??</h3>
         <h3 style="color: blueviolet;">Y esto??</h3>
     </div>

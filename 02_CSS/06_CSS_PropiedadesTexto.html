@@ -10,75 +10,76 @@
     --------------------
 
     1. font-family, tipo de fuente.
-    Ej: Arial; Helvetiva; sans-serif; serif; Times New Roman; Times; Verdana; Georgia; Geneva; Courier;
+    Valores: Arial; Helvetiva; sans-serif; serif; Times New Roman; Times; Verdana; Georgia; 
+    Geneva; Courier;
     
     2. font-size, tamaño de la fuente.
-    Ej: 2px, 3em
+    Valores: 2px, 3em
 
     3. font-style, estilos
-    EJ: italic
+    Valores: italic
 
     4. font-variant, Permite modificar cómo se visualiza el texto.
-    Ej: normal; small-caps; (versalitas)
+    Valores: normal; small-caps; (versalitas)
 
     5. font-weight, Aplica el formato de "negrita" al texto.
-    Ej: valores absolutos-> 100, 200, 300 ... 900; bold; normal;
+    Valores: valores absolutos-> 100, 200, 300 ... 900; bold; normal;
 
-    6. text-decoration, Permite definir diferentes elementos para aplicar al texto, como subrayado o 
-    tachado.
-    Ej: blinks; (parpadeante): line-through; (tachado); underline; (subrayado); overline; (sobrerayado)
+    6. text-decoration, Permite definir diferentes elementos para aplicar al texto, como 
+    subrayado o tachado.
+    Valores: blinks; (parpadeante): line-through; (tachado); underline; (subrayado); 
+    overline; (sobrerayado)
 
     7. text-transform, Transformación del texto.
-    Ej: capitalice; (convierte la primera letra de cada palabra a mayúsculas)
-        uppercase; (todo en mayúsculas)
-        lowercase; (todo en minúsculas)
+    Valores: capitalice; (convierte la primera letra de cada palabra a mayúsculas)
+    uppercase; (todo en mayúsculas)
+    lowercase; (todo en minúsculas)
 
     8. color, color del texto
-    Ej: red; rgb(255,0,0)
-
+    Valores: red; rgb(255,0,0)
 
      -->
     <style>
         h1 {
-            font-family: 'arial';
+            font-family: 'arial';/* notese que va entre comillas*/
             font-size: 19px;
             color: #1D3545;
             text-decoration: underline;
         }
 
         h2 {
-            font-family: 'arial';
-            font-size: 18px;
-            color: #1D3545;
+            font-family: 'Times New Roman';
+            font-size: 30px;
+            color: #261d45;
             text-transform: uppercase;
         }
 
         h3 {
             font-variant: small-caps;
-            font-family: 'arial';
-            font-size: 17px;
-            color: #1D3545;
+            font-family: 'Times New Roman';
+            font-size: 30px;
+            color: #07f76b;
         }
 
         p {
-            font-family: 'arial';
-            font-size: 15px;
+            font-family: 'Geneva';
+            font-size: 45px;
             color: #1D3545;
         }
 
         blockquote {
             font-style: italic;
-            font-family: 'arial';
-            font-size: 16px;
-            color: #06cd10;
-            font-weight: 700;
+            font-family: 'sans-serif';
+            font-size: 40px;
+            color: #cd0638;
+            font-weight: bold;
         }
     </style>
 </head>
 
 <body>
     <h1>Titulo </h1>
-    <h2>Subtitulo</h2>
+    <h2>subtitulo</h2>
     <h3>Subtitulo</h3>
     <p>Párrafo</p>
     <blockquote>Cita en bloque</blockquote>
