@@ -15,7 +15,7 @@
         Cuando varios elementos se superponen, los elementos con mayor valor z-index cubren 
         aquellos con menor valor.
 
-        El valor representa como de cerca esta la caja respecto a nuestra vis
+        El valor representa como de cerca esta la caja respecto a nuestra vista
     -->
     <style>
         div {
@@ -23,7 +23,7 @@
         }
 
         .caja1 {
-            z-index: 5;
+            z-index: 5;/* Cuanto más alto el valor, mas cerca de nuestra visión*/ 
             top: 1em;
             left: 8em;
             background-color: aqua;
@@ -33,7 +33,7 @@
         }
 
         .caja2 {
-            z-index: 15;
+            z-index: 15;/* Cuanto más alto el valor, mas cerca de nuestra visión*/ 
             top: 5em;
             left: 5em;
             background-color: rgb(192, 69, 96);
@@ -42,7 +42,7 @@
         }
 
         .caja3 {
-            z-index: 25;
+            z-index: 25;/* Cuanto más alto el valor, mas cerca de nuestra visión*/ 
             top: 2em;
             left: 2em;
             background-color: rgb(188, 209, 71);
@@ -54,7 +54,7 @@
 
 <body>
     <div class="caja1">El fracaso es la niebla entre la cual vislumbramos el triunfo</div>
-    <div class="caja2">Pase lo que pase mañana, prométame algo: que seguirá siendo usted.
+    <div class="caja2">Pase lo que pase mañana, prométame algo: que seguirá siendo usted,
         No un soldado perfecto, sino un buen hombre
     </div>
     <div class="caja3">Hay cosas que nunca le pregunté a mi padre. Hay preguntas que me

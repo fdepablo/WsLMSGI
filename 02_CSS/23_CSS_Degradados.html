@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS DEGRADADOS</title>
+    <!--
+        Los degradados sirven para hacer transacciones de color
+    -->
+    <style>
+
+        .contenedor{
+            margin: 50px;
+        }
+        /*
+            El primer parámetro es el punto de partida, estamos indicando que el degradado 
+            comience por la izquierda. El resto de argumentos son los puntos de color.
+
+            Este atributo de momento funciona con pocos navegadores, concretamente funciona 
+            con Mozilla Firefox. Observa que hemos puesto dos versiones 
+            (linear-gradient y –webkit-liner-gradient), la segunda versión es para 
+            compatibilizar con navegadores Google Chrome.
+        */
+        .div1 {
+            border-radius: 25px;
+            padding: 10px;
+            background: linear-gradient(left, red , blue, green);/*Firefox*/
+            background: -webkit-linear-gradient(left, red , blue, green); /*Chrome*/
+            display: inline-block;
+            width: 150px;
+            text-align: center;
+            color: azure;
+        }
+
+        /*
+            También puede hacerse en diagonal
+        */
+        .div2 {
+            border-radius: 25px;
+            padding: 10px;
+            background: linear-gradient(50deg, red , blue, green);
+            background: -webkit-linear-gradient(50deg, red , blue, green);
+            display: inline-block;
+            width: 150px;
+            text-align: center;
+            color: azure;
+        }
+
+        /*
+            Tambien pueden formar circulos o elipses.
+
+            Si quitamos "circle" de la propiedad, formariamos una elipse.
+        */
+        .div3 {
+            border-radius: 25px;
+            padding: 10px;
+            background: radial-gradient(circle, red, blue, green);
+            background: -webkit-radial-gradient(circle, red, blue, green);
+            display: inline-block;
+            width: 150px;
+            text-align: center;
+            color: azure;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="div1">Peter Parker</div>
+        <div class="div1">Steve Rogers</div>
+    </div>
+    <div class="contenedor">
+        <div class="div2">Tony Stark</div>
+        <div class="div2">Bruce Banner</div>
+    </div>
+    <div class="contenedor">
+        <div class="div3">Dr. Strange</div>
+        <div class="div3">Natasha Romanov</div>
+    </div>
+</body>
+
+</html>

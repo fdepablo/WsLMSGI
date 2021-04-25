@@ -18,18 +18,25 @@
     
     Posibles valores:
 
-        - relative: Una capa con posicionamiento relativo se sitúa según el flujo secuencial 
-        de elementos dentro del contenedor (relativo a según sería su posición normal)
+        - relative: Una capa con posicionamiento relativo se situa la caja según el flujo 1
+        secuencial de elementos dentro del contenedor. A partir de ahí, podemos colocar el
+        contenido mediante las propiedadas top, botton, left y rigth, es decir, el
+        posicionamiento es relativo según sería su posición normal en la página.
 
         IMPORTANTE: Cuando el posicionamiento es relativo, las propiedades de posición
         (top, botton, left y right) no van en relación a la esquina superior izquierda 
         del documento (como sería en con la posición "absolute"), sino a partir de la 
         posición natural que ocuparía el elemento dentro del flujo secuencial HTML.
 
-        ver imagen "img/posicionamiento_relativo"
+        ver imagen "img/posicionamiento_relativo", en esa imagen el tercer div iría justo
+        debajo del segundo div, de hecho la caja va ahí, pero al ser relativo, lo que se ve
+        se situa en función de las propiedades de posición (top, left, etc.)
 
         - absolute: Una capa con posicionamiento absoluto se sitúa dentro de su contenedor 
-        por coordenadas fijas (top, left) a partir de la esquina superior izquierda. 
+        por coordenadas fijas (top, left) a partir de la esquina superior izquierda de la
+        página web. Pero OJO!, si el div con posición absoluto esta contenido dentro de
+        una
+        
         Dentro de una capa con posicionamiento relativo puede haber otra con posicionamiento 
         absoluto o viceversa.
 
@@ -49,10 +56,11 @@
 
     5. botton: posición del elemento desde abajo
 
-    6. z-index: establece el orden de pila del elemento. Se verá más adelante
+    6. z-index: establece el orden de pila del elemento, es decir, el orden de las capas en
+    función del eje de la Z (de dentro a fuera, por decirlo así). Se verá más adelante
 
     Las propiedades top, left, rigth y botton solo funcionan si tienen antes la propiedad
-    "position" (menos con static).
+    "position" (menos con static, que no le afectan).
 
     -->
     <style>
@@ -68,7 +76,7 @@
         con un navegador e ir redimensionando la ventana para ver el efecto.
         */
 
-        #relativo1 {
+        .relativo1 {
             position: relative;
             /* en este caso seria relativo al body*/
             background-color: aqua;
@@ -78,7 +86,7 @@
             /* alto de la caja en pixeles*/
         }
 
-        #relativo2 {
+        .relativo2 {
             position: relative;
             /* en este caso seria relativo al div con id relativo1*/
             background-color: rgb(207, 204, 204);
@@ -86,17 +94,17 @@
             height: 100px;
         }
 
-        #relativo3 {
+        .relativo3 {
             position: relative;
             /* en este caso seria relativo al div con id relativo2*/
             background-color: aqua;
-            width: 50%;
+            width: 30%;
             height: 100px;
             top: 100px;
-            left: 100px;
+            left: 300px;
         }
 
-        #absoluto1 {
+        .absoluto1 {
             position: absolute;
             background-color: rgb(43, 255, 0);
             width: 200px;
@@ -108,32 +116,43 @@
             left: 900px;
         }
 
-        #fijado1 {
-            position: fixed;
-            width: 100%;
-            height: 75px;
-            top: 0px;
-            left: 0px;
-            background-color: aqua;
-            z-index: 2;
-            text-align: center;
-            font-family: "Comic sans MS";
-            font-size: 25px;
-            padding-top: 25px;
-            /* Estos 25px se suman a la altura de del contenedor */
+        .normal {
+            position: static;
+            background-color: rgb(230, 132, 213);
+            width: 200px;
+            height: 100px;
         }
+
+        .caja_grande {
+            /* Si ponemos la position a "static" , los div de dentro que sean de 
+            position: absolute, entonces lo serán respecto a la página. 
+            Al ser position. relative los div de dentro que sean position: absolute lo seran
+            respecto a este div */
+            position: relative;
+            background-color: rgb(132, 194, 230);
+            width: 1200px;
+            height: 300px;
+        }
+
     </style>
 </head>
 
 <body>
-    <!--
-    <div id="fijado1">
-        Esta es la cabecera de la página y quiero que esté siempre visible.
-    </div>-->
-    <div id="relativo1">Este es el primer DIV relativo</div>
-    <div id="relativo2">Este es el segundo DIV relativo</div>
-    <div id="relativo3">Este es el tercer DIV relativo</div>
-    <div id="absoluto1">Este es el primer DIV absoluto</div>    
+    <div class="relativo1">Este es el primer DIV relativo</div>
+    <div class="relativo2">Este es el segundo DIV relativo</div>
+    <div class="relativo3">Este es el tercer DIV relativo</div>
+    <!-- El siguiente div absoluto es respecto al body -->
+    <div class="absoluto1">Este es el primer DIV absoluto respecto al body</div>  
+    <!-- Observar como este div no va despues de relativo2, sino despues de relativo3, aunque 
+    este este desplazado, es decir, el hueco de relativo3 SIGUE OCUPADO POR SU CAJA, lo que
+    ocurre es que como es relativo se VA A VISUALIZAR segun los atributos top, botton, left y 
+    rigth, en lugar de en su posición natural donde se ocupa su caja -->
+    <div class="normal">
+        Este es un div normal
+    </div>  
+    <div class="caja_grande">
+        <div class="absoluto1">Este es el segundo DIV absoluto respecto a la caja grande</div>
+    </div>
 
 </body>
 

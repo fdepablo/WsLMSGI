@@ -6,17 +6,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS FLOAT</title>
     <!--
+        Tenemos dos propiedades más que son frecuentemente usadas para posicionar elementos en 
+        la pantalla, float y clear
+
         FLOAT
         -----
+        Esta propiedad es usada para posicionar y formatear contenido, por ejemplo para poner una
+        imagen flotante a la izquierda de un texto que esté en un contenedor.
+
+        Float puede tener los siguientes valores:
+        1. left: El elemento flota a la izquierda de su contenedor
+        2. right: El elemento flota a la derecha de su contenedor
+        3. none: Valor por defecto, el elemento no flota
+        4. inherit: El elemento hereda el valor float de su padre
 
     -->
     <style>
-        
+        .caja_texto{
+            width: 60%;
+            margin-bottom: 50px;
+            background-color: aquamarine;
+        }
+        .imagen_derecha {
+            float: right;
+        }
+        .imagen_izquierda {
+            float: left;
+        }
+        .imagen_normal {
+            float: none;
+        }
     </style>
 </head>
 
 <body>
-   
+    <h2>Ejemplos FLOAT</h2>
+    <div class="caja_texto">
+        <img class="imagen_derecha" src="img/boxmodel.png" alt="Pineapple">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et 
+        dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. 
+        Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum 
+        augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. 
+        Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum 
+        nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed 
+        ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue 
+        eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris 
+        quis diam velit. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. 
+        Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum 
+        nisi, sed ullamcorper ipsum dignissim ac.
+        </p>
+    </div>
+
+    <div class="caja_texto">
+        <img class="imagen_izquierda" src="img/boxmodel.png" alt="Pineapple">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et 
+        dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. 
+        Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum 
+        augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. 
+        Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum 
+        nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed 
+        ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue 
+        eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris 
+        quis diam velit. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. 
+        Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum 
+        nisi, sed ullamcorper ipsum dignissim ac.
+        </p>
+    </div>
+
+    <div class="caja_texto">
+        <img class="imagen_normal" src="img/boxmodel.png" alt="Pineapple">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et 
+        dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. 
+        Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum 
+        augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. 
+        Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum 
+        nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed 
+        ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue 
+        eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris 
+        quis diam velit. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. 
+        Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum 
+        nisi, sed ullamcorper ipsum dignissim ac.
+        </p>
+    </div>
 </body>
 
 </html>

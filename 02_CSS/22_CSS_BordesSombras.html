@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS BORDES Y SOMBRAS</title>
+    <!--
+        Hay nuevos atributos de estilo en CSS3 que te permiten crear bordes y sombras. 
+
+        Como son atributos muy nuevos, es posible que no te funcionen con todos los navegadores 
+        y si funcionan puede haber variaciones entre unos y otros, aunque lo normal es que
+        actualmente funcionen en todos los navegadores. En caso de que el navegador no esté
+        preparado simplemente no funcionaría.
+
+    -->
+    <style>
+
+        .contenedor{
+            margin: 50px;
+        }
+        /*
+            Bordes
+        */
+        .div1 {
+            border-radius: 25px;
+            padding: 10px;
+            background-color: blueviolet;
+            display: inline-block;
+            width: 100px;
+            text-align: center;
+        }
+
+        /*
+            Sombras
+
+            Define una sombra en el elemento, los valores asignados son: 
+            1. posición de la sombra desde la derecha
+            2. posición de la sombra desde abajo
+            3. nivel de transparencia
+            4. color de la sombra.
+        */
+        .div2 {
+            box-shadow: 15px 15px 10px #A9F5F2;
+            background-color: rgb(219, 29, 140);
+            padding: 10px;
+            display: inline-block;
+            width: 100px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="div1">Peter Parker</div>
+        <div class="div1">Steve Rogers</div>
+    </div>
+    <div class="contenedor">
+        <div class="div2">Tony Stark</div>
+        <div class="div2">Bruce Banner</div>
+    </div>
+</body>
+
+</html>

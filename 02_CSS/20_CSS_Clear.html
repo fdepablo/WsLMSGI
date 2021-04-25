@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS CLEAR</title>
+    <!--
+        CLEAR
+        -----
+        Esta propiedad especifica que elementos pueden flotar al lado del elemento
+        "cleared" y en que lado.
+
+        Lo más habitual es usar la propiedad clear despues de usar la propiedad float
+
+        Clear puede tener los siguientes valores:
+        1. nome: Permite flotar elementos a ambos lados, valor por defecto. 
+        2. left: No permite flotar elementos a la izquierda
+        3. right: No permite flotar elementos a la derecha
+        4. both: No permite flotar elementos a ambos lados
+        5. inherit: El elemento hereda el valor clear de su padre
+
+        Ejemplos de CLEAR y FLOAT
+        -------------------------
+        https://www.w3schools.com/Css/css_float_examples.asp
+
+    -->
+    <style>
+        .div1 {
+            float: left;
+            width: 100px;
+            height: 50px;
+            margin: 10px;
+            border: 3px solid #73AD21;
+        }
+
+        .div2 {
+            border: 1px solid red;
+        }
+
+        .div3 {
+            float: left;
+            width: 100px;
+            height: 50px;
+            margin: 10px;
+            border: 3px solid #73AD21;
+        }
+
+        .div4 {
+            border: 1px solid red;
+            clear: left;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Ejemplos CLEAR</h2>
+    <h3>SIN clear</h3>
+    <div class="div1">div1</div>
+    <div class="div2">
+        div2 - Notese que div2 esta despues de div1 en el código HTML.
+        Sin embargo, como div1 "floats" a la izquierda, el texto dentro de
+        div2 fluye alrededor de div1.
+    </div>
+
+    <br/><br/><br/>
+
+    <h3>CON clear</h3>
+    <div class="div3">div3</div>
+    <div class="div4">
+        div4 - Aquí esta puesta la propiedad "clear: left;"" Esto quiere decir que 
+        la propiedad "float: left;" que esta puesta en el div3 es "limpiada", y ya 
+        no flotaría como en el caso anterior
+    </div>
+</body>
+
+</html>
