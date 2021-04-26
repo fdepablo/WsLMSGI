@@ -18,10 +18,10 @@
     
     Posibles valores:
 
-        - relative: Una capa con posicionamiento relativo se situa la caja según el flujo 1
+        - relative: Una capa con posicionamiento relativo se situa la caja según el flujo 
         secuencial de elementos dentro del contenedor. A partir de ahí, podemos colocar el
-        contenido mediante las propiedadas top, botton, left y rigth, es decir, el
-        posicionamiento es relativo según sería su posición normal en la página.
+        contenido de la caja mediante las propiedadas top, botton, left y right, es decir, 
+        el posicionamiento es relativo según sería su posición normal en la página.
 
         IMPORTANTE: Cuando el posicionamiento es relativo, las propiedades de posición
         (top, botton, left y right) no van en relación a la esquina superior izquierda 
@@ -33,9 +33,10 @@
         se situa en función de las propiedades de posición (top, left, etc.)
 
         - absolute: Una capa con posicionamiento absoluto se sitúa dentro de su contenedor 
-        por coordenadas fijas (top, left) a partir de la esquina superior izquierda de la
-        página web. Pero OJO!, si el div con posición absoluto esta contenido dentro de
-        una
+        por coordenadas fijas (top, left) a partir de la esquina superior izquierda de su 
+        contenedor (que puede ser el body o la pagina web). 
+        Pero OJO!, si el div con posición absoluto esta contenido dentro de un contenedor
+        que sea relativo, su posición final sería respecto a ese contendor
         
         Dentro de una capa con posicionamiento relativo puede haber otra con posicionamiento 
         absoluto o viceversa.
@@ -78,7 +79,6 @@
 
         .relativo1 {
             position: relative;
-            /* en este caso seria relativo al body*/
             background-color: aqua;
             width: 300px;
             /* ancho de la caja en pixeles*/
@@ -88,7 +88,6 @@
 
         .relativo2 {
             position: relative;
-            /* en este caso seria relativo al div con id relativo1*/
             background-color: rgb(207, 204, 204);
             width: 400px;
             height: 100px;
@@ -96,10 +95,13 @@
 
         .relativo3 {
             position: relative;
-            /* en este caso seria relativo al div con id relativo2*/
             background-color: aqua;
             width: 30%;
             height: 100px;
+            /*
+            Estamos colocando el contenido que haya en relativo3 a 100px respecto al top y 
+            300px respecto al left de la posición natural donde se debería de colocar
+            */
             top: 100px;
             left: 300px;
         }
@@ -112,7 +114,7 @@
             height: 100px;
             /* alto de la caja en pixeles*/
             /* En los absolutos debemos de dar un top y un left*/
-            top: 200px;
+            top: 100px;
             left: 900px;
         }
 
@@ -141,8 +143,6 @@
     <div class="relativo1">Este es el primer DIV relativo</div>
     <div class="relativo2">Este es el segundo DIV relativo</div>
     <div class="relativo3">Este es el tercer DIV relativo</div>
-    <!-- El siguiente div absoluto es respecto al body -->
-    <div class="absoluto1">Este es el primer DIV absoluto respecto al body</div>  
     <!-- Observar como este div no va despues de relativo2, sino despues de relativo3, aunque 
     este este desplazado, es decir, el hueco de relativo3 SIGUE OCUPADO POR SU CAJA, lo que
     ocurre es que como es relativo se VA A VISUALIZAR segun los atributos top, botton, left y 
@@ -150,6 +150,9 @@
     <div class="normal">
         Este es un div normal
     </div>  
+    <!-- El siguiente div absoluto es respecto al body -->
+    <div class="absoluto1">Este es el primer DIV absoluto respecto al body</div>  
+    
     <div class="caja_grande">
         <div class="absoluto1">Este es el segundo DIV absoluto respecto a la caja grande</div>
     </div>

@@ -10,8 +10,8 @@
         -------
         La propiedad display determina cómo se disponen los elementos a lo largo de la página.
 
-        Cada elemento tiene una de estas propiedades por defecto, pero se la podemos cambiar
-        mediante CSS
+        Cada elemento tiene un valor de esta por defecto (block o inline), pero se la podemos 
+        cambiar mediante CSS
 
         display: block
         --------------
@@ -22,11 +22,9 @@
         de posicionamiento por defecto, este es el motivo de que siempre ocupen todo el ancho, 
         aunque su contenido sea una simple palabra.
 
-        Algunas etiquetas tienen este tipo de visualización por defecto, este es el caso de 
-        las etiquetas <p> o <div> por ejemplo
-
         display: inline
         ---------------
+
         Los elementos se disponen en línea uno a continuación de otro, el tamaño se ajusta 
         al contenido, luego no tienen ningún efecto las propiedades width y height.
 
@@ -35,12 +33,13 @@
 
         display: inline-block
         ---------------------
-        Los elementos se disponen en línea y en bloque, uno a continuación de otro, pero a 
-        diferencia del inline, el tamaño es el establecido por los atributos height y width.
+        Los elementos se disponen en línea, uno a continuación de otro, pero a diferencia del 
+        inline, el tamaño es el establecido por los atributos height y width.
     -->
     <style>
         .parrafo_block {
             background-color: aqua;
+            text-align: center;
         }
 
         .parrafo_inline {
@@ -61,6 +60,9 @@
 </head>
 
 <body>
+    <!-- por defecto la etiqueta <a> es inline -->
+    <a href="https://www.google.es">Enlace a google</a>
+    <a href="https://www.google.es">Enlace a google</a>
     <!-- Ejemplo de Display: block-->
     <p class="parrafo_block">Un gran poder implica una gran responsabilidad</p>
     <p class="parrafo_block">Podría estar así todo el día</p>
