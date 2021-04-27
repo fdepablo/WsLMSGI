@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML5</title>
+    <title>ETIQUETAS HTML5</title>
 </head>
 <body>
     <!--
         Etiquetas Semánticas HTML5
         --------------------------
 
-        HTML5 incorpora nuevas etiquetas denominadas etiquetas semánticas. Estas etiquetas no tienen 
-        contrapartida visual, actúan como capas igual que la etiqueta <div>. 
+        HTML5 incorpora nuevas etiquetas denominadas etiquetas semánticas. Estas etiquetas no 
+        tienen contrapartida visual, actúan como capas igual que la etiqueta <div>. 
         Lo que las diferencia de las etiquetas <div> es que sirven para informar sobre el tipo de 
         contenido que soporta.
 
@@ -29,55 +29,61 @@
 
             6) <footer>. Pie de página.
 
-        El uso de las etiquetas semánticas nos ayuda a posicionar mejor nuestra web en los buscadores, 
-        ya que los motores de búsqueda sabrán el tipo de contenido que encierran y darán más peso a 
-        unas áreas que a otras. Por ejemplo, para los motores de búsqueda tiene más peso el texto 
-        incluido en el encabezado del área de navegación que el texto del resto de la página.
+            7) <main>. Representa el contenido principal del <body>. Solo debe haber uno
+
+        El uso de las etiquetas semánticas nos ayuda a posicionar mejor nuestra web en los 
+        buscadores, ya que los motores de búsqueda sabrán el tipo de contenido que encierran 
+        y darán más peso a unas áreas que a otras. Por ejemplo, para los motores de búsqueda 
+        tiene más peso el texto incluido en el encabezado del área de navegación que el texto 
+        del resto de la página.
+
+        Más adelante con CSS haremos algún ejemplo de estilos para estas etiquetas.
     -->
-    
-    <header style="text-align: center;">
-        <h1>Esta es la cabecera de mi pagina web</h1>
-    </header>
+    <main>
+        <header style="text-align: center;">
+            <h1>Esta es la cabecera de mi pagina web</h1>
+        </header>
 
-    <div id="header" style="text-align: center;">
-        <h1>Esta es la cabecera de mi pagina web</h1>
-    </div>
+        <div id="header" style="text-align: center;">
+            <h1>Esta es la cabecera de mi pagina web</h1>
+        </div>
 
-    <nav>
-        <a href="http://www.edix.es">Ir a inicio!</a>
-        <a href="http://www.google.es">Ir a Google!!</a>
-    </nav>
+        <nav>
+            <a href="http://www.edix.es">Ir a inicio!</a>
+            <a href="http://www.google.es">Ir a Google!!</a>
+        </nav>
 
-    <section>
-        <h2>Esta es la seccion noticias nacionales</h2>
-        <article>
-            <h3>Hombre muerde a perro</h3>
-            <p>Un perro ha mordido a un hombre omg!!!</p>
-        </article>
-        <article>
-            <h3>El among us arrasa en el congreso de los diputados!!</h3>
-            <p>Han pillado a politicos jugando al among us!!</p>
-        </article>
-    </section>
+        <section>
+            <h2>Esta es la seccion noticias nacionales</h2>
+            <article>
+                <h3>Hombre muerde a perro</h3>
+                <p>Un perro ha mordido a un hombre omg!!!</p>
+            </article>
+            <article>
+                <h3>El among us arrasa en el congreso de los diputados!!</h3>
+                <p>Han pillado a politicos jugando al among us!!</p>
+            </article>
+        </section>
 
-    <section>
-        <h2>Esta es la seccion noticias Internacionales</h2>
-        <article>
-            <h3>Escandalo en las elecciones EEUU!!</h3>
-            <p>el pato donald sale reelegido!!!</p>
-        </article>
-        <article>
-            <h3>Esto es otra noticia internacional!!</h3>
-            <p>Ha muerto el perro del hortelano!!</p>
-        </article>
-    </section>
+        <section>
+            <h2>Esta es la seccion noticias Internacionales</h2>
+            <article>
+                <h3>Escandalo en las elecciones EEUU!!</h3>
+                <p>el pato donald sale reelegido!!!</p>
+            </article>
+            <article>
+                <h3>Esto es otra noticia internacional!!</h3>
+                <p>Ha muerto el perro del hortelano!!</p>
+            </article>
+        </section>
 
-    <aside>
-        <img id="fotoBatman" src="img/batman.jpg" />
-    </aside>
+        <aside>
+            <img id="fotoBatman" src="img/batman.jpg" />
+        </aside>
 
-    <footer>
-        <p>Todos los derechos reservador! copyright 2021 &copy;</p>
-    </footer>
+        <footer>
+            <p>Todos los derechos reservador! copyright 2021 &copy;</p>
+        </footer>
+    </main>
 </body>
 </html>
