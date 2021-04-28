@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS PSEUDOELEMENTOS</title>
+    <!--
+        PSEUDOELEMENTOS
+        ---------------
+        Los pseudoelementos nos permiten la posibilidad de aplicar normas de estilo ajenos a 
+        la estructura clásica de etiquetas, poniendo nuevas normas de aplicación (al primero, 
+        al último, etc.). 
+
+        Se escriben detrás del selector, separadas por dos puntos dobles (::).
+
+        Se ven y se usan menos que las pseudoclases, por no decir na :)
+            
+        EEstructura:
+            selector::pseudoelemento {
+                propiedad: valor;
+            }
+
+        Algunos ejemplos:
+
+            ::before - Para insertar un contenido (texto) antes de una etiqueta.
+            ::after - Para insertar un contenido (texto) después de una etiqueta.
+
+        Más información:
+        https://www.w3schools.com/css/css_pseudo_elements.asp
+    -->
+    <style> 
+        p{
+            background-color: rgb(43, 189, 226);
+            font-size: large;
+        }
+        p::before {
+            content: "LO QUE QUEREMOS INSERTAR ANTES";
+        } 
+        p::after{
+            content: "LO QUE QUEREMOS INSERTAR DESPUES";
+        }
+    </style>
+</head>
+
+<body>
+    <p>Esto es una etiqueta normal y corriente afectada por pseudoelementos</p>
+</body>
+
+</html>

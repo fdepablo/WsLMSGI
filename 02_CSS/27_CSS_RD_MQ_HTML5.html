@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS RESPONSIVE DESIGN</title>
+    <!--
+        RESPONSIVE DESIGN - MEDIA QUERIES - EJEMPLO
+        -------------------------------------------
+        Veamos un ejemplo de adaptación de los elementos de una página con la estructura de 
+        HTML5. Podemos comprobar que dependiendo del tamaño del dispositivo los elementos 
+        cambian para adaptarse, ajustando su ancho o desapareciendo, como el caso de la 
+        adaptación a móvil.
+    -->
+    <style> 
+        /* Selector comodin, se aplica a todos los elementos */
+        * {
+            padding: 0px;
+            margin: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* CSS */
+        main {
+            border: 1px solid #CCC;
+            padding: 5px;
+            width: 960px;
+            margin: 20px auto;
+            background: #f8f8f8;
+        }
+
+        header {
+            height: 180px;
+            border: 1px solid #CCC;
+        }
+
+        section {
+            border: 1px solid #CCC;
+            width: 600px;
+            float: left;
+            background-color:#000333;
+            color: #fff;
+        }
+
+        aside {
+            width: 300px;
+            float: right;
+            background-color:#00c6d7;
+            color: #fff;
+        }
+
+        footer {
+            border: 1px solid #CCC;
+            clear: both;
+        }
+
+        header, section, aside {
+            margin-bottom: 5px;
+        }
+
+        main, header, section, aside, footer {
+            border: solid 1px #ccc;
+        }
+
+        /* CSS RESPONSIVO */
+        @media screen and (max-width: 980px) {
+            main {
+                width: 94%;
+            }
+            section {
+                width: 65%;
+            }
+            aside {
+                width: 30%;
+            }
+        }
+
+        @media screen and (max-width: 700px) {
+            /* 
+            Con width auto se tiene en cuenta el padding y el margen a la hora de calcular
+            el ancho que ocupara un elemento.
+
+            Con width 100% no se tendra en cuenta, por lo que primero ocupará todo el ancho 
+            de la pagina y luego le sumara el padding y el margen, saliendose de los limites
+
+            https://blogs.ua.es/pi/2012/12/07/la-diferencia-entre-widthauto-y-width100/            
+            */
+            section {
+                width: auto;
+                float: none;
+            }
+            aside {
+                width: auto;
+                float: none;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            header {
+                height: auto;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            aside {
+                display: none;
+            }
+            section {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+           <h1>Header</h1>
+           <p>&nbsp;</p>
+        </header>
+        <section>
+           <h2>Section</h2>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+        </section>
+        <aside>
+           <h3>Aside 1</h3>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+        </aside>
+        <aside>
+            <h3>Aside 2</h3>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+         </aside>
+        <footer>
+           <h4>Footer</h4>
+        </footer>
+    </main>
+</body>
+
+</html>

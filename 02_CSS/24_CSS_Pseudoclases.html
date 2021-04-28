@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS PSEUDOCLASES</title>
+    <!--
+        PSEUDOCLASES
+        ------------
+        Las pseudoclases nos permiten dar algo de dinamismo a los elementos por medio de 
+        un evento. 
+        
+        Se escriben detrás del selector, separadas por dos puntos.
+
+        Estructura:
+            selector:pseudoclase {
+                propiedad: valor;
+            }
+        
+        Podemos encontrar los siguientes tipos de pseudoclases:
+
+        1. Aplicados a los enlaces
+
+            :link - Cuando el enlace no ha sido seleccionado
+            :hover - Cuando el puntero del ratón se posiciona encima del link.
+                (tambien esta en otros elementos, botones, divs, etc)
+            :visited - Selecciona los enlaces que ya fueron visitados.
+            :active - El momento en el que hacemos clic.
+            :focus - Selección del enlace usando el tabulador del teclado.
+
+        2. Aplicados a los campos input de un formulario
+
+            :focus - Cuando el cursor está dentro del campo.
+            :target - Cuando vamos a una url con un id al final: http://pagina.es#Objetivos. 
+            :enabled - Selecciona los input que no tienen el atributo disabled=”true”, 
+                    es decir los que podemos editar.
+            :disabled - Lo contrario que el anterior, los que no podemos editar.
+            :checked - Para las checkbox y radio que están seleccionadas.
+
+        3. Aplicados al arbol de etiquetas
+
+            :root - Selecciona al elemento raíz del DOM. La etiqueta <html>.
+            :first-child - Selecciona al primer hijo dentro de un elemento.
+            :last-child - Selecciona el último hijo.
+            :nth-child(N) - Selecciona elementos de valor de N:
+                (4) El cuarto hijo
+                (n) Todos los hijos.
+                (2n+1) Todos los hijos en posición impar.
+                (2n) Todos los hijos en posición par.
+                (nX) Todos los hijos a partir de X.
+                (-nX) Todos los hijos hasta X.
+                (X) El hijo en la posición X.
+
+        4. Aplicados al contenido
+
+            :empty - Selecciona a todos los elementos que no tengan hijos o texto.
+
+        5. Aplicados al texto
+
+            :first-letter  - Selecciona la primera letra del texto.
+            :first-line - Selecciona la primera línea del texto.
+
+        Más información:
+        https://www.w3schools.com/css/css_pseudo_classes.asp
+    -->
+    <style> 
+        /* Enlaces */
+        a{
+            font-size: 20px;
+        }
+
+        a:link {
+            color:red;
+        } 
+        a:active {
+            color:green;/* en el momento de hacer click */
+        }
+        a:hover, a:focus {
+            color:blue;
+            cursor: crosshair;
+        } 
+        a:visited {
+            color:rgb(74, 248, 6);
+        }
+
+        /* Formularios */
+        input{
+            margin-bottom: 15px;
+            display: block;
+        }
+        input:focus {
+            background-color: blueviolet;
+        }
+        
+        input:disabled {
+            background-color: rgb(51, 185, 85);
+        } 
+        input:checked {
+            cursor: crosshair;
+        }
+
+        /*Selecciona a todos las etiquetas p que sean primer hijo*/
+        p:first-child {
+            background-color: red;
+        } 
+        /*Selecciona a cualquier elemento que sea primer hijo
+          Funcionaria igual con :hover
+        */
+        /*:first-child {
+            background-color: yellow;
+        }*/
+
+        /*Aquellos div que no tengan nodos texto o elemento (vacios)*/
+        div:empty{
+            background-color: black;
+            width: 100px;
+            height: 100px;
+        }
+
+        h2:first-letter{
+            background-color: brown;
+        }
+
+        h3:first-line{
+            background-color: rgb(241, 7, 136);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>PSEUDOCLASES</h1>
+    <a href="https://www.mipaginainventada.com">Enlace a google</a>
+    <hr/>
+    <form>
+        Nombre: 
+        <input type="text" name="nombre"/>
+        Codigo para copiar: 
+        <input type="text" name="codigo" disabled="true" value="QR3T56"/>
+        Superheroe favorito:
+        <br/>
+        <input type="radio" style="display: inline;" name="shf" value="CA"/> Steve Rogers
+        <input type="radio" style="display: inline;" name="shf" value="IM"/> Tony Stark
+        <input type="radio" style="display: inline;" name="shf" value="SM"/> Peter Parker
+    </form>
+    <hr/>
+    <p>Esto sera con el color rojo de fondo? NO, porque no es primer hijo</p>
+    <div>
+        <p>Esto sera con el color rojo de fondo? Si, porque es primer hijo</p>
+        <p>Esto sera con el color rojo de fondo? NO, porque no primer hijo, es segundo :)</p>
+    </div>
+    <hr/>
+    <!-- 
+        El div de arriba no sale en negro pero este sí porque no tiene hijos
+        OJO! en cuanto pongamos algo dentro, aunque sean espacios en blanco, ya 
+        tendrá un nodo texto hijo y ya no será elegible por el selector vacio
+    -->
+    <div></div>
+    <hr/>
+    <h2>Solamente una vez amé en la vida</h2>
+    <h3>Lorem fistrum de la pradera caballo blanco caballo negroorl la caidita pecador caballo blanco caballo negroorl a peich diodenoo está la cosa muy malar. Papaar papaar pecador diodenoo sexuarl está la cosa muy malar a gramenawer ese hombree caballo blanco caballo negroorl se calle ustée. La caidita a gramenawer ahorarr no puedor diodenoo ese hombree apetecan condemor hasta luego Lucas. Apetecan ese que llega tiene musho peligro está la cosa muy malar sexuarl al ataquerl me cago en tus muelas. Por la gloria de mi madre tiene musho peligro fistro amatomaa ese hombree a peich se calle ustée diodeno a peich qué dise usteer jarl. Ese hombree no puedor ese que llega ese pedazo de condemor amatomaa torpedo. Ese pedazo de no te digo trigo por no llamarte Rodrigor diodenoo pupita va usté muy cargadoo. Torpedo qué dise usteer pupita benemeritaar te va a hasé pupitaa sexuarl. </h3>
+</body>
+
+</html>
