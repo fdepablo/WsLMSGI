@@ -140,7 +140,9 @@
             <br/>
             <label for="observaciones">Observaciones: </label>
             <br />	
-            <textarea rows="5" cols="80" name="observaciones"></textarea>
+            <!-- Para evitar que el usuario pueda redimensinar el textarea podemos usar
+            CSS. Para ello podemos poner el atributo "resize: none;" -->
+            <textarea style="resize: none;" rows="5" cols="80" name="observaciones"></textarea>
              <!--
                 Un checkbox tambien es común para opciones simples de marcar o desmarcar
             -->
