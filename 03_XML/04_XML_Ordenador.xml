@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ordenador id="1">
+    <nombre>Flameador</nombre>
+    <precio>1900</precio>
+    <perifericos>
+        <teclado>
+            <nombre>Flaming pro eco 2</nombre>
+            <marca>Flamer Gaming SL</marca>
+        </teclado>
+        <raton>
+            <nombre>Insultating pro 1</nombre>
+            <marca>Flamer Gaming SL</marca>
+        </raton>
+        <cascos>
+            <nombre>Flameitor ultra sound</nombre>
+            <marca>Flamer Gaming SL</marca>
+        </cascos>
+        <micro>
+            <nombre>Flameitor speaker</nombre>
+            <marca>Rager</marca>
+        </micro>
+    </perifericos>
+    <componentes>
+        <monitor>
+            <nombre>oiga 1080p si no no juego</nombre>
+            <marca>Rager</marca>
+            <resolution>1080</resolution>
+        </monitor>
+        <placa_base>
+            <modelo>B470</modelo>
+            <marca>Rager</marca>
+            <slots_ram>4</slots_ram>            
+        </placa_base>        
+        <ram>
+            <modulo id="1">
+                <marca>Flaming</marca>
+                <tipo>DDR4</tipo>
+                <capacidad>8GB</capacidad>
+            </modulo>
+            <modulo id="2">
+                <marca>Flaming</marca>
+                <tipo>DDR4</tipo>
+                <capacidad>8GB</capacidad>
+            </modulo>
+        </ram>
+        <procesador>
+            <marca>Intel</marca>
+            <modelo>i5</modelo>
+            <velocidad>5GHz</velocidad>
+        </procesador>
+        <discos_duros>
+            <disco_duro id="1">
+                <marca>Toshiba</marca>
+                <tipo>HDD</tipo>
+                <capacidad>2TB</capacidad>
+            </disco_duro>
+            <disco_duro id="2">
+                <marca>Samsung</marca>
+                <tipo>SDD</tipo>
+                <capacidad>500GB</capacidad>
+            </disco_duro>
+        </discos_duros>
+        <fuente_alimentacion>
+            <marca>Rager</marca>
+            <modelo>ATX</modelo>
+            <potecia>
+                <valor>750</valor>
+                <unidad>KW</unidad>
+            </potecia>
+        </fuente_alimentacion>
+        <tarjeta_grafica>
+            <marca>Nvidia</marca>
+            <modelo>3080</modelo>
+            <precio>2 bitcoins :)</precio>
+            <potencia>8900 cuda</potencia>
+        </tarjeta_grafica>
+    </componentes>
+</ordenador>

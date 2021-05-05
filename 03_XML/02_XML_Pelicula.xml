@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- la etiqueta de arriba se llama prologo -->
+<pelicula>
+    <!-- Comentario, escribimos la pelicula en XML -->
+    <titulo>La guerra de las galaxias</titulo>
+    <fecha_estreno>1977</fecha_estreno>
+    <director>George Lucas</director>
+    <actores>
+        <actor id="1">
+            <dni>52345678D</dni>
+            <nombre>Luke yo soy tu padre</nombre>
+            <edad>42</edad>
+            <peso>75.3</peso>
+        </actor>
+        <actor id="2" dni="675328282" nombre="princesa leia" edad="40" peso="62.3">
+        </actor>
+        <!-- La informacion que aportan las dos etiquetas actor de arriba es exactemente la misma,
+            solo que una lo hace combinando atributos y etiquetas hijas y la otra lo hace con 
+            atributos exclusivamente. Cual es mejor? para mi es mejor la primera, creo que esta más 
+            ordenada y es más visual. Teoricamente los atributos representan me información de la 
+            etiqueta. -->
+    </actores>
+    <extranjera pais="Fracia"/>
+    <!-- Si queremos mandar simobolos especiales, como "<" podemos utilizar entidades para hacerlo
+        ya que de otra manera no nos dejaria -->
+    <cararcteres_especiales>&lt;etiqueta&gt;</cararcteres_especiales>
+    <!-- Si queremos escribir codigo que no queremos que se procese, podemos utilizar la 
+        etiqueta "<![CDATA[    ]]>" -->
+    <codigo_html_pelicula>
+        <![CDATA[ 
+        <html>
+            <head>
+                <title>Pagina web de la pelicula</title>
+            </head>
+            <body>
+                <h1>La guerra de las galaxias</h1>
+            </body>
+        </html>
+        ]]>
+    </codigo_html_pelicula>
+</pelicula>

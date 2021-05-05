@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<marca_coche>
+    <compania>Land Rover</compania>
+    <pais>Reino Unido</pais>
+    <direccion>Calle la plata 34</direccion>
+    <modelos>
+        <modelo id="01">
+            <nombre>Range Rover</nombre>
+            <codigo>001</codigo>
+            <tipo_motor>diesel</tipo_motor>
+        </modelo>
+        <modelo id="02">
+            <nombre>Range Rover Sport</nombre>
+            <codigo>002</codigo>
+            <tipo_motor>gasolina</tipo_motor>
+        </modelo>
+    </modelos>
+    <!-- Cuando ponenemos un nodo con CDATA lo que estamos diciendo es que no 
+        procese el texto que hay dentro y lo escriba en bruto, si no pusieramos CDATA, 
+        los programas interpretarían ese codigo como si fuera un xml-->
+    <codigo_html_Land_Rover>
+        <![CDATA[
+        <!-- comentarios html-->
+        <html>
+            <head>
+                <title>Land Rover</title>
+            </head>
+            <body>
+                <h1>Land Rover</h1>
+                <h3>Información grupo Land Rover</h3>
+            </body>
+        </html>
+    ]]>
+    </codigo_html_Land_Rover>
+</marca_coche>
