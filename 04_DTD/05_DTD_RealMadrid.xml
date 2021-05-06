@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE real_madrid [
+    <!ELEMENT real_madrid (equipo,cuerpo_tecnico,directiva,estadio)>
+
+    <!ELEMENT equipo (jugador+)>
+    <!ELEMENT cuerpo_tecnico (entrenador,segundo_entrenador,preparador_fisico)>
+    <!ELEMENT directiva (presi,vicepresidente,presidente_consejo,director_general)>
+    <!ELEMENT estadio (nombre_estadio,dimensiones,aforo,antiguedad)>
+
+    <!ELEMENT jugador (nombre_jugador,demarcacion,dorsal)>
+    <!ATTLIST jugador id CDATA #REQUIRED>
+
+    <!ELEMENT nombre_jugador (#PCDATA)>
+    <!ELEMENT demarcacion (#PCDATA)>
+    <!ELEMENT dorsal (#PCDATA)>
+
+    <!ELEMENT entrenador (nombre_entrenador,nacionalidad)>
+    <!ELEMENT segundo_entrenador (nombre_entrenador,nacionalidad)>
+    <!ELEMENT preparador_fisico (nombre_entrenador,nacionalidad)>
+
+    <!ELEMENT nombre_entrenador (#PCDATA)>
+    <!ELEMENT nacionalidad (#PCDATA)>
+
+    <!ELEMENT presi (nombre_directiva,nacionalidad_directiva)>
+    <!ELEMENT vicepresidente (nombre_directiva,nacionalidad_directiva)>
+    <!ELEMENT presidente_consejo (nombre_directiva,nacionalidad_directiva)>
+    <!ELEMENT director_general (nombre_directiva,nacionalidad_directiva)>
+
+    <!ELEMENT nombre_directiva (#PCDATA)>
+    <!ELEMENT nacionalidad_directiva (#PCDATA)>
+
+    <!ELEMENT nombre_estadio (#PCDATA)>
+    <!ELEMENT dimensiones (#PCDATA)>
+    <!ELEMENT aforo (#PCDATA)>
+    <!ELEMENT antiguedad (#PCDATA)>
+]>
+<real_madrid>
+    <equipo>
+        <jugador id="1">
+            <nombre_jugador>Courtois</nombre_jugador>
+            <demarcacion>Portero</demarcacion>
+            <dorsal>1</dorsal>
+        </jugador>
+        <jugador id="2">
+            <nombre_jugador>Carvajal</nombre_jugador>
+            <demarcacion>Defensa</demarcacion>
+            <dorsal>2</dorsal>
+        </jugador>
+        <jugador id="3">
+            <nombre_jugador>Sergio Ramos</nombre_jugador>
+            <demarcacion>Defensa</demarcacion>
+            <dorsal>4</dorsal>
+        </jugador>
+        <jugador id="4">
+            <nombre_jugador>Varane</nombre_jugador>
+            <demarcacion>Defensa</demarcacion>
+            <dorsal>5</dorsal>
+        </jugador>
+        <jugador id="5">
+            <nombre_jugador>Mendy</nombre_jugador>
+            <demarcacion>Defensa</demarcacion>
+            <dorsal>23</dorsal>
+        </jugador>
+        <jugador id="6">
+            <nombre_jugador>Casemiro</nombre_jugador>
+            <demarcacion>Centrocampista</demarcacion>
+            <dorsal>14</dorsal>
+        </jugador>
+        <jugador id="7">
+            <nombre_jugador>Koos</nombre_jugador>
+            <demarcacion>Centrocampista</demarcacion>
+            <dorsal>8</dorsal>
+        </jugador>
+        <jugador id="8">
+            <nombre_jugador>Modric</nombre_jugador>
+            <demarcacion>Centrocampista</demarcacion>
+            <dorsal>10</dorsal>
+        </jugador>
+        <jugador id="9">
+            <nombre_jugador>Hazard</nombre_jugador>
+            <demarcacion>Delantero</demarcacion>
+            <dorsal>7</dorsal>
+        </jugador>
+        <jugador id="10">
+            <nombre_jugador>Benzema</nombre_jugador>
+            <demarcacion>Delantero</demarcacion>
+            <dorsal>9</dorsal>
+        </jugador>
+        <jugador id="11">
+            <nombre_jugador>Vinicius</nombre_jugador>
+            <demarcacion>Delantero</demarcacion>
+            <dorsal>20</dorsal>
+        </jugador>
+    </equipo>
+    <cuerpo_tecnico>
+        <entrenador>
+            <nombre_entrenador>Zinedine Zidane</nombre_entrenador>
+            <nacionalidad>frances</nacionalidad>
+        </entrenador>
+        <segundo_entrenador>
+            <nombre_entrenador>David Bettoni</nombre_entrenador>
+            <nacionalidad>italiano</nacionalidad>
+        </segundo_entrenador>
+        <preparador_fisico>
+            <nombre_entrenador>David Mallo</nombre_entrenador>
+            <nacionalidad>español</nacionalidad>
+        </preparador_fisico>
+    </cuerpo_tecnico>
+    <directiva>
+        <presi>
+            <nombre_directiva>Tito Floren</nombre_directiva>
+            <nacionalidad_directiva>español</nacionalidad_directiva>
+        </presi>
+        <vicepresidente>
+            <nombre_directiva>Fernando Tapias</nombre_directiva>
+            <nacionalidad_directiva>español</nacionalidad_directiva>
+        </vicepresidente>
+        <presidente_consejo>
+            <nombre_directiva>Emilio Butragueño</nombre_directiva>
+            <nacionalidad_directiva>español</nacionalidad_directiva>
+        </presidente_consejo>
+        <director_general>
+            <nombre_directiva>Iker Casillas</nombre_directiva>
+            <nacionalidad_directiva>español</nacionalidad_directiva>
+        </director_general>
+    </directiva>
+    <estadio>
+        <nombre_estadio>Santiago Bernabeu</nombre_estadio>
+        <dimensiones>105 x 68</dimensiones>
+        <aforo>81.044</aforo>
+        <antiguedad>14 Diciembre 1947</antiguedad>
+    </estadio>
+</real_madrid>

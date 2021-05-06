@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE empresa[
+<!ELEMENT empresa (nombre,fecha_constitucion,ceo_director,empleados)>
+
+<!ELEMENT fecha_constitucion (#PCDATA)>
+<!ELEMENT ceo_director (#PCDATA)>
+
+<!ELEMENT empleados (empleado+)>
+<!ELEMENT empleado (nombre, apellidos, puesto, permanencia, proyectos?)>
+<!ATTLIST empleado id CDATA #REQUIRED>
+<!ATTLIST empleado numero_empleado CDATA #REQUIRED>
+
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellidos (#PCDATA)>
+<!ELEMENT puesto (#PCDATA)>
+<!ATTLIST puesto categoria CDATA #REQUIRED> 
+<!ELEMENT permanencia EMPTY>
+<!ATTLIST permanencia tiempo CDATA #REQUIRED>
+<!ELEMENT proyectos (proyecto+)>
+<!ELEMENT proyecto (#PCDATA)>
+<!ATTLIST proyecto tipo CDATA #REQUIRED>
+
+]>
+
+<empresa>
+    <nombre>ARABA CONSULTORIA S.L.</nombre>
+    <fecha_constitucion> 27/01/2000</fecha_constitucion>
+    <ceo_director> Isabel de Castilla</ceo_director>
+
+    <empleados>
+        <empleado id="1" numero_empleado="ab120">
+            <nombre>Alejandro</nombre>
+            <apellidos>Mart Ledema</apellidos>
+            <puesto categoria="senior">programador</puesto>
+            <permanencia tiempo="10" />
+            <proyectos>
+                <proyecto tipo="curso">Curso XML</proyecto>
+                <proyecto tipo="web">GPM</proyecto>
+            </proyectos>
+        </empleado>
+
+        <empleado id="2" numero_empleado="ab121">
+            <nombre>Manuel</nombre>
+            <apellidos>Perez Avila</apellidos>
+            <puesto categoria="senior">analista</puesto>
+            <permanencia tiempo="8" />
+            <proyectos>
+                <proyecto tipo="api">Android </proyecto>
+                <proyecto tipo="web">GPM</proyecto>
+            </proyectos>
+        </empleado>
+
+        <empleado id="3" numero_empleado="ab123">
+            <nombre>Carla</nombre>
+            <apellidos>Gonzalez Martin</apellidos>
+            <puesto categoria="junior">programador</puesto>
+            <permanencia tiempo="3" />
+            <proyectos>
+                <proyecto tipo="api">Android </proyecto>
+            </proyectos>
+        </empleado>
+
+        <empleado id="4" numero_empleado="ab124">
+            <nombre>Marta</nombre>
+            <apellidos>Marcos Lasa</apellidos>
+            <puesto categoria="auxiliar">programador</puesto>
+            <permanencia tiempo="1" />
+        </empleado>
+    </empleados>
+
+</empresa>

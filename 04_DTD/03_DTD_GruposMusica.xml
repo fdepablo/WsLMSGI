@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE grupos_musica [
+    <!ELEMENT grupos_musica (grupo+)>
+
+    <!ELEMENT grupo (nombre,integrantes,album_premiados,pais, anio_formacion, 
+                    discos_vendidos, genero, estado?)>
+    
+    <!ATTLIST grupo id CDATA #REQUIRED>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT integrantes (nombre+)>
+    <!ELEMENT album_premiados (album+)>
+    <!ELEMENT pais (#PCDATA)>
+    <!ELEMENT anio_formacion (#PCDATA)>
+    <!ELEMENT discos_vendidos (#PCDATA)>
+    <!ELEMENT genero (#PCDATA)>
+    <!ELEMENT estado (#PCDATA)>
+
+    <!ELEMENT album (nombre, discografica, canciones, anio)>
+    <!ATTLIST album id CDATA #REQUIRED>    
+    
+    <!ELEMENT discografica (#PCDATA)>
+    <!ELEMENT anio (#PCDATA)>
+    <!ELEMENT canciones (cancion+)>
+    <!ELEMENT cancion (#PCDATA)>
+    <!ATTLIST cancion id CDATA #REQUIRED>
+
+]>
+
+<grupos_musica>
+    <grupo id="1">
+        <nombre>Aerosmith</nombre>
+        <integrantes>
+            <nombre>Joe Perry</nombre>
+            <nombre>Steven Tyles</nombre>
+            <nombre>Tom Hamilton</nombre>
+            <nombre>Joey Kramer</nombre>
+            <nombre>Ray Tabano</nombre>
+        </integrantes>
+        <album_premiados>
+            <album id="1">
+                <nombre>Aerosmith</nombre>
+                <discografica>Columbia Records</discografica>
+                <canciones>
+                    <cancion id="1">Make it</cancion>
+                    <cancion id="2">Dream on</cancion>
+                </canciones>
+                <anio>1973</anio>
+
+            </album>
+            <album id="2">
+                <nombre>Get Your Wings</nombre>
+                <discografica>Columbia Records</discografica>
+                <canciones>
+                    <cancion id="1">Same Old Song and Dance</cancion>
+                    <cancion id="2">Train Kept A-Rollin</cancion>
+                </canciones>
+                <anio>1973</anio>
+            </album>
+        </album_premiados>
+        <pais>EEUU</pais>
+        <anio_formacion>1970</anio_formacion>
+        <discos_vendidos>200 millones</discos_vendidos>
+        <genero>rock-blues</genero>
+        <estado>activo</estado>
+    </grupo>
+
+    <grupo id="2">
+        <nombre>R.E.M.</nombre>
+        <integrantes>
+            <nombre>Michael Stipe</nombre>
+            <nombre>Bill Berry</nombre>
+            <nombre>Peter Buck</nombre>
+            <nombre>Mike Mills</nombre>
+        </integrantes>
+
+        <album_premiados>
+            <album id="1">
+                <nombre>Reckoning</nombre>
+                <discografica>I.R.S. Records</discografica>
+                <canciones>
+                    <cancion id="1">So. Central Rain (I'm Sorry)</cancion>
+                    <cancion id="2">(Don't Go Back To) Rockville</cancion>
+                </canciones>
+                <anio>1984</anio>
+            </album>
+
+            <album id="2">
+                <nombre>Out of Time</nombre>
+                <discografica>Warner Bros. Records</discografica>
+                <canciones>
+                    <cancion id="1">Losing My Religion</cancion>
+                    <cancion id="2">Shiny Happy People</cancion>
+                </canciones>
+                <anio>1991</anio>
+            </album>
+        </album_premiados>
+        <pais>EEUU</pais>
+        <anio_formacion>1980</anio_formacion>
+        <discos_vendidos>100 millones</discos_vendidos>
+        <genero>rock-alternativo</genero>
+        <estado>disuelto</estado>
+    </grupo>
+
+</grupos_musica>

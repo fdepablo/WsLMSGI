@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE LCK [
+    <!ELEMENT LCK (titulo,premio,equipos?,codigo_html_LCK)>
+    <!ELEMENT titulo (#PCDATA)>
+    <!ELEMENT premio (#PCDATA)>
+    <!ELEMENT equipos (equipo+)>
+    <!ELEMENT codigo_html_LCK (#PCDATA)>
+
+    <!ELEMENT equipo (nombre,jugadores,creacion)>
+    <!ATTLIST equipo id CDATA #REQUIRED>
+
+    <!ELEMENT jugadores (jugador+)>
+    <!ELEMENT creacion (#PCDATA)>
+
+    <!ELEMENT jugador (nombre,rol)>
+
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT rol (#PCDATA)>     
+]>
+
+<LCK>
+	<titulo>Equipos en la LCK</titulo>
+	<premio>30000 euros</premio>
+	<equipos>
+		<equipo id="1">
+			<nombre>SKT T1</nombre>
+			<jugadores>
+				<jugador>
+					<nombre>Canna</nombre>	
+					<rol>TOP</rol>
+				</jugador>
+				<jugador>
+					<nombre>Ellim</nombre>
+					<rol>JUNGLE</rol>
+				</jugador>
+				<jugador>
+					<nombre>Faker</nombre>
+					<rol>MEDIO</rol>
+				</jugador>
+				<jugador>
+					<nombre>Gumayusi</nombre>
+					<rol>ADC</rol>
+				</jugador>
+				<jugador>
+					<nombre>Keria</nombre>
+					<rol>SUPPORT</rol>
+				</jugador>
+				<jugador>
+					<nombre>Daeny</nombre>
+					<rol>COACH</rol>
+				</jugador>
+			</jugadores>
+			<creacion>2019-12-08</creacion>
+		</equipo>
+		<equipo id="2">
+			<nombre>DRX</nombre>
+			<jugadores>
+				<jugador>
+					<nombre>Kingen</nombre>
+					<rol>TOP</rol>
+				</jugador>
+				<jugador>
+					<nombre>Pyosik</nombre>
+					<rol>JUNGLE</rol>
+				</jugador>
+				<jugador>
+					<nombre>Solka</nombre>
+					<rol>MEDIO</rol>
+				</jugador>
+				<jugador>
+					<nombre>BAO</nombre>
+					<rol>ADC</rol>
+				</jugador>
+				<jugador>
+					<nombre>Becca</nombre>
+					<rol>SUPPORT</rol>
+				</jugador>
+				<jugador>
+					<nombre>Ssong</nombre>
+					<rol>COACH</rol>
+				</jugador>
+			</jugadores>
+			<creacion>2019-10-09</creacion>
+		</equipo>
+		<equipo id="3">
+			<nombre>Gen.G</nombre>
+			<jugadores>
+				<jugador>
+					<nombre>Rascal</nombre>
+					<rol>TOP</rol>
+				</jugador>
+				<jugador>
+					<nombre>Clid</nombre>
+					<rol>JUNGLE</rol>
+				</jugador>
+				<jugador>
+					<nombre>Bdd</nombre>
+					<rol>MEDIO</rol>
+				</jugador>
+				<jugador>
+					<nombre>Ruler</nombre>
+					<rol>ADC</rol>
+				</jugador>
+				<jugador>
+					<nombre>Life</nombre>
+					<rol>SUPPORT</rol>
+				</jugador>
+				<jugador>
+					<nombre>oDin</nombre>
+					<rol>COACH</rol>
+				</jugador>
+			</jugadores>
+			<creacion>2018-05-03</creacion>
+		</equipo>
+	</equipos>
+	<codigo_html_LCK>
+	<![CDATA[
+		<html>
+			<head>
+				<title>LCK</title>
+			</head>
+		</html>
+    ]]>
+	</codigo_html_LCK>
+</LCK>

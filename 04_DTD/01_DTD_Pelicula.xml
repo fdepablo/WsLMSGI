@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE pelicula [
+    <!ELEMENT pelicula (titulo,fecha,actores,director?)>
+    <!ATTLIST pelicula id CDATA #REQUIRED>
+    <!ATTLIST pelicula categoria CDATA #REQUIRED>
+
+    <!ELEMENT titulo (#PCDATA)>
+    <!ELEMENT fecha (#PCDATA)>
+    <!ELEMENT actores (actor+)>
+
+    <!ELEMENT actor (nombre,edad)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT edad (#PCDATA)>
+
+    <!ELEMENT director (#PCDATA)>
+]>
+<pelicula id="1" categoria="sci-fi">
+    <titulo>La guerra de las galaxias</titulo>
+    <fecha>22/07/1977</fecha>
+    <actores>
+        <actor>
+            <nombre>Luke</nombre>
+            <edad>29</edad>
+        </actor>
+        <actor>
+            <nombre>Han solo</nombre>
+            <edad>39</edad>
+        </actor>
+    </actores>
+    <director>pepe</director>
+</pelicula>

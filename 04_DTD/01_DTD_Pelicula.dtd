@@ -1,0 +1,13 @@
+<!ELEMENT pelicula (titulo,fecha,actores,director)>
+<!ATTLIST pelicula id CDATA #REQUIRED>
+<!ATTLIST pelicula categoria CDATA #REQUIRED>
+
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT actores (actor+)>
+
+<!ELEMENT actor (nombre,edad)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT edad (#PCDATA)>
+
+<!ELEMENT director (#PCDATA)>
