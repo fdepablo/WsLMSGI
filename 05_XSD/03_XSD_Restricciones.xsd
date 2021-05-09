@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="superheroe">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- El DNI debe de tener o caracteres -->
+                <xs:element name="dni">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:length value="9"></xs:length>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <!-- El nombre debe de tener una longitud entre 3 y 25 caracteres -->
+                <xs:element name="nombre">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:minLength value="3"></xs:minLength>
+                            <xs:maxLength value="25"></xs:maxLength>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+                <!-- La edad debe de estar comprendida entre 1 y 20000-->
+                <xs:element name="edad">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:integer">
+                            <xs:minInclusive value="1"></xs:minInclusive>
+                            <xs:maxInclusive value="20000"></xs:maxInclusive>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+
+                <!-- Los super hereos solo pueden ser de MARVEL o de DC-->
+                <xs:element name="universo">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="DC"></xs:enumeration>
+                            <xs:enumeration value="MARVEL"></xs:enumeration>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="codigo" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:totalDigits value="3"></xs:totalDigits>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Libro id="1" precio="23.50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+        xsi:noNamespaceSchemaLocation= "02_XSD_Libro.xsd">
+    <Titulo>El planeta de los simios</Titulo>
+    <Autor>Felix</Autor>
+    <Autor>Ana</Autor>
+    <Editorial>Panini</Editorial>
+    <fecha_edicion>2012-11-12</fecha_edicion>
+    <bestseller />
+    <paginas valor="250" />
+    <prologo pagina="3">
+        Es un libro muy bonito :) en el cual se cuenta la vida de Maria de "o"
+    </prologo>
+</Libro>
