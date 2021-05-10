@@ -1,3 +1,4 @@
+![LMSGI](lmsgi.jpg "LMSGI")
 # Lenguajes de Marcas y Sistemas de Gestión de la Información
 Workspace con teoría y ejemplos sobre la asignatura de Lenguajes de Marcas y Sistemas de Gestión de la Información.
 
