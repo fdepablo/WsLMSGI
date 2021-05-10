@@ -1,4 +1,4 @@
-![XSD](img/Validar_XML.jpg "Validando XML!!")
+![XSD](img/Validar_XML.jpg "Validando XML con XSD!!")
 
 # XML Schema Definition  (XSD)
 
@@ -16,12 +16,14 @@ En la actualidad los XSD se utilizan en mayor medida que los DTD para validar XM
 
 Principales diferencias:
 
-   1. Los XSD o esquemas son más potentes: permiten describir con mayor detalle y restricciones un documento XML.
+   1. Los XSD o esquemas son más potentes: permiten describir un XML con mayor detalle y hacer mayores restricciones.
    2. Permiten utilizar tipos de datos. Mientras que con DTD el tipo de datos siempre era texto, con XSD podemos afinar más y decir que puede ser númerico, string, etc.
    3. Los Esquemas pueden implantar reglas mucho más específicas que las DTD sobre el contenido de los elementos y atributos. Son las llamadas restricciones. Por ejemplo, que el texto de una etiqueta nombre no pueda exceder de 20 caracteres.
    4. No se puede describir entidades utilizando esquemas. Necesitaremos utilizar DTDs. para ello.
 
 ## Definición
+
+XSD es un lenguaje basado en XML, a diferencia de los DTDs.
 
 Al definir el schema es necesario escribir una serie de atributos. El primero es el namespace al que pertenece nuestro esquema o XSD
 
@@ -31,8 +33,9 @@ Esto indica que los elementos utilizados corresponden al espacio de nombres (nam
 
 Por poner una similitud con la programación, el namespace sería como los paquetes, o por dentro de los sistemas informáticos, sería como los directorios.
 
-Existen diversas maneras de vincular un XML a un XSD, una de las mas sencillas es poniendo la siguiente sentencia en el nodo raiz del documento XML
+Existen diversas maneras de vincular un XML a un XSD, una de las mas sencillas es poniendo las siguientes sentencias en el nodo raiz del documento XML
 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation= "DIRECCION_XSD"
 
 ## Elementos Simples
@@ -69,13 +72,13 @@ Ejemplos:
     <?xml version=“1.0”?>
     <schema  xmlns=“http://www.w3.org/2001/XMLSchema”> 
         <element name=“pelicula”>  
-        <complexType>
-        <sequence>	
-            <element name=“titulo” type=“string” />
-            <element name=“minutos” type=“integer” />
-            <element name=“fecha_estreno” type=“date” />
-        </sequence>
-        </complexType>
+            <complexType>
+                <sequence>	
+                    <element name=“titulo” type=“string” />
+                    <element name=“minutos” type=“integer” />
+                    <element name=“fecha_estreno” type=“date” />
+                </sequence>
+            </complexType>
         </element>
     </schema>
 
@@ -113,7 +116,7 @@ En el tercer ejemplo tienen que ir todos los elementos, pero en el orden que se 
 
 Para documentos XML en los que necesitemos definir un elemento que se repitan, podremos utilizar los atributos de element, <b>maxOccurs y minOccurs</b>. Tienen las siguientes caracteristicas:
 
-   1. Son elementos Opcionales.
+   1. Son atributos opcionales.
    2. Estos dos atributos indican el mínimo (minOccurs) y máximo (maxOccurs) número de concurrencias del elemento.
    3. El valor por defecto para ambos atributos es 1.
    4. Si se quiere indicar que el elemento puede aparecer un número ilimitado de veces, el atributo maxOccurs tomará el valor “unbounded”
@@ -152,9 +155,9 @@ Caracteristicas de los atributos:
    2. Son optativos por defecto. Los podemos hacer obligatorios con el atributo 'use="required"'
    3. Se pueden poner valores por defecto y fijos con los atributos "fixed" y "default".
 
-## Anotaciones
+## Etiqueta annotation (Anotaciones)
 
-A menudo podemos incluir una descripción en nuestros esquemas como referencia y ayuda para quiénes los vaya a utilizar y para nosotros en un futuro. Para ello se utilizarán las etiquetas "documentation" dentro de las etiquetas "annotation". Suele ir justo despues de la etiqueta "schema"
+A menudo podemos incluir una descripción en nuestros esquema(XSD) como referencia y ayuda para quiénes los vaya a utilizar y para nosotros en un futuro. Para ello se utilizarán las etiquetas "documentation" dentro de las etiquetas "annotation". Suele ir justo despues de la etiqueta "schema"
 
 ```
     <annotation>

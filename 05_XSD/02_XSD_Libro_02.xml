@@ -3,7 +3,10 @@
         xsi:noNamespaceSchemaLocation= "02_XSD_Libro.xsd">
     <Titulo>Fray Perico y su borrico</Titulo>
     <Autor>Yo no</Autor>
-    <Editorial>Espasa</Editorial>
+    <Editorial>
+        <nombre>Espasa</nombre>
+        <direccion>Calle la plata 29</direccion>
+    </Editorial>
     <fecha_edicion>2011-11-04</fecha_edicion>
     <paginas valor="154" />
     <prologo pagina="5">

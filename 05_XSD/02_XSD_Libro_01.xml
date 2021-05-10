@@ -4,11 +4,15 @@
     <Titulo>El planeta de los simios</Titulo>
     <Autor>Felix</Autor>
     <Autor>Ana</Autor>
-    <Editorial>Panini</Editorial>
+    <Autor>Enrique</Autor>
+    <Editorial>
+        <nombre>Panini</nombre>
+        <direccion>Calle la plata 28</direccion>
+    </Editorial>
     <fecha_edicion>2012-11-12</fecha_edicion>
     <bestseller />
     <paginas valor="250" />
     <prologo pagina="3">
-        Es un libro muy bonito :) en el cual se cuenta la vida de Maria de "o"
+        Es un libro muy bonito :) en el cual se cuenta la vida de Maria de "O"
     </prologo>
 </Libro>

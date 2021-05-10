@@ -2,16 +2,27 @@
 <schema xmlns="http://www.w3.org/2001/XMLSchema">
     <annotation>
         <documentation>
-            Esquema que marca la estructura de un libro de la libreria "Paco's Shop"
+            Esquema que marca la estructura de un libro de la libreria "Paco's Library"
          </documentation>
     </annotation>
+    <!-- El nodo raiz se llama Libro-->
     <element name="Libro">
         <complexType>
             <sequence>
                 <element name="Titulo" type="string" />
                 <element name="Autor" type="string" minOccurs="1" maxOccurs="unbounded" />
-                <element name="Editorial" type="string" default="Espasa" />
-                <element name="fecha_edicion" type="date" minOccurs="0" maxOccurs="1"></element>
+                <element name="Editorial">
+                    <complexType>
+                        <sequence>
+                            <element name="nombre" type="string"></element>
+                            <element name="direccion" type="string"></element>
+                        </sequence>
+                    </complexType>  
+                </element>
+                <!-- Optativa la fecha de edicion -->
+                <element name="fecha_edicion" type="date" minOccurs="0"></element>
+
+                <!-- Algunos casos mas particulares -->
                 <!--
                 Elemento vacio simple, estos elementos deberian de ser autoexplicativos y que
                 el tener la etiqueta o no tenerla ya aportaria información.            
