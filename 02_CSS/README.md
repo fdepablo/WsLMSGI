@@ -57,10 +57,8 @@ Luego, dentro del selector tenemos dos declaraciones, la primera dice que el col
 Podemos empezar a ver los ejemplos que estan numerados dentro de esta carpeta (01_CSS_Introduccion.html)
 
 ## Bibliografía
-[https://www.w3schools.com/css/](https://www.w3schools.com/css/)
-
-[https://developer.mozilla.org/es/docs/Web/CSS](https://developer.mozilla.org/es/docs/Web/CSS)
-
-[https://www.w3.org/TR/CSS/#css](https://www.w3.org/TR/CSS/#css)
+- [https://www.w3schools.com/css/](https://www.w3schools.com/css/)
+- [https://developer.mozilla.org/es/docs/Web/CSS](https://developer.mozilla.org/es/docs/Web/CSS)
+- [https://www.w3.org/TR/CSS/#css](https://www.w3.org/TR/CSS/#css)
 
 

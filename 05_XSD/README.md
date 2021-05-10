@@ -233,5 +233,5 @@ Reglas:
 Podemos empezar a ver los ejemplos que estan numerados dentro de esta carpeta
 
 ## Bibliografía
-[https://www.w3schools.com/xml/schema_intro.asp](https://www.w3schools.com/xml/schema_intro.asp)
-[https://www.abrirllave.com/xsd/](https://www.abrirllave.com/xsd/)
+- [https://www.w3schools.com/xml/schema_intro.asp](https://www.w3schools.com/xml/schema_intro.asp)
+- [https://www.abrirllave.com/xsd/](https://www.abrirllave.com/xsd/)

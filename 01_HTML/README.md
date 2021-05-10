@@ -59,5 +59,5 @@ Podemos empezar a ver los ejemplos que estan numerados dentro de esta carpeta (0
 **Nota**: Para crear un fichero HTML con VSC debemos crear un nuevo fichero con extensión .html. Para rellenar un contenido básico debemos de poner dentro del fichero "html:5" y pulsar enter. Esto último solo funcionaría si tenemos instalada la extensión "beautify"
 
 ## Bibliografía
-[https://www.w3schools.com/html/default.asp](https://www.w3schools.com/html/default.asp)
-[https://developer.mozilla.org/es/docs/conflicting/Web/HTML/Element](https://developer.mozilla.org/es/docs/conflicting/Web/HTML/Element)
+- [https://www.w3schools.com/html/default.asp](https://www.w3schools.com/html/default.asp)
+- [https://developer.mozilla.org/es/docs/conflicting/Web/HTML/Element](https://developer.mozilla.org/es/docs/conflicting/Web/HTML/Element)
