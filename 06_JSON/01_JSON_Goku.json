@@ -1,0 +1,13 @@
+{
+    "nombre":"Son Goku",
+    "sexo":"varon",
+    "edad":38,
+    "casado":true,
+    "numeros_de_la_suerte":[1,4,7,9],
+    "direccion":{
+            "tipoVia":"Calle",
+            "nombreVia":"Diamante",
+            "numero":78,
+            "ciudad":"Madrid"
+        }
+}
