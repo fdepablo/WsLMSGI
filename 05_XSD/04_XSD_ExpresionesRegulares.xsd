@@ -22,20 +22,21 @@
                 <element name="rango_numerico">
                     <simpleType>
                         <restriction base="integer">
-                            <!-- Un rango comprendido entre dos valores -->
-                            <pattern value="[0-5]"></pattern>
+                            <!-- Un rango comprendido entre el 0 y el 5 -->
+                            <pattern value="[012345]"></pattern>
+                        </restriction>
+                    </simpleType>
+                </element>
+                <element name="rango_de_letras_minusculas">
+                    <simpleType>
+                        <restriction base="string">
+                            <!-- Un rango de letras, con un "-" decimos el principio del rango y 
+                            el final del rango -->
+                            <pattern value="[a-z]"></pattern>
                         </restriction>
                     </simpleType>
                 </element>
                 <element name="rango_de_letras">
-                    <simpleType>
-                        <restriction base="string">
-                            <!-- Un rango de letras -->
-                            <pattern value="[a-p]"></pattern>
-                        </restriction>
-                    </simpleType>
-                </element>
-                <element name="rango_de_letras_mayusculas">
                     <simpleType>
                         <restriction base="string">
                             <!-- Un rango de letras minusculas o mayusculas -->
@@ -55,7 +56,7 @@
                     <simpleType>
                         <restriction base="string">
                             <!-- Un rengo de letras de 1 a 8 coincidencias -->
-                            <pattern value="[a-zA-Z]{1,8}"></pattern>
+                            <pattern value="[a-zA-Z]{2,8}"></pattern>
                         </restriction>
                     </simpleType>
                 </element>
@@ -94,7 +95,7 @@
                 <element name="nombre_apellido">
                     <simpleType>
                         <restriction base="string">
-                            <!-- nombre seguido de un espacio en blanco y luego un apeelido-->
+                            <!-- nombre seguido de un espacio en blanco y luego un apellido-->
                             <pattern value="[A-Z]([a-z])+\s[A-Z]([a-z])+"></pattern>
                         </restriction>
                     </simpleType>

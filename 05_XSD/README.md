@@ -184,20 +184,20 @@ Tipos de restricciones:
 
 Atributos que podemos usar con las restricciones:
 
-   1. enumeration: Establece una lista de valores “aceptados”
-   2. length: Número de caracteres obligatorios
-   3. maxExclusive y maxInclusive: Valor máximo de un rango
-   4. minExclusive y minInclusive: Valor mínimo en un rango
-   5. maxLength y minLength: Número máximo y mínimo de caracteres permitidos
-   6. totalDigits: Número exacto de dígitos permitidos
-   7. fractionDigits: Número máximo de posiciones decimales permitidas, solo para double
+   1. <b>enumeration:</b> Establece una lista de valores “aceptados”
+   2. <b>length</b>: Número de caracteres obligatorios
+   3. <b>maxExclusive y maxInclusive</b>: Valor máximo de un rango
+   4. <b>minExclusive y minInclusive</b>: Valor mínimo en un rango
+   5. <b>maxLength y minLength</b>: Número máximo y mínimo de caracteres permitidos
+   6. <b>totalDigits</b>: Número máximo de dígitos permitidos
+   7. <b>fractionDigits</b>: Número máximo de posiciones decimales permitidas, solo para double
 
 Ejemplo
 
 ```
     <element name="edad">
         <simpleType>
-            <restriction base=“integer">
+            <restriction base="TIPO">
                 <minInclusive value="0"/>
                 <maxInclusive value="100"/>
             </restriction>
@@ -208,13 +208,20 @@ Un elemento edad, de tipo numero entero, cuyo valor debe de estar comprendido en
 
 ## Expresiones regulares
 
-Muchas veces los atributos de las restriciones se nos quedan tambien cortos a la hora de validar un xml. Por ejemplo, imaginemos que queremos validar un DNI, que tiene un formato establecido. Pues con los atributos que hemos visto hasta ahora no podríamos hacerlo. Es ahí cuando entran en juego las expresiones regulares que <b>definen una secuencia de caracteres permitida como un patrón determinado</b>
+Muchas veces los atributos de las restriciones se nos quedan tambien cortos a la hora de validar un xml. Por ejemplo, imaginemos que queremos validar un DNI, que tiene un formato establecido. Pues con los atributos que hemos visto hasta ahora no podríamos hacerlo. Es ahí cuando entran en juego las expresiones regulares que <b>definen una secuencia de caracteres permitida como un patrón. determinado</b>
 
 ```
-    <pattern value="expresión regular"/>
+    <element name="edad">
+        <simpleType>
+            <restriction base="TIPO">
+                <pattern value="EXPRESION_REGULAR"/>
+            </restriction>
+        </simpleType>
+    </element>
+
 ```
 
-Hacer expresioes regulares simples, es sencillo, pero se pueden volver MUY complejas.
+Hacer expresiones regulares simples, es sencillo, pero se pueden volver MUY complejas.
 
 Reglas:
 
@@ -223,10 +230,11 @@ Reglas:
    3. \D cualquier no-dígito
    4. \s espacio en blanco, retorno de carro, línea nueva
    5. \S cualquier carácter distinto a espacio en blanco
-   6. (ab)* cualquier cosa entre paréntesis puede aparecer cero o más veces
-   7. (ab)+cualquier cosa entre paréntesis puede aparecer una o más veces
-   8. a{n} a puede aparecer en una cadena n veces
+   6. <code>a*</code> "a" puede aparecer cero o más veces
+   7. <code>a+</code> "a" puede aparecer una o más veces
+   8. a{n} "a" puede aparecer n veces
    9. [a] uno de los caracteres que aparezcan entre []
+   10. () los parentesis sirven para agrupar las reglas anteriores
 
 ## Como comenzar
 

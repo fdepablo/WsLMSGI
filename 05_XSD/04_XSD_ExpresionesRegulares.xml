@@ -2,10 +2,10 @@
 <persona xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
         xsi:noNamespaceSchemaLocation= "04_XSD_ExpresionesRegulares.xsd">
     <posicion>1</posicion>
-    <letra>F</letra>
+    <letra>G</letra>
     <rango_numerico>4</rango_numerico>
-    <rango_de_letras>a</rango_de_letras>
-    <rango_de_letras_mayusculas>J</rango_de_letras_mayusculas>
+    <rango_de_letras_minusculas>e</rango_de_letras_minusculas>
+    <rango_de_letras>R</rango_de_letras>
     <ejemplo_llaves>abcdefgh</ejemplo_llaves>
     <ejemplo_llaves_2>abcdefgh</ejemplo_llaves_2>
     <DNI>12345678K</DNI>
