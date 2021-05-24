@@ -32,13 +32,13 @@ Despues de
 
 	<?xml version="1.0" encoding="UTF-8"?>
 
-## INSTRUCCIONES PARA VISUALIZAR ESTE EJEMPLO EN UN NAVEGADOR WEB
+## INSTRUCCIONES PARA VISUALIZAR EJEMPLOS DE XML A HTML EN UN NAVEGADOR WEB
 
 Los ficheros de este ejemplo hay que desplegarlos en algun servidor como puede ser TOMCAT o APACHE
 habitualmente. Tambien se puede utilizar algun extension de Visual Studio Code como "live server"
 para ejecutarlo.
 
-## Visual Studio Code + Live Server
+### Visual Studio Code + Live Server
 
 1. Primero debemos de instalar VSC
 2. Bajarse la extension "Live Server". Esto emula un servidor web en el puerto 5500
@@ -47,7 +47,7 @@ para ejecutarlo.
 "Open With Live Server"
 5. Para hacer un shutdown del servidor, hay una opcion abajo a la derecha del VSC "Cerrar Port:5500"
 
-## APACHE
+### APACHE
 
 1. Instalar algun APACHE (XAMPP) 
 2. Ir a la carpeta "HTDOCS" donde tengamos instalado nuestro APACHE
@@ -55,7 +55,7 @@ para ejecutarlo.
 4. Arrancar el servidor apache
 4. Abrir el navegado e ir al a ruta determinada EJ: http://localhost/08_XSLT/01_XSLT_Cursos.xml)
 
-## ECLIPSE + TOMCAT
+### ECLIPSE + TOMCAT
 
 1. Configurar eclipse con el servidor TOMCAT
 2. Crear un nuevo proyecto dinamico (dinamic web proyect) y lo llamamos "08_XSLT"
@@ -63,3 +63,21 @@ para ejecutarlo.
 4. Arrancamos el servidor con el proyecto desplegado
 5. Abrir el navegado e ir al a ruta determinada (ojo, revisar las URLs de los ejemplos) EJ: http://localhost/08_XSLT/01_XSLT_Cursos.xml
 
+## INSTRUCCIONES PARA VER EJEMPLOS DE XML A XML
+
+El ejemplo 05 y 06 tratan de hacer una transformación de un XML a otro XML. Si queremos ver la transformación completa, es decir, con las etiquetas resultantes, no podemos usar un navegador de manera normal, ya que estos por defecto quitan las etiquetas de los XML resultantes.
+
+Para ello podemos usar alguna otra aplicación para ver el resultado
+
+### NOTEPAD++
+
+Esta estupenda aplicación para trabajar con ficheros de texto plano es muy valida para XML
+
+Para convertir un XML a otro XML mediante XSLT haremos lo siguiente
+
+1. Abriremos el xml con notepad++
+2. Con el fichero xml en la ventana del notepad, pulsaremos la pestaña "plugins"
+3. Seleccionamos  "XML Tools"
+4. Seleccionamos "XML Transformation..." 
+5. El la ventana modal que aparece, buscaremos el fichero XSLT que queremos utilizar
+6. Pulsamos el boton "Transform"

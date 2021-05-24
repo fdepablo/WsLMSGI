@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!-- 
+    El objetivo de este ejemplo es convertir este xml a otro xml con el siguiente formato:
+
+        <tiendas>
+            <tienda marca="amazon">
+                <identificacion>tablet 7 pulgadas</identificacion>
+                <codigo>1102</codigo>
+                <precio>28.875</precio>
+            </tienda>
+            ....
+            ....
+        </tiendas>
+
+    NOTA: Para visualizar este ejemplo y ver mejor la transformación mejor visualizarla
+    en otra aplicación que no sea un navegador, ya que estos por defecto quitan las 
+    etiquetas y muestran solo el texto. Ver el "README.md" para más detalles
+-->
+<?xml-stylesheet type="text/xsl" href="06_XSLT_Productos.xsl"?>
+<productos>
+  <item type="tienda" nombre="amazon" codigo="1102" producto="tablet 7 pulgadas" precio="28.875"/>
+  <item type="tienda" nombre="tiendaPC" codigo="1104" producto="tablet 10  pulgadas" precio="92.250"/>
+  <item type="tienda" nombre="tiendaPC" codigo="1105" producto="tablet 14 pulgadas" precio="20.313"/>
+</productos>
