@@ -1,4 +1,4 @@
-![XXLT](img/xslt.png "Aprende XSLT!!")
+![XSLT](img/xslt.png "Aprende XSLT!!")
 # EXtensible Stylesheet Language Transformations (XSLT)
 
 Permite convertir documentos XML a otros formatos (por ejemplo, HTML). Una plantilla podra ser la siguiente (fichero con extension xsl):
@@ -39,27 +39,27 @@ habitualmente. Tambien se puede utilizar algun extension de Visual Studio Code c
 para ejecutarlo.
 
 ## Visual Studio Code + Live Server
-----------------------------------
+
 1. Primero debemos de instalar VSC
 2. Bajarse la extension "Live Server". Esto emula un servidor web en el puerto 5500
 3. Abrir la carpeta 08_XSLT dentro del VSC
-4. Ponerse sobre el fichero "cruceros.xml", pulsar boton derecho y elegir la opcion
+4. Ponerse sobre el fichero "01_XSLT_Cursos.xml", pulsar boton derecho y elegir la opcion
 "Open With Live Server"
-5. Para apagar el servidor hay una opcion abajo a la derecha del VSC "Cerrar Port:5500"
+5. Para hacer un shutdown del servidor, hay una opcion abajo a la derecha del VSC "Cerrar Port:5500"
 
 ## APACHE
---------
+
 1. Instalar algun APACHE (XAMPP) 
 2. Ir a la carpeta "HTDOCS" donde tengamos instalado nuestro APACHE
 3. Dentro de esta carpeta pegar la carpeta 08_XSLT
 4. Arrancar el servidor apache
-4. Abrir el navegado e ir al a ruta determinada EJ: http://localhost/08_XSLT/cruceros.xml
+4. Abrir el navegado e ir al a ruta determinada EJ: http://localhost/08_XSLT/01_XSLT_Cursos.xml)
 
 ## ECLIPSE + TOMCAT
-------------------
+
 1. Configurar eclipse con el servidor TOMCAT
 2. Crear un nuevo proyecto dinamico (dinamic web proyect) y lo llamamos "08_XSLT"
 3. Una vez creado, vamos a la carpeta "webcontent" y pegamos todos los ficheros de ejemplo 08_XSLT (La carpeta css y los ficheros "cruceros")
 4. Arrancamos el servidor con el proyecto desplegado
-5. Abrir el navegado e ir al a ruta determinada (ojo, revisar las URLs de los ejemplos) EJ: http://localhost/08_XSLT/cruceros.xml
+5. Abrir el navegado e ir al a ruta determinada (ojo, revisar las URLs de los ejemplos) EJ: http://localhost/08_XSLT/01_XSLT_Cursos.xml
 
