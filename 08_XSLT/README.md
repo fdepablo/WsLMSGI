@@ -81,3 +81,8 @@ Para convertir un XML a otro XML mediante XSLT haremos lo siguiente
 4. Seleccionamos "XML Transformation..." 
 5. El la ventana modal que aparece, buscaremos el fichero XSLT que queremos utilizar
 6. Pulsamos el boton "Transform"
+
+## Bibliografía
+1. [https://www.w3schools.com/xml/xsl_intro.asp](https://www.w3schools.com/xml/xsl_intro.asp)
+2. [https://www.mclibre.org/consultar/xml/lecciones/xml-xslt.html](https://www.mclibre.org/consultar/xml/lecciones/xml-xslt.html)
+
