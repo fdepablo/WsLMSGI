@@ -1,6 +1,6 @@
 <!ELEMENT pelicula (titulo,fecha,actores,director)>
 <!ATTLIST pelicula id CDATA #REQUIRED>
-<!ATTLIST pelicula categoria CDATA #REQUIRED>
+<!ATTLIST pelicula categoria (accion | terror | humor | sci-fi) #REQUIRED>
 
 <!ELEMENT titulo (#PCDATA)>
 <!ELEMENT fecha (#PCDATA)>

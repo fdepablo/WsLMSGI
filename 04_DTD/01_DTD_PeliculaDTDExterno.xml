@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE pelicula SYSTEM "01_DTD_Pelicula.dtd">
-<pelicula id="1" categoria="sci-fi">
+<pelicula id="1" categoria="humor">
     <titulo>La guerra de las galaxias</titulo>
     <fecha>22/07/1977</fecha>
     <actores>
