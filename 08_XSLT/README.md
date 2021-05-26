@@ -75,12 +75,14 @@ Esta estupenda aplicación para trabajar con ficheros de texto plano es muy vali
 
 Para convertir un XML a otro XML mediante XSLT haremos lo siguiente
 
-1. Abriremos el xml con notepad++
-2. Con el fichero xml en la ventana del notepad, pulsaremos la pestaña "plugins"
-3. Seleccionamos  "XML Tools"
-4. Seleccionamos "XML Transformation..." 
-5. El la ventana modal que aparece, buscaremos el fichero XSLT que queremos utilizar
-6. Pulsamos el boton "Transform"
+1. Instalamos Notepad++ [https://notepad-plus-plus.org/downloads/](https://notepad-plus-plus.org/downloads/)
+2. Instalamos el plugin "XML Tools". En la pestaña "plugins" elegimos la opcion "administrar plugins" y lo buscamos ahí. Reiniciamos en caso necesario. 
+3. Abriremos el xml con Notepad++
+4. Con el fichero xml en la ventana del notepad, pulsaremos la pestaña "plugins"
+5. Seleccionamos  "XML Tools"
+6. Seleccionamos "XML Transformation..." 
+7. El la ventana modal que aparece, buscaremos el fichero XSLT que queremos utilizar
+8. Pulsamos el boton "Transform"
 
 ## Bibliografía
 1. [https://www.w3schools.com/xml/xsl_intro.asp](https://www.w3schools.com/xml/xsl_intro.asp)
