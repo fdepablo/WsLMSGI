@@ -45,7 +45,7 @@ La necesidad de esta nueva versión viene por que su antecesora HTML 4 carece de
 
 Por ejemplo, el declive de uso de Adobe Flash para dotar de dinamismo nuestras páginas. Así que es necesario que HTML disponga de herramientas para que nuestros navegadores puedan gestionar audio, vídeo, animaciones vectoriales, componentes de interfaz, entre muchas otras cosas. Ahora HTML5 es capaz de hacer esto sin necesidad de plugins y con una gran compatibilidad entre navegadores.
 
-Dentro de HTML5 podemos encontrar 3 grandes tecnologías: HTML, CSS y JavaScript. Cada una de estas tecnologías tendrá una función dentro de una página web:
+Dentro de HTML5 podemos encontrar 3 grandes tecnologías: HTML5, CSS3 y JavaScript. Cada una de estas tecnologías tendrá una función dentro de una página web:
 1. La estructura de la pagina la lleva HTML (Etiquetas HTML)
 2. Los estilos de la pagina lo lleva CSS (Los colores, los tamaños de las letras, la colocacion de las etiquetas, etc.)
 3. La funcionalidad de la pagina la lleva JavaScript (Que puede hacer la pagina web, cuando pulsamos un boton por ejemplo)
