@@ -43,7 +43,8 @@
 
         - fixed: Funciona como el posicionamiento absoluto (absolute) con la diferencia de 
         que la capa siempre estará visible aunque se utilice la barra de desplazamiento.
-        Muy util para poner cabeceras de pagina que siempre queremos que sean visibles
+        Muy util para poner cabeceras de pagina que siempre queremos que sean visibles, como
+        por ejemplo anuncios o banners.
 
         - static: Es la posición por defecto de los elementos. No son afectados por las
         propiedades top, left, right y botton. Un elemento "static" no es posicionado de
@@ -53,20 +54,20 @@
 
     3. left: posición del elemento desde la izquierda.
     
-    4. right: posición del elemento desde arriba
+    4. right: posición del elemento desde la derecha.
 
-    5. botton: posición del elemento desde abajo
+    5. botton: posición del elemento desde abajo.
 
     6. z-index: establece el orden de pila del elemento, es decir, el orden de las capas en
     función del eje de la Z (de dentro a fuera, por decirlo así). Se verá más adelante
 
-    Las propiedades top, left, rigth y botton solo funcionan si tienen antes la propiedad
-    "position" (menos con static, que no le afectan).
+    IMPORTANTE!: Las propiedades "top left rigth botton" solo funcionan si tienen declarada
+    la propiedad "position" (a excepción de "static", que no le afectan).
 
     -->
     <style>
         /*
-        Observa que en el ejemplo los atributos height y width de las capas (<div>) están 
+        Observa que en el ejemplo, los atributos height y width de las capas (<div>) están 
         establecidos en píxeles, lo que significa que tienen un tamaño fijo independientemente 
         del tamaño del dispositivo donde se muestre la página. También es posible establecer 
         los valores de alto y ancho en porcentaje para que los elementos se adapten al tamaño 
@@ -106,6 +107,13 @@
             left: 300px;
         }
 
+        .normal {
+            position: static;/*posicion por defecto de los elementos*/
+            background-color: rgb(230, 132, 213);
+            width: 200px;
+            height: 100px;
+        }
+
         .absoluto1 {
             position: absolute;
             background-color: rgb(43, 255, 0);
@@ -116,19 +124,12 @@
             /* En los absolutos debemos de dar un top y un left*/
             top: 100px;
             left: 900px;
-        }
-
-        .normal {
-            position: static;
-            background-color: rgb(230, 132, 213);
-            width: 200px;
-            height: 100px;
-        }
+        }        
 
         .caja_grande {
             /* Si ponemos la position a "static" , los div de dentro que sean de 
             position: absolute, entonces lo serán respecto a la página. 
-            Al ser position. relative los div de dentro que sean position: absolute lo seran
+            Al ser position: relative los div de dentro que sean position: absolute lo seran
             respecto a este div */
             position: relative;
             background-color: rgb(132, 194, 230);
@@ -142,8 +143,8 @@
 <body>
     <div class="relativo1">Este es el primer DIV relativo</div>
     <div class="relativo2">Este es el segundo DIV relativo</div>
-    <div class="relativo3">Este es el tercer DIV relativo</div>
-    <!-- Observar como este div no va despues de relativo2, sino despues de relativo3, aunque 
+    <div class="relativo3">Este es el tercer DIV relativo, desplazado del top y del rigth</div>
+    <!-- Observar como este div "normal" no va despues de relativo2, sino despues de relativo3, aunque 
     este este desplazado, es decir, el hueco de relativo3 SIGUE OCUPADO POR SU CAJA, lo que
     ocurre es que como es relativo se VA A VISUALIZAR segun los atributos top, botton, left y 
     rigth, en lugar de en su posición natural donde se ocupa su caja -->

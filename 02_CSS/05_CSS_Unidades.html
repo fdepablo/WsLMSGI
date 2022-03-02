@@ -27,12 +27,17 @@
         Unidades Relativas
         ------------------
 
-        em, relativa respecto del tamaño de letra del elemento. 
+        em, Tamaño de letra del elemento padre, en el caso de propiedades tipográficas como 
+        font-size, y tamaño de la fuente del propio elemento en el caso de otras propiedades, 
+        como width.
+
+        vw, 1% del ancho de la ventana gráfica.
+
+        vh, 1% de la altura de la ventana gráfica.
 
         %, el tanto por cien relativo al tamaño de la ventana donde se está visualizando 
         el documento.
 
-        Todas estas unidades son bastante importantes
     -->
     <style>
         .divazul {
@@ -53,6 +58,12 @@
 
         .child {
             font-size: 1.5em;
+        }
+
+        .vw_vh{
+            width: 10vw;
+            height: 30vh;
+            background-color: aquamarine;
         }
     </style>
 </head>
@@ -76,6 +87,11 @@
                 <p>Inner child</p>
             </div>
         </div>
+    </div>
+    <br/>
+    <!-- Si encojemos la ventana, el rectangulo cambiara sus dimensiones-->
+    <div class="vw_vh">
+        Rectangulo
     </div>
 </body>
 

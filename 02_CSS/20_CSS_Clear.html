@@ -26,7 +26,7 @@
 
     -->
     <style>
-        .div1 {
+        .float_izquierda {
             float: left;
             width: 100px;
             height: 50px;
@@ -34,19 +34,11 @@
             border: 3px solid #73AD21;
         }
 
-        .div2 {
+        .div_sin_clear {
             border: 1px solid red;
         }
 
-        .div3 {
-            float: left;
-            width: 100px;
-            height: 50px;
-            margin: 10px;
-            border: 3px solid #73AD21;
-        }
-
-        .div4 {
+        .div_con_clear {
             border: 1px solid red;
             clear: left;
         }
@@ -56,19 +48,19 @@
 <body>
     <h2>Ejemplos CLEAR</h2>
     <h3>SIN clear</h3>
-    <div class="div1">div1</div>
-    <div class="div2">
-        div2 - Notese que div2 esta despues de div1 en el código HTML.
+    <div class="float_izquierda">div1</div>
+    <div class="div_sin_clear">
+        div_sin_clear - Notese que div_sin_clear esta despues de div1 en el código HTML.
         Sin embargo, como div1 "floats" a la izquierda, el texto dentro de
-        div2 fluye alrededor de div1.
+        div_sin_clear fluye alrededor de div1.
     </div>
 
     <br/><br/><br/>
 
     <h3>CON clear</h3>
-    <div class="div3">div3</div>
-    <div class="div4">
-        div4 - Aquí esta puesta la propiedad "clear: left;"" Esto quiere decir que 
+    <div class="float_izquierda">div3</div>
+    <div class="div_con_clear">
+        div_con_clear - Aquí esta puesta la propiedad "clear: left;"" Esto quiere decir que 
         la propiedad "float: left;" que esta puesta en el div3 es "limpiada", y ya 
         no flotaría como en el caso anterior
     </div>

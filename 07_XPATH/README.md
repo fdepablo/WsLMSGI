@@ -124,8 +124,8 @@ Necesitamos algun plugin como puede ser:
 2. XPATH Tools
 
 ## Bibliografia
-1. [https://developer.mozilla.org/es/docs/Web/XPath](https://developer.mozilla.org/es/docs/Web/XPath)
-2. [https://www.w3schools.com/xml/xpath_intro.asp](https://www.w3schools.com/xml/xpath_intro.asp)
-3. [https://www.mclibre.org/consultar/xml/lecciones/xml-xpath.html](https://www.mclibre.org/consultar/xml/lecciones/xml-xpath.html)
+1. <https://developer.mozilla.org/es/docs/Web/XPath>
+2. <https://www.w3schools.com/xml/xpath_intro.asp>
+3. <https://www.mclibre.org/consultar/xml/lecciones/xml-xpath.html>
 
 

@@ -8,7 +8,7 @@ Este lenguaje es un estándar reconocido por todo el mundo. Sus normas las defin
 
 Se ha convertido en el estándar de visualización de la información, siendo la vista de muchas aplicaciones, tanto de las páginas web más tradicionales como de aplicaciones de servidor para servicios empresariales.
 
-Una tag o etiqueta es la marca que usa el lenguaje para delimitar a un elemento específico.
+Una **tag** o **etiqueta** es la marca que usa el lenguaje para delimitar a un elemento específico.
 
 Las etiquetas o marcas están definidas por caracteres de escape que indican al software que lee el documento cuándo comienza y acaba el tag o etiqueta. En lenguajes de marcado como HTML existen etiquetas o marcas que usan el carácter “<” para abrir, o el “/>” para cerrar la etiqueta.
 
@@ -41,14 +41,14 @@ Todas las etiquetas anteriores serían obligatorias para tener un documento HTML
 
 HTML5 es la última actualización de HTML. HTML5 también es un termino que sirve para agrupar las  tecnologías web HTML5, CSS3 y nuevas capacidades de JavaScript.
 
-La necesidad de esta nueva versión viene por que su antecesora HTML 4 carece de las características necesarias para la creación de aplicaciones modernas.
+La necesidad de esta nueva versión viene por que su antecesora HTML4, que carece de las características necesarias para la creación de aplicaciones modernas.
 
-Por ejemplo, el declive de uso de Adobe Flash para dotar de dinamismo nuestras páginas. Así que es necesario que HTML disponga de herramientas para que nuestros navegadores puedan gestionar audio, vídeo, animaciones vectoriales, componentes de interfaz, entre muchas otras cosas. Ahora HTML5 es capaz de hacer esto sin necesidad de plugins y con una gran compatibilidad entre navegadores.
+Por ejemplo, el declive de uso de Adobe Flash para dotar de dinamismo nuestras páginas, ha llevado a que HTML5 disponga de herramientas para que nuestros navegadores puedan gestionar audio, vídeo, animaciones vectoriales, componentes de interfaz, entre muchas otras cosas. Ahora HTML5 es capaz de hacer esto sin necesidad de plugins y con una gran compatibilidad entre navegadores.
 
 Dentro de HTML5 podemos encontrar 3 grandes tecnologías: HTML5, CSS3 y JavaScript. Cada una de estas tecnologías tendrá una función dentro de una página web:
 1. La estructura de la pagina la lleva HTML (Etiquetas HTML)
-2. Los estilos de la pagina lo lleva CSS (Los colores, los tamaños de las letras, la colocacion de las etiquetas, etc.)
-3. La funcionalidad de la pagina la lleva JavaScript (Que puede hacer la pagina web, cuando pulsamos un boton por ejemplo)
+2. Los estilos de la pagina lo lleva CSS (los colores, los tamaños de las letras, la colocacion de las etiquetas, etc.)
+3. La funcionalidad de la pagina la lleva JavaScript (lo que puede hacer la pagina web cuando pulsamos un boton, por ejemplo)
 
 Para saber si nuestro código cumple los estándares de HTML5 podemos utilizar las herramientas de validación disponibles en Internet. [Validador](http://validator.w3.org/.)
 
@@ -59,5 +59,5 @@ Podemos empezar a ver los ejemplos que estan numerados dentro de esta carpeta (0
 **Nota**: Para crear un fichero HTML con VSC debemos crear un nuevo fichero con extensión .html. Para rellenar un contenido básico debemos de poner dentro del fichero "html:5" y pulsar enter. Esto último solo funcionaría si tenemos instalada la extensión "beautify"
 
 ## Bibliografía
-- [https://www.w3schools.com/html/default.asp](https://www.w3schools.com/html/default.asp)
-- [https://developer.mozilla.org/es/docs/conflicting/Web/HTML/Element](https://developer.mozilla.org/es/docs/conflicting/Web/HTML/Element)
+- <https://www.w3schools.com/html/default.asp>
+- <https://developer.mozilla.org/es/docs/conflicting/Web/HTML/Element>
