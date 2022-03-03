@@ -6,7 +6,7 @@ Workspace con teoría y ejemplos sobre la asignatura de Lenguajes de Marcas y Si
 
 Los proyectos están numerados y contienen teoría y ejemplos.
 
-Este Workspace está realizado con Visual Studio Code (VSC), pero puede ser utilizado por cualquier IDE.
+Este Workspace está realizado con <b>Visual Studio Code (VSC)</b>, pero puede ser utilizado por cualquier IDE.
 
 - Enlace de VSC : <https://code.visualstudio.com/>
 - Enlace para descargar: <https://code.visualstudio.com/download>.

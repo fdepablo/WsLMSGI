@@ -22,8 +22,8 @@
             3) <section>. Una sección dentro de la página que podrá estar dividida en artículos.
                 Ej: Seccion noticias nacionales
 
-            4) <article>. Un artículo.
-                Ej: Hombre muerde a perro, pues resulta que un hombre le otro dia...
+            4) <article>. Un artículo de una sección.
+                Ej: Hombre muerde a perro, pues resulta que un hombre el otro dia...
 
             5) <aside>. Área de banners o publicidad.
 
@@ -31,6 +31,12 @@
 
             7) <main>. Representa el contenido principal del <body>. Solo debe haber uno
 
+        Antes de estas etiquetas se usaban "div" con un id describiendo el tipo de contenido
+        que iba a soportar, ej:
+
+            <div id="cabecera"></div>
+            <div id="pie_de_pagina"></div>
+        
         El uso de las etiquetas semánticas nos ayuda a posicionar mejor nuestra web en los 
         buscadores, ya que los motores de búsqueda sabrán el tipo de contenido que encierran 
         y darán más peso a unas áreas que a otras. Por ejemplo, para los motores de búsqueda 
@@ -44,12 +50,13 @@
             <h1>Esta es la cabecera de mi pagina web</h1>
         </header>
 
+        <!-- Este código sería como se hacia antes de HTML5
         <div id="header" style="text-align: center;">
             <h1>Esta es la cabecera de mi pagina web</h1>
         </div>
-
+        -->
         <nav>
-            <a href="http://www.edix.es">Ir a inicio!</a>
+            <a href="http://www.elpais.es">Ir al ElPais!</a>
             <a href="http://www.google.es">Ir a Google!!</a>
         </nav>
 
@@ -57,7 +64,7 @@
             <h2>Esta es la seccion noticias nacionales</h2>
             <article>
                 <h3>Hombre muerde a perro</h3>
-                <p>Un perro ha mordido a un hombre omg!!!</p>
+                <p>Un hombre ha mordido a un perro omg!!!</p>
             </article>
             <article>
                 <h3>El among us arrasa en el congreso de los diputados!!</h3>
@@ -69,7 +76,7 @@
             <h2>Esta es la seccion noticias Internacionales</h2>
             <article>
                 <h3>Escandalo en las elecciones EEUU!!</h3>
-                <p>el pato donald sale reelegido!!!</p>
+                <p>El pato donald sale reelegido!!!</p>
             </article>
             <article>
                 <h3>Esto es otra noticia internacional!!</h3>
