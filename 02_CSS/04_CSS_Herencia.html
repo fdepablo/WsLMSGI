@@ -7,7 +7,7 @@
 
     <!--
         Para facilitar la comprensión del concepto de herencia debemos entender que un documento 
-        HTML se puede representar como un árbol genealógico.
+        HTML se puede representar como un árbol genealógico de nodos (DOM).
 
         Algunas de las propiedades de las hojas de estilo se propagan por los descendientes de los 
         elementos de manera automática, como por ejemplo el color. Para saber cuales son las
@@ -47,12 +47,19 @@
 </head>
 <body>
 
+    <div>
+        <h1>Esto es Azul por herencia</h1>
+        <h1>Esto es Azul por herencia</h1>
+    </div>
+
+    <br/>
     <!-- 
         Por defecto heredamos el CSS del padre. Podemos sobreescribir el comportamiento
-        de algun atributo css, y nos quedariamos con el ultimo dado -->
+        de algun atributo css, y nos quedariamos con el ultimo dado 
+    -->
     <div class="rojo">
         <h3>Esto será rojo??</h3>
-        <h3 style="color: blueviolet;">Y esto??</h3>
+        <h3 style="color: rgb(3, 250, 16);">Y esto??</h3>
     </div>
 
     <br/>

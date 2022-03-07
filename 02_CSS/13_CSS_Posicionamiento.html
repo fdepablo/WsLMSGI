@@ -18,6 +18,10 @@
     
     Posibles valores:
 
+        - static: Es la posición por defecto de los elementos. Un elemento "static" no es 
+        posicionado de una manera especial, es posicionado según el flujo normal de la 
+        página web. No son afectados por las propiedades top, left, right y botton. 
+
         - relative: Una capa con posicionamiento relativo se situa la caja según el flujo 
         secuencial de elementos dentro del contenedor. A partir de ahí, podemos colocar el
         contenido de la caja mediante las propiedadas top, botton, left y right, es decir, 
@@ -45,10 +49,6 @@
         que la capa siempre estará visible aunque se utilice la barra de desplazamiento.
         Muy util para poner cabeceras de pagina que siempre queremos que sean visibles, como
         por ejemplo anuncios o banners.
-
-        - static: Es la posición por defecto de los elementos. No son afectados por las
-        propiedades top, left, right y botton. Un elemento "static" no es posicionado de
-        una manera especial, es posicionado según el flujo normal de la página web
 
     2. top: posición del elemento desde arriba. 
 
@@ -104,7 +104,7 @@
             300px respecto al left de la posición natural donde se debería de colocar
             */
             top: 100px;
-            left: 300px;
+            left: 250px;
         }
 
         .normal {
@@ -112,6 +112,7 @@
             background-color: rgb(230, 132, 213);
             width: 200px;
             height: 100px;
+            left: 200px;
         }
 
         .absoluto1 {
@@ -155,7 +156,7 @@
     <div class="absoluto1">Este es el primer DIV absoluto respecto al body</div>  
     
     <div class="caja_grande">
-        <div class="absoluto1">Este es el segundo DIV absoluto respecto a la caja grande</div>
+        <div class="absoluto1" style="background-color:brown">Este es el segundo DIV absoluto respecto a la caja grande</div>
     </div>
 
 </body>
