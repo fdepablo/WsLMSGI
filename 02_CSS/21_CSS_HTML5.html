@@ -31,7 +31,7 @@
         }
 
         /* 
-        #contenedor>header: selector del header que sea hijo directo del id contenedor.
+        main>header: selector del header que sea hijo directo del main.
         Para evitar confusión con el header que es hijo de section (ver más abajo).     
         */
 
@@ -73,6 +73,8 @@
             background: #FFF;
         }
 
+        /* En este caso los "article" que sean hijos de "section" pero no hace falta que sean
+        directos*/
         section article {
             margin-top: 10px;
             margin-left: 10px;
@@ -111,35 +113,35 @@
 <body>
     <main>
         <header>
-
+            CABECERA
         </header>
 
         <nav>
-
+            NAVEGACION
         </nav>
 
         <section>
 
             <header>
-
+                CABECERA SECCIÓN 1
             </header>
 
             <article>
-
+                ARTICULO SECCIÓN 1
             </article>
 
             <footer>
-
+                PIE DE PÁGINA SECCIÓN 1
             </footer>
 
         </section>
 
         <aside>
-
+            PUBLICIDAD 1
         </aside>
 
         <footer>
-
+            PIE DE PÁGINA
         </footer>        
     </main>
 </body>

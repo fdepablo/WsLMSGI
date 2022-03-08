@@ -17,7 +17,7 @@
             selector:pseudoclase {
                 propiedad: valor;
             }
-        
+ 
         Podemos encontrar los siguientes tipos de pseudoclases:
 
         1. Aplicados a los enlaces
@@ -28,6 +28,7 @@
             :visited - Selecciona los enlaces que ya fueron visitados.
             :active - El momento en el que hacemos clic.
             :focus - Selección del enlace usando el tabulador del teclado.
+                (tambien esta en otros elementos, inputs, etc)
 
         2. Aplicados a los campos input de un formulario
 
@@ -37,6 +38,11 @@
                     es decir los que podemos editar.
             :disabled - Lo contrario que el anterior, los que no podemos editar.
             :checked - Para las checkbox y radio que están seleccionadas.
+
+            Ej:
+            input:disabled{
+                background-color: black
+            }
 
         3. Aplicados al arbol de etiquetas
 
@@ -56,6 +62,11 @@
 
             :empty - Selecciona a todos los elementos que no tengan hijos o texto.
 
+            Ej:
+            div:empty {
+                /*Estilo que se aplicará a los divs que no tengan hijos*/
+            }
+
         5. Aplicados al texto
 
             :first-letter  - Selecciona la primera letra del texto.
@@ -67,7 +78,7 @@
     <style> 
         /* Enlaces */
         a{
-            font-size: 20px;
+            font-size: large;
         }
 
         a:link {
@@ -77,8 +88,9 @@
             color:green;/* en el momento de hacer click */
         }
         a:hover, a:focus {
-            color:blue;
-            cursor: crosshair;
+            color:blue !important; /* Hacemos que el azul sea el estilo en caso de que tambien
+                                    hayamos visitado la página*/
+            cursor: crosshair;/*Mediante css podemos cambiar el estilo del ratón*/
         } 
         a:visited {
             color:rgb(74, 248, 6);
@@ -130,7 +142,7 @@
 
 <body>
     <h1>PSEUDOCLASES</h1>
-    <a href="https://www.mipaginainventada.com">Enlace a google</a>
+    <a href="https://www.google.es">Enlace a google</a>
     <hr/>
     <form>
         Nombre: 
@@ -144,10 +156,10 @@
         <input type="radio" style="display: inline;" name="shf" value="SM"/> Peter Parker
     </form>
     <hr/>
-    <p>Esto sera con el color rojo de fondo? NO, porque no es primer hijo</p>
+    <p>Esto sera con el color rojo de fondo? NO, porque NO es primer hijo</p>
     <div>
         <p>Esto sera con el color rojo de fondo? Si, porque es primer hijo</p>
-        <p>Esto sera con el color rojo de fondo? NO, porque no primer hijo, es segundo :)</p>
+        <p>Esto sera con el color rojo de fondo? NO, porque NO primer hijo, es segundo :)</p>
     </div>
     <hr/>
     <!-- 

@@ -12,8 +12,8 @@
         los dispositivos electronicos, como moviles o tables, ya que normalmente son 
         más pequeños que una pantalla de ordenador.
 
-        Las media queries se utilizan en la tecnología CSS para condicionar la aplicación de 
-        un grupo de atributos de diseño al cumplimiento de una condición, que tendrá que ser 
+        Las media queries se utilizan en la tecnología CSS para condicionar el diseño de la 
+        aplicación al cumplimiento de una serie condiciones, que tendrá que ser 
         relativa al tipo de dispositivo, orientación, tipo de visualización, etc.
 
         La etiqueta de la linea 6:
@@ -22,28 +22,11 @@
         optimizar los sitios para móviles, ayudando a definir el ancho, alto y escala 
         del área usada por el navegador para mostrar contenido.
 
+        Una media query empieza siempre por "@media"
+
         Las media query están formadas por 
             1. Un Media Type
             2. Una o varias condiciones.
-
-        Los Media Types (tipos de medios) describen la categoría general de un dispositivo
-        siendo opcional. Si no lo especificamos, entonces la Media Query será para todos
-        los dispositivos. 
-
-        El media type puede ser de varios tipos, algunos ejemplos:
-            1. all (todos). Valor por defecto si no lo especificamos. La media query
-            afectará a todos los dispositivos.
-                EJ: @media (max-width: 700px) { }	
-            2. screen (pantalla). Solo afectamos a los dispositivos que tengan pantalla.
-            Es el más común para desarrollo web.
-                EJ: @media screen and (max-width: 700px) { }	
-            3. print (impresión). Destinado a material impreso y visualización de documentos 
-            en una pantalla en el modo de vista previa de impresión. 
-        
-        En un desarrollo web normal, elegiremos "screen" o lo dejaremos vacio (all)
-
-        Despues de elegir el Media Type debemos de poner las condiciones. Las condiciones 
-        son aquellos casos en las que queremos ejecutar un determinado CSS.
 
         La estructura básica de una Media Querie sería la siguiente:
 
@@ -52,6 +35,25 @@
             PROPIEDADES CSS QUE QUEREMOS CAMBIAR CUANDO SE DE LA CONDICION
         }
         *********
+
+        Los Media Types (tipos de medios) describen la categoría general de un dispositivo,
+        siendo opcional. Si no lo especificamos, entonces la Media Query será para todos
+        los dispositivos. 
+
+        El media type puede ser de varios tipos, algunos ejemplos:
+            1. all (todos). Valor por defecto si no lo especificamos. La media query
+            afectará a todos los dispositivos.
+                EJ: @media (max-width: 700px) { CSS A APLICAR }	
+            2. screen (pantalla). Solo afectamos a los dispositivos que tengan pantalla.
+            Es el más común para desarrollo web.
+                EJ: @media screen and (max-width: 700px) { CSS A APLICAR }	
+            3. print (impresión). Destinado a material impreso y visualización de documentos 
+            en una pantalla en el modo de vista previa de impresión. 
+        
+        En un desarrollo web normal, elegiremos "screen" o lo dejaremos vacio ("all")
+
+        Despues de elegir el Media Type debemos de poner las condiciones. Las condiciones 
+        son aquellos casos en las que queremos ejecutar un determinado CSS.
 
         Recordemos que el MEDIA_TYPE sería opcional, y las condiciones van puestas entre
         parentesis. Si no ponemos MEDIA_TYPE tampoco pondremos la palabra "and"
@@ -107,13 +109,13 @@
             padding:10px 0;
             text-align:center;
             width: 1000px;
-        }
+         }
 
-        .fila1{
+        .columna1{
             background:#B30F2A;
         }
 
-        .fila2{
+        .columna2{
             background:#1C4583;
         }
 
@@ -124,14 +126,14 @@
         se vera con margenes entre "section" y el final de la pantalla, tanto a la derecha
         como a la izquierda
 
-        Las siguientes media queries actuan de la siguiente manera
+        Las media queries actuan de la siguiente manera
 
         1. Cuando la pantalla ocupe entre 700 y 1000px (normalmente las tabletas), la 
-        etiqueta "section" ocupara un 100% del ancho de la pantalla, es decir, sin margenes. 
+        etiqueta "section" ocupara un 98% del ancho de la pantalla, es decir, casi sin margenes. 
         Esto sería para aprovechar mejor el espacio.
 
         2. Cuando la pantalla ocupe menos de 700px o igual, entonces la etiqueta "article"
-        ocupara un 100% del ancho de la pantalla para hacer que los articulos se vean 
+        ocupara un 98% del ancho de la pantalla para hacer que los articulos se vean 
         uno debajo del otro en vez de seguidos.
 
         El cambio de colores es para apreciar cuando ocurre el efecto
@@ -139,7 +141,7 @@
 
         @media screen and (max-width: 1000px){
             section{
-                width:98%;
+                width:98%;/*Escribiremos aquellas propiedades que queremos cambiar*/
             }
 
             body{
@@ -166,11 +168,11 @@
             <p>Peliculas</p>
         </section>
         <section>
-            <article class="fila1">
+            <article class="columna1">
                 <h2>fila2 columna1</h2>
                 <p>DIE HARD</p>
             </article>
-            <article class="fila2">
+            <article class="columna2">
                 <h2>fila2 columna2</h2>
                 <p>MATRIX</p>
             </article>
