@@ -7,12 +7,16 @@
     </head>
 
     <body>
-        <!-- comentario: Lo que vaya aqui no sera procesado por el navegador -->
+        <!-- 
+            comentario: Lo que vaya aqui no sera procesado por el navegador 
+            y puede ocupar varias lineas
+        -->
         <!-- La etiqueta "p" es para mostrar un parrafo y luego un salgo de linea -->
         <p>HOLA!!! MI PRIMERA PÁGINA HTML EN MAYUSCULAS</p>
+        <p>HOLA!!! Esto se escribe debajo del etiqueta anterior</p>
 
-        <!-- Hay etiquetas que se autocierran, es decir, que la apertura y el cierre están en la misma
-            etiqueta. Son etiquetas que no necesitan de ningun contenido.
+        <!-- Hay etiquetas que se autocierran, es decir, que la apertura y el cierre están 
+            en la misma etiqueta. Son etiquetas que no necesitan de ningun contenido.
             Por ejemplo tenemos la etiqueta "br" que es para hacer saltos de linea-->
         <br/>
         hola caracola
@@ -29,7 +33,7 @@
             https://ascii.cl/es/codigos-html.htm
         -->
         <p>hola mi primera p&aacute;gina web en minusculas. Feliz a&ntilde;o </p>
-        <p>ESTO ES una mezcla</p>
+        <p>hola mi primera página web en minusculas. Feliz año</p>
         <p>Si teneis instalada la extension "open in browse", podeis pulsar</p>
         <p>"alt+b" para que se os abra automaticamente en un buscador</p>
 
@@ -40,6 +44,7 @@
         <h4>Esta etiqueta sirve para escribir titulos</h4>
         <h5>Esta etiqueta sirve para escribir titulos</h5>
         <h6>Esta etiqueta sirve para escribir titulos</h6>
+
         <!-- Tambien tenemos la etiqueta "hr" que hacer una linea y luego un salto de line-->
         <hr/>
 
@@ -48,8 +53,8 @@
         ---------
         Las etiquetas pueden tener atributos.
 
-        Los atributos sirven para dotar al elemento de propiedades que tienen que ver con la marca 
-        en la que están contenidos.
+        Los atributos sirven para dotar al elemento de propiedades que tienen que ver con 
+        la etiqueta en la que están contenidos.
 
         La forma de representar dichas propiedades es a través de pares nombre/valor separados por 
         un signo de igual (=), normalmente se escriben después de la etiqueta de comienzo de un 
@@ -63,18 +68,22 @@
         En este ejemplo "id" sería el identificador del elemento en la página. Muy util cuando se 
         combina con JavaScript o CSS
 
-        "title" es un atributo que hace que salga un pequeño "tooltip" cuando dejamos el raton encima
-        del contenido
+        <p id="valor1">El contenido</p>
+
+        Por ejemplo, dentro de la etiqueta p podremos encontranos con el abributo "title" 
+        que es un atributo que hace que salga un pequeño "tooltip" cuando dejamos 
+        el raton encima del contenido
 
         Más adelante se verán otros atributos como "style" o "class" usados en CSS
         -->
         <p id="p1" title="El id de este elemento es 'p1'">Parrafo especial, con id y con title</p>
 
         <!-- 
-            Por ejemplo, estos serían atributos especiales de la etiqueta "hr", que solo se pueden usar
-            en esta etiqueta
+            Por ejemplo, estos serían atributos especiales de la etiqueta "hr", que solo se 
+            pueden usar en esta etiqueta
         -->
         <hr width="75%" size="10px" color="green" />
+        
         <!-- La etiqueta "pre" sirve para escribir un texto tal y como vaya dentro de la etiqueta
             Se respetan saltos de linea, tabulaciones, etc. No es muy utilizada
         -->
@@ -96,6 +105,7 @@
         <!-- Es muy habitual poner etiquetas dentro de otras para conbinar efectos -->
         <b><u>Este texto estaria subrayado y en negrita</u></b>
         <p><b><u>Parrafo subrayado y en negrita</u></b></p>
+
         <!-- Etiqueta que hace que el texto se mueva. Esta en desuso pero cuando empezaron las
         paginas html se usaba bastante -->
         <marquee>
@@ -113,7 +123,7 @@
         <h1 style="color: rgb(240, 4, 248);">Esta etiqueta esta a la izquierda</h1>
         <h1 style="color: red;text-align: right;">Esta etiqueta esta en rojo y a la derecha</h1>
 
-        <!-- blockquote sirve para hacer sangrados -->
+        <!-- blockquote sirve para hacer sangrados, aunque mejor con CSS -->
         <blockquote> Texto con sangrado </blockquote>
     </body>
 

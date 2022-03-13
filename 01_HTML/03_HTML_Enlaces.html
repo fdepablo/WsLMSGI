@@ -6,9 +6,9 @@
     <title>Enlaces</title>
 </head>
 <body>
-    <h1 style="text-align: center;">Hiperenlaces</h1>
+    <h1 style="text-align: center;">Enlaces</h1>
     <!-- Enlaces
-        --------_
+        --------
         Este recurso se diseña y se usa por primera vez por Tim Bernes-Lee para enlazar documentos a 
         través de hiperenlaces en la red World Wide Web.
 
@@ -16,14 +16,14 @@
         estándar URI "Uniform Resource Identifier", en español identificador uniforme de recurso.
 
         El recurso tiene una dirección única disponible en Internet. El formato general de una URL es:
-        esquema://dirección_máquina/directorio/archivo
+        protocolo://dirección_máquina/directorio/archivo.txt
         Ej: http://www.mipaginaweb.com/index.html
 
         <a> es la etiqueta usada para enlazar con recursos a través de una URL.
 
         El enlace se puede asociar a un texto, una imagen o un elemento HTML. Una vez enlazado, pulsando 
         en el elemento se navegará hacia el recurso definido. El atributo más importante del elemento <a> 
-        es el atributo "href", que indica el destino del enlace, es decir, la URL del recurso al que 
+        es "href", que indica la direccion del destino del enlace, es decir, la URL del recurso al que 
         queremos acceder.
 
         Las direcciones que pongamos pueden ser absolutas o relativas
@@ -38,12 +38,15 @@
         está por encima, por debajo o al mismo nivel en el árbol de directorio del sitio, usaremos 
         direcciones relativas al directorio donde está la página que contiene el enlace al recurso.
 
-        Si el sitio web es www.misitio.com y quiero hacer referencia a un recurso que está en el 
-        directorio “/documentos/” y tengo que acceder a un recurso que cuelga de ese directorio, 
-        por ejemplo en “/documentos/fichero.html”, podré crear la dirección de esta forma:
-        <a href=“/documentos/fichero.html”>
+        Por ejemplo si hay un recurso situado en www.misitio.com/documentos/fichero.html y
+        nuestra página esta en www.misitio.com/documentos/pagina.html podremos acceder a ella 
+        poniendo <a href=“fichero.html”>Acceder</a>
+
+        Para direcciones que se encuentran en internet usaremos direcciones absolutas, para 
+        direcciones que se encuentran en local usaremos direcciones relativas.
 
     -->
+    <!-- Direccion absoluta -->
     <a href="https://www.google.es">Ir a goolgle</a>
     <br/>
     <!-- Podemos hacer que vaya a una pagina local de manera relativa de donde se encuentra
@@ -52,9 +55,17 @@
     <a href="02_HTML_Listas.html">Ir a la pagina de Listas</a>
     <!-- Manera absoluta
     <a href="C:/Users/WsLMSGI/01_HTML/02_HTML_Listas.html">Ir a la pagina de Listas</a>
+    NADA recomendable, ya que esta página web solo funcionará en mi local, y si se la mando
+    a alguien no le funcionará
     -->
+
+    <!-- Varios ejemplos de acceso de manera relativa-->
     <br/>
-    <a href="img/batman.jpg">Ir a la foto de batman</a>
+    <a href="img/DOM_HTML.png">Ir a la imagen de DOM</a>
+    <br/>
+    <a href="../README.md">Ir al fichero README.md</a>
+    <br/>
+    <a href="../03_XML/01_XML_Persona.xml">Ir al fichero 01_XML_Persona</a>
 
     <!-- Podemos hacer enlaces a contenido de la propia página
         poniendo un href con una almohadilla iremos al elemento con id que queramos

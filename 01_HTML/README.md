@@ -10,7 +10,9 @@ Se ha convertido en el estándar de visualización de la información, siendo la
 
 Una **etiqueta** (o **tag** en inglés) es la marca que usa el lenguaje para delimitar a un elemento específico.
 
-Las etiquetas o marcas están definidas por caracteres de escape que indican al software que lee el documento cuándo comienza y acaba el tag o etiqueta. En lenguajes de marcado como HTML existen etiquetas o marcas que usan el carácter “<” para abrir, o el “/>” para cerrar la etiqueta.
+Las etiquetas o marcas están definidas por caracteres de escape que indican al software que lee el documento cuándo comienza y acaba el tag o etiqueta. En lenguajes de marcado como HTML existen etiquetas o marcas que usan el carácter “<” para abrir, o el “</” para cerrar la etiqueta. Ejemplo:
+
+    <etiqueta>contenido</etiqueta>
 
 Empecemos por mostrar un poco de código de una página HTML en su formato más básico:
 
