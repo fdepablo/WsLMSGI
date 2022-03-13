@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- 
+	Con la siguiente etiquete, decimos que queremos dar estilos segun el css a este XML
+	cuando se visualice en un navegador
+-->
+<?xml-stylesheet type="text/css" href="css/cursos.css" ?>
+<cursos>
+	<curso>
+		<alumno>
+			<nombre>Juan</nombre>
+			<nota>9</nota>
+			<faltas>1</faltas>
+		</alumno>	
+		<alumno>
+			<nombre>Luisa</nombre>
+			<nota>10</nota>
+			<faltas>0</faltas>
+		</alumno>	
+		<alumno>
+			<nombre>Sergio</nombre>
+			<nota>5</nota>
+			<faltas>7</faltas>
+		</alumno>	
+		<alumno>
+			<nombre>María</nombre>
+			<nota>8</nota>
+			<faltas>3</faltas>
+		</alumno>		
+	</curso>
+</cursos>

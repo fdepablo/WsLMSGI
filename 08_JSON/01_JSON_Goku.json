@@ -1,0 +1,12 @@
+{
+    "nombre":"Tony Starck",
+    "sexo":"varon",
+    "edad":38,
+    "casado":false,
+    "numeros_de_la_suerte":[1,4,7,9],
+    "direccion":{
+            "nombreVia":"Torre Stark (Avengers)",
+            "numero":104,
+            "ciudad":"New York"
+        }
+}
