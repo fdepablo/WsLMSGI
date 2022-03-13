@@ -55,7 +55,7 @@ Luego, podemos empezar a ver los ejemplos que estan numerados dentro de esta car
 
 ### Validadores online
 
-- <www.w3schools.com/xml/xml_validator.asp>
+- <http://www.w3schools.com/xml/xml_validator.asp>
 - <http://www.xmlvalidation.com> 
 
 
