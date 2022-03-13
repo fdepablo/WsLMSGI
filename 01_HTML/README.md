@@ -39,9 +39,7 @@ Todas las etiquetas anteriores serían obligatorias para tener un documento HTML
 
 ## HTML5
 
-HTML5 es la última actualización de HTML. HTML5 también es un termino que sirve para agrupar las  tecnologías web HTML5, CSS3 y nuevas capacidades de JavaScript.
-
-La necesidad de esta nueva versión viene por que su antecesora HTML4, que carece de las características necesarias para la creación de aplicaciones modernas.
+HTML5 es la última actualización de HTML. La necesidad de esta nueva versión viene por que su antecesora HTML4, que carece de las características necesarias para la creación de aplicaciones modernas.
 
 Por ejemplo, el declive de uso de Adobe Flash para dotar de dinamismo nuestras páginas, ha llevado a que HTML5 disponga de herramientas para que nuestros navegadores puedan gestionar audio, vídeo, animaciones vectoriales, componentes de interfaz, entre muchas otras cosas. Ahora HTML5 es capaz de hacer esto sin necesidad de plugins y con una gran compatibilidad entre navegadores.
 
@@ -56,10 +54,31 @@ Podemos empezar a ver los ejemplos que estan numerados dentro de esta carpeta (0
 
 **Nota**: Para crear un fichero HTML con VSC debemos crear un nuevo fichero con extensión .html. Para rellenar un contenido básico debemos de poner dentro del fichero "html:5" y pulsar enter. Esto último solo funcionaría si tenemos instalada la extensión "beautify"
 
+## Modelo de objetos DOM
+
+El **Document Object Model** (DOM) es el árbol creado por las aplicaciones para representar la estructura de los documentos de tipo HTML y XML.
+
+Cuando creamos un documento XML o HTML, es muy importante entender que cada etiqueta se convertirá en el navegador en un nodo o un objeto del DOM, permitiendo a otros lenguajes acceder a ellos y pudiendo acceder a sus métodos o atributos. El lenguaje más extendido para trabajar con el DOM es JavaScript.
+
+La interfaz del Modelo de Objetos del Documento (DOM) tiene una gran similitud con la de un arbol, cada nodo tendrá un nodo padre pero podrá varios nodos hijos.
+
+![DOM](img/DOM_HTML.png "DOM")
+
+Dentro del DOM podemos encontrar diferentes tipos de nodos. Los principales tipos de nodos que podemos encontrar son:
+
+1. **Document:** El objeto document es el nodo raíz, a partir del cual derivan el resto de nodos. Es la frontera entre el navegador y nuestro contenido.
+2. **Element:** Son los nodos creados por las propias etiquetas de HTML. Un documento web está formado por una jerarquía de nodos. Lo habitual es aplicarles términos de parentesco; si dentro de una etiqueta contenedora **div** ponemos dos etiquetas de párrafo **p**, estas **p** serán las hijas de la etiqueta **div**.
+3. **Text:** Es el contenido dentro de un **Nodo Element**.
+4. **Attr (Atributo):** Representa un atributo de un **Nodo Element**.
+5. **Comment:** Representa un comentario escrito por el diseñador.
+
+Una vez tenemos el DOM creado, podremos ser capaces de recorrerlo y alterarlo a nuestro antojo mediante lenguajes como **JavaScript**, dando así un comportamiento dinámico a nuestras páginas web.
+
 ## Bibliografía
 
 - <https://www.w3schools.com/html/default.asp>
 - <https://developer.mozilla.org/es/docs/conflicting/Web/HTML/Element>
+- [Arbol Dom](http://www.gnu.org/software/classpathx/jaxp/apidoc/org/w3c/dom/tree.html)
 
 ### Textos falsos
 

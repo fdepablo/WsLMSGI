@@ -29,7 +29,8 @@
 
             6) <footer>. Pie de página.
 
-            7) <main>. Representa el contenido principal del <body>. Solo debe haber uno
+            7) <main>. Representa el contenido principal del <body>. Contiene la información
+                más importante de la página web.
 
         Antes de estas etiquetas se usaban "div" con un id describiendo el tipo de contenido
         que iba a soportar, ej:
@@ -45,21 +46,21 @@
 
         Más adelante con CSS haremos algún ejemplo de estilos para estas etiquetas.
     -->
+    <header style="text-align: center;">
+        <h1>Esta es la cabecera de mi pagina web</h1>
+    </header>
+
+    <!-- Este código sería como se hacia antes de HTML5
+    <div id="header" style="text-align: center;">
+        <h1>Esta es la cabecera de mi pagina web</h1>
+    </div>
+    -->
+    <nav>
+        <a href="http://www.elpais.es">Ir al ElPais!</a>
+        <a href="http://www.google.es">Ir a Google!!</a>
+    </nav>
+
     <main>
-        <header style="text-align: center;">
-            <h1>Esta es la cabecera de mi pagina web</h1>
-        </header>
-
-        <!-- Este código sería como se hacia antes de HTML5
-        <div id="header" style="text-align: center;">
-            <h1>Esta es la cabecera de mi pagina web</h1>
-        </div>
-        -->
-        <nav>
-            <a href="http://www.elpais.es">Ir al ElPais!</a>
-            <a href="http://www.google.es">Ir a Google!!</a>
-        </nav>
-
         <section>
             <h2>Esta es la seccion noticias nacionales</h2>
             <article>
@@ -83,14 +84,14 @@
                 <p>Ha muerto el perro del hortelano!!</p>
             </article>
         </section>
-
-        <aside>
-            <img id="fotoBatman" src="img/batman.jpg" />
-        </aside>
-
-        <footer>
-            <p>Todos los derechos reservador! copyright 2021 &copy;</p>
-        </footer>
     </main>
+
+    <aside>
+        <img id="fotoBatman" src="img/batman.jpg" />
+    </aside>
+
+    <footer>
+        <p>Todos los derechos reservador! copyright 2021 &copy;</p>
+    </footer>
 </body>
 </html>
