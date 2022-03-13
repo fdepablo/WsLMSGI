@@ -61,4 +61,18 @@ Podemos empezar a ver los ejemplos que estan numerados dentro de esta carpeta (0
 - [https://developer.mozilla.org/es/docs/Web/CSS](https://developer.mozilla.org/es/docs/Web/CSS)
 - [https://www.w3.org/TR/CSS/#css](https://www.w3.org/TR/CSS/#css)
 
+### Herramientas
 
+- [Editor de fotografía on-line](https://pixlr.com/)
+- [Creación de bocetos](https://ninjamock.com/)
+- [Degradados CSS](http://www.colorzilla.com/gradient-editor/)
+
+### Inspiración:
+- <https://www.awwwards.com/>
+- <http://www.logogala.com/>
+- <https://mediaqueri.es/>
+- <http://www.webcreme.com/>
+
+### Varios
+
+- [CV en HTML5 y CSS3](http://www.rleonardi.com/interactive-resume/)

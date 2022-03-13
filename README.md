@@ -46,8 +46,9 @@ Algunos enlaces de bibliografía general.
 
 - <https://www.w3schools.com>
 - <https://www.w3.org/standards/webdesign/htmlcss>
+- <https://uniwebsidad.com/>
 
 ## Otros enlaces de interes
 
 - [Tutorial de MarkDown](https://www.markdownguide.org/basic-syntax/)
-- [Visualizar HTML desde Github](https://htmlpreview.github.io/)
+

@@ -218,4 +218,4 @@ Practicamente toda esta documentación se ha sacado de la unidad formativa 3.2.2
 Luego, podemos empezar a ver los ejemplos que estan numerados dentro de esta carpeta
 
 ## Bibliografía
-- [https://www.w3schools.com/xml/xml_dtd_intro.asp](https://www.w3schools.com/xml/xml_dtd_intro.asp)
+- <https://www.w3schools.com/xml/xml_dtd_intro.asp>

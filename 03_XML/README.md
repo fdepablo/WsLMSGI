@@ -46,8 +46,18 @@ Primero ver la unidad formativa 3.2 XML
 Luego, podemos empezar a ver los ejemplos que estan numerados dentro de esta carpeta (01_XML_Persona.xml)
 
 ## Bibliografía
-- [https://www.w3schools.com/xml/](https://www.w3schools.com/xml/)
-- [https://developer.mozilla.org/es/docs/Web/XML/XML_introduction](https://developer.mozilla.org/es/docs/Web/XML/XML_introduction)
-- [https://www.w3.org/XML/](https://www.w3.org/XML/)
+
+- <https://www.w3schools.com/xml/>
+- <https://www.mclibre.org/consultar/xml/>
+- <https://desarrolloweb.com/manuales/18/>
+- <https://developer.mozilla.org/es/docs/Web/XML/XML_introduction>
+- <https://www.w3.org/XML/>
+
+### Validadores online
+
+- <www.w3schools.com/xml/xml_validator.asp>
+- <http://www.xmlvalidation.com> 
+
+
 
 

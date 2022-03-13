@@ -50,8 +50,6 @@ Dentro de HTML5 podemos encontrar 3 grandes tecnologías: HTML5, CSS3 y JavaScri
 2. Los estilos de la pagina lo lleva CSS (los colores, los tamaños de las letras, la colocacion de las etiquetas, etc.)
 3. La funcionalidad de la pagina la lleva JavaScript (lo que puede hacer la pagina web cuando pulsamos un boton, por ejemplo)
 
-Para saber si nuestro código cumple los estándares de HTML5 podemos utilizar las herramientas de validación disponibles en Internet. [Validador](http://validator.w3.org/.)
-
 ## Como comenzar
 
 Podemos empezar a ver los ejemplos que estan numerados dentro de esta carpeta (01_HTML)
@@ -59,6 +57,29 @@ Podemos empezar a ver los ejemplos que estan numerados dentro de esta carpeta (0
 **Nota**: Para crear un fichero HTML con VSC debemos crear un nuevo fichero con extensión .html. Para rellenar un contenido básico debemos de poner dentro del fichero "html:5" y pulsar enter. Esto último solo funcionaría si tenemos instalada la extensión "beautify"
 
 ## Bibliografía
+
 - <https://www.w3schools.com/html/default.asp>
 - <https://developer.mozilla.org/es/docs/conflicting/Web/HTML/Element>
-- [Can I Use](https://caniuse.com/)
+
+### Textos falsos
+
+- [Enlace Lorem Ipsum para copiar textos ficticios](http://es.lipsum.com/)
+- [Enlace Chiquito Ipsum](https://www.chiquitoipsum.com/)
+
+### Fotos
+- <https://morguefile.com/>
+- <https://es.freeimages.com/>
+- <https://www.pexels.com/>
+- <https://unsplash.com/>
+- <http://realisticshots.com/>
+
+### Iconos
+- <https://www.iconfinder.com/>
+- <https://findicons.com/>
+- <https://fontawesome.com/>
+
+### Herramientas
+
+- [Visualizar HTML desde Github](https://htmlpreview.github.io/)
+- [Can I Use (Compatibilidad de HTML5 con navegadores)](https://caniuse.com/)
+
