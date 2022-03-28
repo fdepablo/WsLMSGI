@@ -13,11 +13,12 @@
         permiten al usuario interactuar. Estos elementos pueden ser: campos de texto, etiquetas, botones, 
         listas desplegables, casillas de verificación, etc.
 
-        El atributo action determina el proceso al que se enviarán los datos introducidos por el usuario 
-        cuando se pulse el botón submit.
+        El atributo "action" determina el proceso al que se enviarán los datos introducidos por el usuario 
+        cuando se pulse el botón submit, normalmente un servidor web. Por defecto, se enviaran todos los
+        elementos con el atributo "name" que haya dentro de la etiqueta <form>
 
-        El atributo method determina la forma en que se enviarán los datos. Con el valor "get" los datos 
-        se envían en la cabecera de la petición HTTP, por lo que serán visibles en la URL. Este 
+        El atributo "method" determina la forma en que se enviarán los datos. Con el valor "get" los datos 
+        se envían en la línea de petición HTTP, por lo que serán visibles en la URL. Este 
         método no es recomendable si los datos son confidenciales. Con el valor "post" los datos se 
         envían en el cuerpo de la petición HTTP (body), por lo que no serán visibles en la URL.
     -->
@@ -27,15 +28,17 @@
             <legend> Colocado inmediatamente después de una etiqueta <fieldset>, permite colocarle 
             una etiqueta de texto (título).
         -->
-        <fieldset><legend>Datos personales:</legend>
+        <fieldset>
+            <legend>Datos personales:</legend>
             <!--
                 <label> Define una etiqueta estática, que normalmente estará asociada con un elemento 
-                de campo de formulario que se identifica mediante el atributo "for".
+                de campo de formulario que se identifica mediante el atributo "for". El valor del
+                atributo "for" se iguala al valor del atributo "id" del elemento del formulario
             -->
             <label for="nombre">Nombre: </label>
             <!--
-                La etiqueta <input> define un elemento de campo de formulario. Estos son sus atributos 
-                más comunes:
+                La etiqueta <input> define un elemento de campo de texto de formulario. Estos son 
+                sus atributos más comunes:
 
                 1) type: tipo de campo. El valor más usual es text (caja de texto).
 
@@ -43,16 +46,15 @@
                 recuperar el valor del campo. Será como se enviará al servidor con la pareja
                 "name=value"
 
-                3) value: valor que tomará el campo cuando el usuario escriba en él.
+                3) value: valor que tomará el campo.
 
                 4) readonly: solo lectura. No puede ser modificado por el usuario. 
                 
-                Además si hay un label con el atributo "for" con el 
-                valor del "id" de un input, cuando pinchemos en ese label nos hara focus a dicho 
-                "input"
+                Además si hay un label con el atributo "for" con el valor del "id" de un input, 
+                cuando pinchemos en ese label nos hara focus a dicho "input"
             -->
-            <input id="nombre" type="text" name="nombre"/>
-            <br />
+            <input id="nombre" type="text" name="nombre" value="Tony Stark"/>
+            <br/>
             <label for="edad">Edad: </label>
             <input id="edad" type="text" name="edad" />
             <br/>
@@ -74,7 +76,7 @@
                 Todos los botones de radio que tienen el mismo name pertenecen al mismo grupo y 
                 solamente uno de los elementos del grupo podrá ser seleccionado por el usuario.
 
-                El usuario solamente podrá seleccionar uno de los cuatro valores. 
+                El usuario solamente podrá seleccionar uno de los valores preestablecidos. 
                 La variable que recogerá el programa y enviará al servidor será
                 estado_civil y el valor enviado será S, C, V o D según el botón de radio seleccionado 
                 por el usuario.
@@ -133,7 +135,7 @@
 
                     1) rows: número de filas visibles del campo.
 
-                    2) cols: ancho del campo.
+                    2) cols: ancho del campo, numero de caracteres por línea.
 
                     3) readonly: solo lectura. (este tambien se puede encontrar en los text y en otros)
             -->
@@ -143,12 +145,13 @@
             <!-- Para evitar que el usuario pueda redimensinar el textarea podemos usar
             CSS. Para ello podemos poner el atributo "resize: none;" -->
             <textarea style="resize: none;" rows="5" cols="80" name="observaciones"></textarea>
-             <!--
+
+            <!--
                 Un checkbox tambien es común para opciones simples de marcar o desmarcar
             -->
             <br/>
             <br/>
-            <label for="terminos">Acepta los terminos de uso? </label>
+            <label for="terminos">¿Acepta los terminos de uso? </label>
             <br/>	
             He leido y acepto los terminos de uso <input type="checkbox" name="terminos" value="Y" />
             <br/>	
@@ -163,6 +166,13 @@
                 se deja el formulario en su estado inicial (normalmente vacio)
             -->
             <input type="reset" value="Limpiar formulario" />
+
+            <!-- 
+                Tambien hay botones normales para dar otro tipo de funcionalidad
+                Al estar este botón en el formulario, su comportamiento por defecto sería
+                la misma que la del "input type='submit'""
+            -->
+            <button>Boton normal</button>
         </fieldset>
     </form>
 </body>

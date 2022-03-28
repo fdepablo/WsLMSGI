@@ -17,7 +17,7 @@
     <p style="color: blue;text-align: right">Esto es otro parrafo</p>
        
     <!-- Repetimos la funcionalidad de arriba pero con una agrupación-->
-    <div style="color: rgb(245, 6, 6); text-align: center;">
+    <div style="color: red; text-align: center;">
         <p>Esto es otra seccion</p>
         <p>Esto es otro elemento de la otra seccion</p>
     </div>
@@ -25,15 +25,17 @@
     <hr/>
     <p>Elementos  de agrupación de bloque y en línea</p>
 	<!-- Con div agrupamos en forma de bloque (saltos de linea)-->
-    <div style="color:#ff0037">
+    <div style="color: green">
         <h3>Encabezado de tipo 3</h3>
         <p>Párrafo con formato aplicado.</p>
     </div>
-    
-     <!-- Fiajos la diferencia de usar span y div -->
+
+    <!-- La etiqueta span tambien sive para agupar componente, pero no hace salto de linea-->
+
+    <!-- Fiajos la diferencia de usar span y div -->
     <h3>Ejemplo de div</h3>
     <div>
-        <p>Párrafo con formato <div style="color: blue">aplicado</div> a un elemento en línea</p>
+        <p>Párrafo con formato <div style="color: blue">aplicado</div> a un elemento en bloque</p>
     </div>
 
     <h3>Ejemplo de span</h3>
@@ -42,10 +44,11 @@
     </div>
 
     <!-- 
-        La etiqueta <span> se usa para realizar agrupaciones en línea de los elementos de un documento. 
+        La etiqueta <span> se usa para realizar agrupaciones en línea de los elementos de un documento.
+
         Esta etiqueta no cambia la visualización de un texto ella sola, necesitará de estilos de CSS 
-        para realizarlo. Además, facilita añadir una clase a una parte específica de un texto o de 
-        una parte de un documento (se entenderá mejor cuando veamos CSS).        
+        para realizarlo (Como DIV). Además, facilita añadir estilos a una parte específica de un 
+        texto o de una parte de un documento (se entenderá mejor cuando veamos CSS).        
     -->
 
     <p>Mi hermano tiene los ojos <span style="color:blue; font-weight:bold;">azules</span>. </p>

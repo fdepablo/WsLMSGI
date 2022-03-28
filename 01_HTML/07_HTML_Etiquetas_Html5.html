@@ -11,7 +11,7 @@
         --------------------------
 
         HTML5 incorpora nuevas etiquetas denominadas etiquetas semánticas. Estas etiquetas no 
-        tienen contrapartida visual, actúan como capas igual que la etiqueta <div>. 
+        tienen contrapartida visual, actúan como capas contenedoras igual que la etiqueta <div>. 
         Lo que las diferencia de las etiquetas <div> es que sirven para informar sobre el tipo de 
         contenido que soporta.
 
@@ -27,16 +27,17 @@
 
             5) <aside>. Área de banners o publicidad.
 
-            6) <footer>. Pie de página.
+            6) <footer>. Pie de página. Podemos encontrar, enlaces de contacto, enlaces de redes sociales..
 
             7) <main>. Representa el contenido principal del <body>. Contiene la información
-                más importante de la página web.
+                más importante de la página web, normalmente agrupa <section>
 
         Antes de estas etiquetas se usaban "div" con un id describiendo el tipo de contenido
         que iba a soportar, ej:
 
             <div id="cabecera"></div>
             <div id="pie_de_pagina"></div>
+            <div id="navegacion"></div>
         
         El uso de las etiquetas semánticas nos ayuda a posicionar mejor nuestra web en los 
         buscadores, ya que los motores de búsqueda sabrán el tipo de contenido que encierran 
@@ -50,7 +51,7 @@
         <h1>Esta es la cabecera de mi pagina web</h1>
     </header>
 
-    <!-- Este código sería como se hacia antes de HTML5
+    <!-- Ejemplo de como se hacia antes de HTML5
     <div id="header" style="text-align: center;">
         <h1>Esta es la cabecera de mi pagina web</h1>
     </div>
@@ -65,11 +66,11 @@
             <h2>Esta es la seccion noticias nacionales</h2>
             <article>
                 <h3>Hombre muerde a perro</h3>
-                <p>Un hombre ha mordido a un perro omg!!!</p>
+                <p>Un hombre ha mordido a un perro ¡¡¡OMG!!!</p>
             </article>
             <article>
-                <h3>El among us arrasa en el congreso de los diputados!!</h3>
-                <p>Han pillado a politicos jugando al among us!!</p>
+                <h3>Politicos trabajando en el congreso!!</h3>
+                <p>Han pillado a politicos fuera de la cafeteria</p>
             </article>
         </section>
 
@@ -77,11 +78,11 @@
             <h2>Esta es la seccion noticias Internacionales</h2>
             <article>
                 <h3>Escandalo en las elecciones EEUU!!</h3>
-                <p>El pato donald sale reelegido!!!</p>
+                <p>El pato Donald sale elegido por el 50% de los votos</p>
             </article>
             <article>
-                <h3>Esto es otra noticia internacional!!</h3>
-                <p>Ha muerto el perro del hortelano!!</p>
+                <h3>Polemica en la embajada de Laos</h3>
+                <p>Se acabo el helado de vainilla</p>
             </article>
         </section>
     </main>
@@ -91,7 +92,7 @@
     </aside>
 
     <footer>
-        <p>Todos los derechos reservador! copyright 2021 &copy;</p>
+        <p>Todos los derechos reservados! copyright 2021 &copy;</p>
     </footer>
 </body>
 </html>

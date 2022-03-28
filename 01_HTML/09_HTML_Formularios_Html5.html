@@ -16,24 +16,24 @@
         <!--
             Nuevos atributos
             ----------------
-            placeholder, Un texto que se muestra al hacer clic sobre una caja de texto para guiar 
-            al usuario y que desaparece cuando se sitúa el cursor.
+            placeholder, Un texto que se muestra sobre un campo de texto para guiar 
+            al usuario. Este texto desaparece cuando escribimos algo en él.
         -->
         <input type="text" name="edad" placeholder="Escribe tu edad" />	
         <br/>
         <br/>
         <!--
-            El campo al que se le añade el atributo autofocus será el que esté seleccionado por 
+            El campo al que se le añade el atributo "autofocus" será el que esté seleccionado por 
             defecto al cargar la página, es decir, tendrá el cursor.
         -->
-        <input type="text" name="nombre" autofocus/>
+        Nombre: <input type="text" name="nombre" autofocus/>
         <br/>
         <br/>
         <!--
            required, hace que el campo al que se le aplica sea obligatorio. No se podrá enviar 
            el formulario sin rellenarlo.
         -->
-        <input type="text" name="apellidos" required/>
+        Apellidos: <input type="text" name="apellidos" required/>
         <br/>
         <br/>
         <!-- 
@@ -51,9 +51,11 @@
         -->
        
         <!--
-            1) email, Campo que solo admite una dirección de correo electrónico (e-mail) correcta.
+            1) email, Campo que admite una dirección de correo electrónico (e-mail). Si le ponemos
+            el atributo "required" la dirección email debera de tener un formato correcto 
+            "nombre@correo"
         -->
-        <input type="email" name="email" required/>
+        Email: <input type="email" name="email" required/>
 
         <!--
             2) number, Campo que solo admite numeros. Podemos configurarlo con los siguientes
@@ -66,7 +68,7 @@
         -->
         <br/>
         <br/>
-        <input type="number" min="18" max="120" step="5" name="edadNumber" 
+        Edad: <input type="number" min="18" max="120" step="5" name="edadNumber" 
                 placeholder="Edad" required/>
     
         <!--
@@ -74,7 +76,7 @@
         -->
         <br/>
         <br/>
-        <input type="tel" name="telefono" placeholder="Escribe su número de telefono"/>
+        Teléfono: <input type="tel" name="telefono" placeholder="Escribe su número de telefono"/>
     
         <!--
             4) url, solo admite una URL en el formato correcto.
@@ -100,11 +102,6 @@
         <br/>
         <br/>
         <input type="submit" value="Enviar"/>
-
-        <!-- 
-            Nota, al final de la unidad 2.2 hay un video corto que es interesante que veáis
-            sobre la estructura de un documento HTML
-        -->
     </form>
 </body>
 </html>
