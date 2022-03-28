@@ -22,6 +22,10 @@ Se recomienda instalar las siguientes extensiones en VSC
 5. Live Server, para poder arrancar un servidor ligero de manera sencilla. Se recargaran las páginas HTML de manera automática.
 6. Markdown Preview Enhanced, para ver los ficheros con extensión ".md"
 
+Para instalar las extensiones, primero pulsar en el enlace de la barra izquierda de navegación "extensiones", buscarlas e instalarlas.
+
+![extensiones](img/extensiones.png "extensiones")
+
 ## Configuraciones especiales
 
 Si queremos hacer que los simbolos especiales esten coloreados, como por ejemplo los simbolos **()[]{}** y conseguir que el código sea más legible, debemos añadir las siguientes líneas de código en el fichero de configuración **settings.json** (al final de fichero, antes del cierre **}**): 
@@ -36,7 +40,7 @@ Para abrir el fichero **settings.json**:
 
 Debería quedar algo parecido a la siguiente imagen
 
-![settingsjson](img/settingsjson.png "settingsjson")
+
 
 ## Bibliografía
 
