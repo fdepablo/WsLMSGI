@@ -2,7 +2,7 @@
 
 # Cascading Style Sheets (CSS)
 
-El lenguaje de marcas HTML surgió como una forma de definir un documento, pero nunca para darle formato.
+El lenguaje de marcas HTML surgió como una forma de definir un documento, pero nunca para darle estilos.
 
 Es en la versión HTML 3.2 cuando comienzan a usarse etiquetas como "font" y otras que generan documentos HTML poco estructurados y con demasiadas etiquetas de formato.
 
@@ -19,27 +19,23 @@ La revisión de HTML 4 aportó la creación del etiquetado de estilos para defin
 Para aplicar estilos a nuestras páginas podemos hacerlo de tres formas:
 
 1. En la propia página HTML con una etiqueta "style". No es muy recomendable ya que no permite la reutilización de código.
-2. Dentro de una etiqueta HTML por medio del atributo style. Tampoco sería muy recomendable ya que tampoco permite la reutilización de código, también lo sobrecarga y muchas veces complica el código de manera innecesaria.
+2. Dentro de una etiqueta HTML llamada "style". Tampoco sería muy recomendable ya que tampoco permite la reutilización de código, también lo sobrecarga y muchas veces complica el código de manera innecesaria.
 3. En una hoja de estilos independiente. Este es el método recomendado ya que permite reutilización y separa claramente el HTML y el CSS.
 
 ## Sintaxis CSS
 
-La sintaxis de un estilo es muy simple e intuitiva. Su estructura consta de una serie de reglas que describen la forma en la que se visualiza cada uno de los elementos.
+La sintaxis de un estilo es muy simple e intuitiva. Su estructura consta de una serie de reglas que describen la forma en la que se visualiza cada uno de los elementos. Las reglas están definidas en el **selector**, que es el se encarga de saber a que etiquetas HTML debemos de aplicar los estilos mediante la definición de sus propiedades.
 
 La estructura sería la siguiente:
 
     SELECTOR { 
-        DECLARACION_1;
-        DECLARACION_2;
-        DECLARACION_3;
+        PROPIEDAD_1:VALOR_1;
+        PROPIEDAD_1:VALOR_2;
+        PROPIEDAD_1:VALOR_3;
         ...
     }
 
-La declaración nos dice como se va a comportar el selector. Cada declaración se dividiría en dos partes:
-
-    PROPIEDAD:VALOR
-
-La propiedad sería lo que queremos modificar del elemento seleccionado, y el valor sería el valor que tome.
+La propiedad sería el estilo que queremos modificar del elemento seleccionado, y el valor sería el estado que toma dicha propiedad.
 
 Veamoslo con un ejemplo:    
 
