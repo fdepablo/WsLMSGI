@@ -34,7 +34,7 @@ El siguiente ejemplo solo el elemento con el atributo id="h5Especial" se le apli
 SELECTOR POR CLASE
 ------------------
 Si hacemos que el selector empiece por "." entonces afectará a aquellas etiquetas que tengan
-el atributo class cuyo valor coincida con este selector.
+el atributo "class" cuyo valor coincida con este selector.
 
 El siguiente ejempolo solo los elementos con el atributo class="rojo" se le aplicará el color 
 rojo

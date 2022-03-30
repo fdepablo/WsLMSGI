@@ -9,39 +9,48 @@
     Propiedades de Texto
     --------------------
 
-    1. font-family, tipo de fuente.
-    Valores: Arial; Helvetiva; sans-serif; serif; Times New Roman; Times; Verdana; Georgia; 
+    1. font-family, tipo de fuente. Podemos poner el nombre de la familia o el genérico
+    - Ejemplo de valores de familia: Arial; Helvetiva; Times New Roman; Verdana; Georgia; 
     Geneva; Courier;
+    - Ejemplo de valores genéricos: serif, sans-serif, cursive, fantasy, monospace
     
+    Podemos poner los valores con comillas o sin ellas. En caso de que la familia tenga
+    espacios, entonces es obligatorio con comillas, como "Times New Roman"
+
+    Además, podemos especificar una lista de fuentes, desde la prioridad más alta a la más baja. 
+    (por si no se puede obtener la primera fuente)
+    Ej: font-family: "Gill Sans Extrabold", Helvetica, sans-serif;
+        
     2. font-size, tamaño de la fuente.
-    Valores: 2px, 3em, large
+    Ejemplo de Valores: 2px, 3em, large
 
     3. font-style, estilos
-    Valores: italic
+    Ejemplo de Valores: italic, normal
 
     4. font-variant, Permite modificar cómo se visualiza el texto.
-    Valores: normal; small-caps; (versalitas)
+    Ejemplo de Valores: normal; small-caps; (versalitas)
 
     5. font-weight, Aplica el formato de "negrita" al texto. Equivalente a <b>
-    Valores: valores absolutos-> 100, 200, 300 ... 900; bold; normal;
+    Ejemplo de valores absolutos-> 100, 200, 300 ... 900; bold; normal;
 
     6. text-decoration, Permite definir diferentes elementos para aplicar al texto, como 
     subrayado o tachado.
-    Valores: blinks; (parpadeante): line-through; (tachado); underline; (subrayado); 
+    Ejemplo de Valores: blinks; (parpadeante): line-through; (tachado); underline; (subrayado); 
     overline; (sobrerayado)
 
     7. text-transform, Transformación del texto.
-    Valores: capitalice; (convierte la primera letra de cada palabra a mayúsculas)
-    uppercase; (todo en mayúsculas)
-    lowercase; (todo en minúsculas)
+    Ejemplo de Valores:
+        capitalice; (convierte la primera letra de cada palabra a mayúsculas)
+        uppercase; (todo en mayúsculas)
+        lowercase; (todo en minúsculas)
 
     8. color, color del texto
-    Valores: red; rgb(255,0,0)
+        Ejemplo de Valores:: red; rgb(255,0,0)
+    -->
 
-     -->
     <style>
         h1 {
-            font-family: arial;/* Podemos ponerlo con comillas ('arial') o sin ellas*/
+            font-family: arial;
             font-size: 19px;
             color: #1D3545;
             text-decoration: underline;/* <u>*/
@@ -55,8 +64,8 @@
         }
 
         h3 {
-            font-variant: small-caps;
-            font-family: 'Times New Roman';
+            font-variant: small-caps;/* pequeñas separaciones entre las letras*/
+            font-family: "Gill Sans Extrabold", Helvetica, sans-serif;
             font-size: 30px;
             color: #07f76b;
         }
@@ -78,7 +87,7 @@
 </head>
 
 <body>
-    <h1>Titulo </h1>
+    <h1>Titulo en H1</h1>
     <h2>subtitulo</h2>
     <h3>Subtitulo</h3>
     <p>Párrafo</p>
