@@ -8,10 +8,9 @@ Vamos a ver los 3 principales selectores que podemos encontar en CSS
 
 SELECTOR POR ETIQUETA
 ---------------------
-El selector más básico es el que ya hemos visto anterioremente. Afecta a todas las etiquetas que se
-llamen como el selector.
+El selector más básico. Afecta a todas las etiquetas que se llamen como el selector.
 
-En el siguiente ejemplo, decimos que todas nuestras etiquetas H4 vas a ser de color aguamarina, 
+En el siguiente ejemplo, decimos que todas nuestras etiquetas H4 van a ser de color aguamarina, 
 centradas y con el color negro de fondo */
 h4 {
     color: aquamarine;
