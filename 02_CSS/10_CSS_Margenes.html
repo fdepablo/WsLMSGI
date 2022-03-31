@@ -13,7 +13,7 @@
     tiene alrededor, es decir, es un espacio que está en el exterior del elemento al 
     que se aplica.
 
-    Ver imagen "img/boxmodel.png" o ejecutar la página en un navegador
+    Ver imagen "img/boxmodel.png" o visualizar la página en un navegador
 
     -->
     <style>
@@ -26,7 +26,8 @@
 
         .margin2 {
             border: 1px solid black;
-            margin-top: 100px;
+            margin-top: 100px;/*Ojo, decimos que el margin top es 0, pero el de arriba tiene 100px 
+                            de margen con el de abajo*/
             margin-bottom: 100px;
             margin-right: 150px;
             margin-left: 80px;
@@ -34,7 +35,7 @@
         }
 
         .margin3 {
-            /*Con la propiedad "auto" establecemos horizontalmente a center el elemento respecto 
+            /*Con la propiedad "auto" establecemos centrado el elemento respecto 
             a su contenedor*/
             margin: auto;
             width: 500px;
@@ -46,7 +47,7 @@
 
 <body>
     <!-- imagen de box model -->
-    <div style="text-align: center;">
+    <div style="text-align: center;border: 3px solid">
         <h1 >Margenes</h1>
         <h3 style="text-decoration:underline">Box Model Elementos HTML</h3>
         <img src="img/boxmodel.png"/>

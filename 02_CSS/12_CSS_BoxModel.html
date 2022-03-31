@@ -7,24 +7,36 @@
     <title>CSS Padding</title>
     <!--
         
-    BoxModel
-    --------
+    Box Model
+    ---------
 
-    Al final el tamaño que ocupa un componenten en la página web es la suma de las propiedades
+    El modelo de caja en CSS es esencialmente una caja que está alrededor de cada elemento
+    HTML. 
 
-    1. width
-    2. Height
+    Tenemos 4 conceptos fundamentales dentro de un modelo de caja:
+
+    1. content, lo que hay dentro de un elemento. Donde el texto o las imagenes se muestran.
+    3. padding, el espacio entre el el 'content' y el 'border'. Es transparente
+    4. border, linea que rodea el 'content'
+    5. margin, el espacio entre el 'border' y los demas elementos. Es transparente
+
+    Al final el tamaño que ocupa un elemento en la página web es la suma de las siguientes
+    propiedades:
+
+    1. width, por defecto, el ancho del 'content' del elemento
+    2. height, por defecto, el alto del 'content' del elemento
     3. padding
     4. border
-    5. margin
 
     -->
+
     <style>
         .caja {
             width: 320px;
             padding: 10px;
-            border: 5px solid rgb(187, 92, 92);
+            border: 5px solid red;
             margin: auto;
+            text-align: center;
         }
 
         h3{
@@ -48,7 +60,7 @@
 </head>
 
 <body>
-    <!-- El tamaño horizontal final que ocupa en la pagina sería:
+    <!-- El tamaño horizontal final que ocupa en la página sería:
         320px (width)
         + 20px (left + right padding)
         + 10px (left + right border)
