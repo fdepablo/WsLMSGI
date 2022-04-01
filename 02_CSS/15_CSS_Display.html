@@ -12,52 +12,40 @@
 
         Tenemos cuatro valores básicos: block, inline, inline-block y none
 
-        display: block
-        --------------
+        1. display: block
 
-        Los elementos se disponen en bloque uno debajo de otro y ocupando todo el ancho, a no 
+        Los elementos se disponen en bloque uno debajo de otro y ocupan todo el ancho, a no 
         ser que se especifique un valor para la propiedad width. Solo tiene efecto si el 
-        posicionamiento es relativo o estático. Las etiquetas <p> y <div> tienen este tipo 
+        posicionamiento es relative o static. Las etiquetas <p> y <div> tienen este tipo 
         de posicionamiento por defecto, este es el motivo de que siempre ocupen todo el ancho, 
         aunque su contenido sea una simple palabra.
 
-        display: inline
-        ---------------
+        2. display: inline
 
-        Los elementos se disponen en línea uno a continuación de otro, el tamaño se ajusta 
-        al contenido, luego no tienen ningún efecto las propiedades width y height.
+        Los elementos se disponen en línea uno a continuación de otro, el ancho se ajusta 
+        al siempre contenido, luego no tienen ningún efecto las propiedades width y height.
 
         Algunas etiquetas tienen un tipo de visualización inline por defecto, este es el caso 
         de las etiquetas <a> o <span>.
 
-        display: inline-block
-        ---------------------
+        3. display: inline-block
+
         Los elementos se disponen en línea, uno a continuación de otro, pero a diferencia del 
         inline, el tamaño es el establecido por los atributos height y width.
                 
+        4. display: none
 
-        display: none
-        -------------
-        Los elementos no se mostrarán en la página. Muy util cuando lo conbinamos con 
+        Los elementos no se mostrarán en la página. Muy útil cuando lo combinamos con 
         Javascript para ocultar elementos de manera dinámica en nuestra página.
 
         Cada elemento tiene un valor de esta por defecto, pero se la podemos 
         cambiar mediante CSS
 
-        Tenemos muchos más valores para el display:
+        Aunque estos son los más importantes, tenemos más valores para el display:
+        https://www.w3.org/TR/CSS21/visuren.html#propdef-display
         https://www.w3schools.com/cssref/pr_class_display.asp
     -->
     <style>
-        /*
-            "*" es el selector comodin, seleccionamos todas las etiquetas de la pantalla 
-            (body, etc).
-            Mediante este selector y el atributo online podemos ver lo que ocupan todos
-            las etiquetas en una página
-        */
-        *{
-            outline: 1px solid red
-        }
-
         .parrafo_block {
             background-color: aqua;
             text-align: center;
@@ -70,13 +58,29 @@
         }
 
         .div_inline_block{
-            display: none;
+            display: inline-block;
 	        background-color: rgb(0, 255, 157);
         	margin: 20px;
             width: 200px;
 	        height: 50px;
         }
 
+        /*
+            Para ver lo que ocupan los elementos de una pantalla podemos usar el siguiente 
+            "truco" mientras aplicamos estilos web.
+
+            "*" es el selector comodin, seleccionamos todas las etiquetas de la pantalla 
+            para aplicar el estilo definido.
+
+            Mediante este selector y el atributo outline podemos ver lo que ocupan todos
+            las etiquetas en una página. el atributo outline es parecido al border, a diferencia
+            de que outline no cuenta para el tamaño de la caja del elemento.
+        
+        */
+
+        *{
+            outline: 1px solid red
+        }
     </style>
 </head>
 
@@ -85,16 +89,21 @@
     <a href="https://www.google.es">Enlace a google</a>
     <a href="https://www.google.es">Enlace a google</a>
     <a href="https://www.google.es" style="text-align: center;width: 300px;">Enlace a google</a>
+    <a href="https://www.google.es">Enlace a google</a>
+    
     <!-- por defecto la etiqueta <h1> es block-->
     <h1>Esto es una etiqueta block</h1>
     <h1 style="text-align: center;">Esto es otra etiqueta block</h1>
+    
     <!-- Ejemplo de Display: block-->
     <p class="parrafo_block">Un gran poder implica una gran responsabilidad</p>
     <p class="parrafo_block">Podría estar así todo el día</p>
+    
     <!-- Ejemplo de Display: inline-->
     <p class="parrafo_inline">Nosotros tenemos un Hulk</p>
     <p class="parrafo_inline">APLASTA!</p>
     <br/>
+    
     <!-- Ejemplo de Display: inline-block-->
     <div class="div_inline_block">Peter Parker</div>
     <div class="div_inline_block">Steve Rogers</div>

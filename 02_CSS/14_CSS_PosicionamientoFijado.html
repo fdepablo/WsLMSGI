@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Posicionamiento Fijado</title>
 
+    <!--
+        POSICIONAMIENTO FIJADO
+        ---------------------
+        Funciona como el posicionamiento absolute con la diferencia de que la 
+        capa siempre estará visible. Muy útil para poner cabeceras de página, anuncios o 
+        banners que siempre queramos que sean visibles sin importar donde se encuentre
+        el usuario. Veremos este caso en el siguiente ejemplo.
+    -->
     <style>
         header {
             position: fixed;
@@ -16,8 +24,8 @@
             background-color: aqua;
             /*
             z-index, se aplica cuando hay superposición de elementos para indicar el orden 
-            de superposición. Para nuestro ejemplo la cabecera está en primer plano y el 
-            contenido en segundo plano. Lo veremos más adelante.
+            de superposición (capas). Para nuestro ejemplo la cabecera está en primer plano 
+            y el contenido en segundo plano. Lo veremos más adelante con más detalle
             */
             z-index: 2;/* Cuanto más alto el valor, mas cerca de nuestra visión*/   
             text-align: center;
@@ -34,7 +42,7 @@
             left: 0px;
             height: 1300px;
             background-color: skyblue;
-            z-index: 1;
+            z-index: 1;/*la capa main esta por debajo de la capa header*/
             padding-left: 2%;
             font-size: large;
             font-weight: bold;
@@ -48,9 +56,14 @@
         Esta es la cabecera de la página y quiero que esté siempre visible.
     </header>
     <main>
-        <p>Este es el contenido de la página</p>
-        <p>Otro párrafo</p>
-        <p>Otro párrafo</p>
+        <section>
+            <p>Este es el contenido de la página</p>
+            <p>Otro párrafo</p>
+            <p>Otro párrafo</p>
+            <p>Otro párrafo</p>
+            <p>Otro párrafo</p>
+            <p>Otro párrafo</p>
+        </section>
     </main>
 </body>
 
