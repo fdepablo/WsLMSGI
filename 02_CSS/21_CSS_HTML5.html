@@ -20,7 +20,7 @@
             line-height: 40px;
         }
 
-        main {
+        body {
             margin-left: auto;
             margin-right: auto;
             width: 960px;
@@ -31,11 +31,11 @@
         }
 
         /* 
-        main>header: selector del header que sea hijo directo del main.
-        Para evitar confusión con el header que es hijo de section (ver más abajo).     
+        main header: Selector para el header que sea hijo del body.        
+        Hacemos esto para evitar confusión con el header que es hijo de section 
+        (ver más abajo).     
         */
-
-        main>header {
+        body header {
             width: 100%;
             height: 100px;
             background: #999;
@@ -63,8 +63,8 @@
             margin-bottom: 10px;
         }
 
-        /* section>header: Selector del header que sea hijo directo de la etiqueta section*/
-        section>header {
+        /* Selector para el header que sea hijo de la etiqueta section*/
+        section header {
             margin-top: 10px;
             margin-left: 10px;
             margin-right: 10px;
@@ -73,9 +73,7 @@
             background: #FFF;
         }
 
-        /* En este caso los "article" que sean hijos de "section" pero no hace falta que sean
-        directos*/
-        section article {
+        article {
             margin-top: 10px;
             margin-left: 10px;
             margin-right: 10px;
@@ -84,6 +82,7 @@
             background: #FFF;
         }
 
+        /* Selector para el footer que sea hijo de la etiqueta section*/
         section footer {
             margin-top: 10px;
             margin-left: 10px;
@@ -111,38 +110,40 @@
 </head>
 
 <body>
+    <header>
+        CABECERA
+    </header>
+
+    <nav>
+        NAVEGACION
+    </nav>
+
     <main>
-        <header>
-            CABECERA
-        </header>
-
-        <nav>
-            NAVEGACION
-        </nav>
-
         <section>
-
             <header>
                 CABECERA SECCIÓN 1
             </header>
 
             <article>
-                ARTICULO SECCIÓN 1
+                ARTICULO 1 SECCIÓN 1
+            </article>
+
+            <article>
+                ARTICULO 2 SECCIÓN 1
             </article>
 
             <footer>
                 PIE DE PÁGINA SECCIÓN 1
             </footer>
-
-        </section>
-
-        <aside>
-            PUBLICIDAD 1
-        </aside>
-
-        <footer>
-            PIE DE PÁGINA
-        </footer>        
+        </section>        
     </main>
+
+    <aside>
+        PUBLICIDAD 1
+    </aside>
+
+    <footer>
+        PIE DE PÁGINA
+    </footer>     
 </body>
 </html>

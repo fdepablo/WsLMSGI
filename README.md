@@ -40,16 +40,13 @@ Para abrir el fichero **settings.json**:
 
 Debería quedar algo parecido a la siguiente imagen
 
-
+![settingsjson](img/settingsjson.png "settingsjson")
 
 ## Bibliografía
 
-En cada apartado se recomendará bibliografía específica.
-
-Algunos enlaces de bibliografía general.
-
 - <https://www.w3schools.com>
 - <https://www.w3.org/standards/webdesign/htmlcss>
+- <https://developer.mozilla.org/es/docs/Web>
 - <https://uniwebsidad.com/>
 
 ## Otros enlaces de interes
