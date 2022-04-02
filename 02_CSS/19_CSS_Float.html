@@ -8,22 +8,90 @@
     <!--
         FLOAT
         -----
+    
+        La propiedad 'float' posiciona una caja todo lo posible a la izquierda o derecha dentro 
+        de su elemento contenedor y desde su posición original.
 
-        Tenemos dos propiedades más que son frecuentemente usadas para posicionar elementos en 
-        la pantalla, float y clear.
-        
-        Esta propiedad es usada para posicionar y formatear contenido, por ejemplo para poner una
-        imagen flotante a la izquierda de un texto que esté en un contenedor.
+        Cuando usamos la propiedad 'float', el elemento flotará y tendrá un posicionamiento diferente
+        a los que vimos en el ejemplo de la propiedad 'display' (bloque, inline, etc). Esto es,
+        cuando indicamos que un elemento flote, estamos diciendo que no siga el flujo habitual de
+        su propiedad 'display'.
 
-        float puede tener los siguientes valores:
-        1. left: El elemento flota a la izquierda de su contenedor
-        2. right: El elemento flota a la derecha de su contenedor
+        Tambien es importante notar, que a diferencia de cuando usamos 'position: relative',
+        la caja se situa realmente a la derecha o a la izquierda, por lo que puede dejar sitio
+        para otros elementos.
+
+        La propiedad 'float' puede tener los siguientes valores:
+
+        1. left: El elemento flota a la izquierda de su contenedor (todo lo posible)
+        2. right: El elemento flota a la derecha de su contenedor (todo lo posible)
         3. none: Valor por defecto, el elemento no flota
-        4. inherit: El elemento hereda el valor float de su padre
+        4. inherit: El elemento hereda el valor float de su elemento padre
 
     -->
     <style>
-        .caja_texto{
+        /*
+        En este primer ejemplo vamos a ver como podemos hacer que 4 cajas (div) floten a la
+        derecha de su contenedor 'body'.
+
+        Podemos ir agregando la propiedad 'float: right' a cada una de las cajas para ver su
+        comportamiento.
+        */
+        h1{
+            text-align: center;
+        }
+
+        .caja1{
+            width: 200px;
+            height: 100px;
+            background-color: blue;
+            border: 2px solid black;
+            margin: 2px;
+            float: right
+        }
+
+        .caja2{
+            width: 200px;
+            height: 100px;
+            background-color: red;
+            border: 2px solid black;
+            margin: 2px;
+            float: right
+        }
+
+        .caja3{
+            width: 200px;
+            height: 100px;
+            background-color: green;
+            border: 2px solid black;
+            margin: 2px;
+            float: right
+        }
+
+        .caja4{
+            width: 200px;
+            height: 100px;
+            background-color: violet;
+            border: 2px solid black;
+            margin: 2px;
+            float: right
+        }
+
+        /*
+        En este segundo ejemplo vamos a ver como podemos hacer que las imagenes floten a la
+        derecha o a la izquierda de su contenedor 'div'.
+
+        El objetivo es poner imagenes a la derecha o a la izquierda de un texto.
+
+        Nótese que lo máximo que pueden flotar las imagenes a la izquierda o a la derecha 
+        es al ancho del contenedor, en este caso, el div, que ocupa el 70% de la página.        
+        */
+        h2{
+            margin-top: 250px;
+            text-align: center;
+        }
+
+        .caja_imagen{
             width: 70%;
             margin-bottom: 50px;
             margin-left: 5px;
@@ -42,8 +110,29 @@
 </head>
 
 <body>
-    <h2>Ejemplos FLOAT</h2>
-    <div class="caja_texto">
+    <h1>Ejemplos de cajas flotantes</h1>
+    <div class="caja1"></div>
+    <div class="caja2"></div>
+    <div class="caja3"></div>
+    <div class="caja4"></div>
+
+    <h2>Ejemplos de imagenes flotantes</h2>
+    <div class="caja_imagen">
+        <img class="imagen_normal" src="img/boxmodel.png" alt="boxmodel">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et 
+        dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. 
+        Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum 
+        augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. 
+        Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum 
+        nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed 
+        ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue 
+        eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris 
+        quis diam velit. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. 
+        Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum 
+        nisi, sed ullamcorper ipsum dignissim ac.
+        </p>
+    </div>
+    <div class="caja_imagen">
         <img class="imagen_derecha" src="img/boxmodel.png" alt="boxmodel">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et 
         dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. 
@@ -59,24 +148,8 @@
         </p>
     </div>
 
-    <div class="caja_texto">
+    <div class="caja_imagen">
         <img class="imagen_izquierda" src="img/boxmodel.png" alt="boxmodel">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et 
-        dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. 
-        Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum 
-        augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. 
-        Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum 
-        nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed 
-        ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue 
-        eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris 
-        quis diam velit. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. 
-        Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum 
-        nisi, sed ullamcorper ipsum dignissim ac.
-        </p>
-    </div>
-
-    <div class="caja_texto">
-        <img class="imagen_normal" src="img/boxmodel.png" alt="boxmodel">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et 
         dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. 
         Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum 
