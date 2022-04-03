@@ -10,16 +10,14 @@
         -----
 
         La propiedad 'clear' especifica si un elemento puede estar al lado de elementos 
-        flotantes que lo preceden o si debe ser movido (cleared) debajo de ellos. La propiedad 
+        flotantes que lo preceden o si debe mostrarse según su flujo natural. La propiedad 
         clear aplica tanto a elementos flotantes como no flotantes.
 
-        Lo más habitual es usar la propiedad clear después de usar la propiedad float
-
         Clear puede tener los siguientes valores:
-        1. none: Permite flotar elementos a ambos lados, valor por defecto. 
-        2. left: No permite flotar elementos a la izquierda
-        3. right: No permite flotar elementos a la derecha
-        4. both: No permite flotar elementos a ambos lados
+        1. none: Permite que haya elementos flotantes a ambos lados, valor por defecto. 
+        2. right: No puede haber elementos flotantes a la derecha
+        3. left: No puede haber elementos flotantes a la izquierda
+        4. both: No puede haber elementos flotantes a la derecha ni a la izquierda
         5. inherit: El elemento hereda el valor clear de su padre
 
         Las propiedades 'float' y 'clear' son muy potentes pero también nos pueden dar muchos
@@ -31,8 +29,8 @@
     -->
     <style>
         /*
-        Aquí vamos a tener las mismas cajas que en el ejemplo anterior, pero esta vez queremos ponerlas
-        a la derecha de dos en dos. Para ello vamos a usar la propiedad 'clear'
+        Aquí vamos a tener las mismas cajas que en el ejemplo anterior pero más anchas. Además,
+        queremos ponerlas a la derecha y de dos en dos. Para ello vamos a usar la propiedad 'clear'
         */
         h1{
             text-align: center;
@@ -65,9 +63,9 @@
             float: right;
             /*
             Poniendo la propiedad 'clear:right' estamos diciendo que la caja3 no queremos que 
-            a la derecha haya ninguna otra caja. De esta manera, la pondremos en el siguiente
-            bloque de abajo. Como también tiene la propiedad 'float:right', la situaremos a la
-            derecha.
+            a la derecha haya ninguna otra caja flotando. De esta manera, la pondremos en el 
+            siguiente bloque de abajo. Como también tiene la propiedad 'float:right', la 
+            situaremos a la derecha.
             */
             clear: right;
         }
