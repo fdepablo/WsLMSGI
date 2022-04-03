@@ -10,7 +10,7 @@
         -----
 
         Ejemplo de como poder crear estilos CSS en una página web con las etiquetas semanticas
-        de HTML5
+        de HTML5.
 
     -->
     <style>
@@ -31,9 +31,12 @@
         }
 
         /* 
-        main header: Selector para el header que sea hijo del body.        
-        Hacemos esto para evitar confusión con el header que es hijo de section 
-        (ver más abajo).     
+        En este ejemplo hay algun selector especial.
+
+        El selector 'body header' selecciona aquel elemento 'header' que sea hijo
+        del 'body'. Hacemos esto para evitar confusión con el 'header' que es hijo de 'section' 
+        (ver más abajo, ya que tenemos un 'header' general para la página y un 'header' para
+        la sección).     
         */
         body header {
             width: 100%;
@@ -63,7 +66,7 @@
             margin-bottom: 10px;
         }
 
-        /* Selector para el header que sea hijo de la etiqueta section*/
+        /* Selector para el 'header' que sea hijo de la etiqueta 'section' */
         section header {
             margin-top: 10px;
             margin-left: 10px;
@@ -82,7 +85,7 @@
             background: #FFF;
         }
 
-        /* Selector para el footer que sea hijo de la etiqueta section*/
+        /* Selector para el 'footer' que sea hijo de la etiqueta 'section' */
         section footer {
             margin-top: 10px;
             margin-left: 10px;
