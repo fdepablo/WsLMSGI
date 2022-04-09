@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- la etiqueta de arriba se llama prologo -->
+<!-- la instrucción de procesamiento de arriba se suele llamar 'prologo' y siempre tiene
+que ir en la primera línea-->
 <pelicula>
     <!-- Comentario, escribimos la pelicula en XML -->
     <titulo>La guerra de las galaxias</titulo>
@@ -12,13 +13,13 @@
             <edad>42</edad>
             <peso>75.3</peso>
         </actor>
-        <actor id="2" dni="675328282" nombre="princesa leia" edad="40" peso="62.3">
-        </actor>
+        <actor id="2" dni="675328282" nombre="princesa leia" edad="40" peso="62.3"></actor>
         <!-- La informacion que aportan las dos etiquetas actor de arriba es exactemente la misma,
             solo que una lo hace combinando atributos y etiquetas hijas y la otra lo hace con 
-            atributos exclusivamente. Cual es mejor? para mi es mejor la primera, creo que esta más 
-            ordenada y es más visual. Teoricamente los atributos representan me información de la 
-            etiqueta. -->
+            atributos exclusivamente. ¿Cuál es mejor? para mi es mejor la primera, creo que esta más 
+            ordenada y es más visual. Teoricamente los atributos representan metainformación de la 
+            etiqueta (id). -->
+        <actor>1 76998877R 500 90 R2D2</actor><!-- Esta manera seria horrible -->
     </actores>
     <extranjera pais="Fracia"/>
     <!-- Si queremos mandar simobolos especiales, como "<" podemos utilizar entidades para hacerlo

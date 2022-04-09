@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Persona atributo3="valor3">
-    <!-- Esto es un ejemplo y no tendrá repercusión cuando se procese el documento. -->
+    <!-- Esto es un comentario y no tendrá repercusión cuando se procese el documento. -->
     <Nombre atributo1="valor1" atributo2="valor2">Julia</Nombre>
     <Fecha>18.06.91</Fecha>
     <Ciudad>Navarra</Ciudad>
     <DNI>02654312B</DNI>
-    <nombre_pais>España</nombre_pais><!-- Snake case -->
+    <nombre_pais>España</nombre_pais><!-- Para nombres compuestos, mejor utilizar 'snake case' -->
+    <operacion>2 &lt; 3 &gt; 1</operacion>
 </Persona>
