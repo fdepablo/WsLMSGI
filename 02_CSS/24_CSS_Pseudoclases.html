@@ -11,7 +11,7 @@
         Las pseudoclases nos permiten dar algo de dinamismo a los elementos por medio de 
         un evento. 
         
-        Se escriben detrás del selector, separadas por dos puntos.
+        Se escriben detrás del selector, separadas por dos puntos (:)
 
         Estructura:
             selector:pseudoclase {
@@ -28,11 +28,10 @@
             :hover - Cuando el puntero del ratón se posiciona encima del link.
                 (tambien esta en otros elementos, botones, divs, etc)
             :visited - Selecciona los enlaces que ya fueron visitados.
-            :active - El momento en el que hacemos clic.
             :focus - Selección del enlace usando el tabulador del teclado.
                 (tambien esta en otros elementos, inputs, etc)
 
-        2. Aplicados a los campos input de un formulario
+        2. Aplicados a los campos de un formulario
 
             :focus - Cuando el cursor está dentro del campo.
             :target - Cuando vamos a una url con un id al final: http://pagina.es#Objetivos. 
@@ -83,21 +82,16 @@
         a{
             font-size: large;
         }
-
         a:link {
             color:red;
-        } 
-        a:active {
-            color:green;/* en el momento de hacer click */
-        }
-        a:hover, a:focus {
-            color:blue !important; /* Hacemos que el azul sea el estilo en caso de que tambien
-                                    hayamos visitado la página*/
-            cursor: crosshair;/*Mediante css podemos cambiar el estilo del ratón*/
         } 
         a:visited {
             color:rgb(74, 248, 6);
         }
+        a:hover{
+            color:blue !important; /* Hacemos que el azul sea el estilo en caso de que tambien
+                                    hayamos visitado la página*/
+        } 
 
         /* Formularios */
         input{
@@ -106,26 +100,21 @@
         }
         input:focus {
             background-color: blueviolet;
-        }
-        
+        }        
         input:disabled {
             background-color: rgb(51, 185, 85);
         } 
         input:checked {
-            cursor: crosshair;
+            cursor: crosshair;/*Mediante css podemos cambiar el estilo del ratón*/
         }
 
+        /*Aplicando al arbol de etiquetas*/
         /*Selecciona a todos las etiquetas p que sean primer hijo*/
         p:first-child {
             background-color: red;
         } 
-        /*Selecciona a cualquier elemento que sea primer hijo
-          Funcionaria igual con :hover
-        */
-        /*:first-child {
-            background-color: yellow;
-        }*/
 
+        /*Aplicando al contenido*/
         /*Aquellos div que no tengan nodos texto o elemento (vacios)*/
         div:empty{
             background-color: black;
@@ -133,10 +122,10 @@
             height: 100px;
         }
 
+        /*Aplicando al texto*/
         h2:first-letter{
             background-color: brown;
         }
-
         h3:first-line{
             background-color: rgb(241, 7, 136);
         }
@@ -146,12 +135,13 @@
 <body>
     <h1>PSEUDOCLASES</h1>
     <a href="https://www.google.es">Enlace a google</a>
+    <a href="https://www.meinventoelenlace.com">Enlace a invent</a>
     <hr/>
     <form>
         Nombre: 
         <input type="text" name="nombre"/>
         Codigo para copiar: 
-        <input type="text" name="codigo" disabled="true" value="QR3T56"/>
+        <input type="text" name="codigo" disabled="disabled" value="QR3T56"/>
         Superheroe favorito:
         <br/>
         <input type="radio" style="display: inline;" name="shf" value="CA"/> Steve Rogers
@@ -166,9 +156,9 @@
     </div>
     <hr/>
     <!-- 
-        El div de arriba no sale en negro pero este sí porque no tiene hijos
+        El div de arriba no sale en negro, pero el de abajo sí porque no tiene hijos
         OJO! en cuanto pongamos algo dentro, aunque sean espacios en blanco, ya 
-        tendrá un nodo texto hijo y ya no será elegible por el selector vacio
+        tendrá un nodo texto como hijo y ya no será elegible por el selector vacio
     -->
     <div></div>
     <hr/>

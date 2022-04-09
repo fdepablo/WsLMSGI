@@ -4,32 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS RESPONSIVE DESIGN</title>
+    <title>CSS MEDIA QUERIES - RESPONSIVE DESIGN</title>
     <!--
-        RESPONSIVE DESIGN - MEDIA QUERIES
+        MEDIA QUERIES - RESPONSIVE DESIGN
         ---------------------------------
         
         El diseño responsivo muy utilizado para hacer que una página web se adapte a 
-        los dispositivos electronicos, como moviles o tables, ya que normalmente son 
+        los dispositivos electrónicos, como móviles o tables, ya que normalmente son 
         más pequeños que una pantalla de ordenador.
 
         Las media queries se utilizan en la tecnología CSS para condicionar el diseño de la 
         aplicación al cumplimiento de una serie condiciones, que tendrá que ser 
         relativa al tipo de dispositivo, orientación, tipo de visualización, etc.
 
-        La etiqueta de la linea 6:
-        "<meta name="viewport" content="width=device-width, initial-scale=1.0">""
+        Datos a tener en cuenta antes de continuar con el diseño responsivo
+
+        1- La etiqueta de la línea 6:
+
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         Representa el área visible del navegador. Es una etiqueta HTML5 que sirve para 
         optimizar los sitios para móviles, ayudando a definir el ancho, alto y escala 
         del área usada por el navegador para mostrar contenido.
+        
+        2- Las dos principales orientaciones que tienen los dispositivos electrónicos. 
 
-        Una media query empieza siempre por "@media"
+            a. Landscape: De manera simple, cuando el disposivito está en horizontal.
+            b. Portrait: De manera simple, cuando el disposivito está en vertical.
+
+        Ver imagen 'img/portrait_and_landscape.png'
+
+        Una media query empieza siempre por "@media" y va denro de CSS.
 
         Las media query están formadas por 
             1. Un Media Type
             2. Una o varias condiciones.
 
-        La estructura básica de una Media Querie sería la siguiente:
+        La estructura básica de una Media Query sería la siguiente:
 
         *********
         @media MEDIA_TYPE and (CONDICION){
@@ -44,22 +55,26 @@
         El media type puede ser de varios tipos, algunos ejemplos:
             1. all (todos). Valor por defecto si no lo especificamos. La media query
             afectará a todos los dispositivos.
-                EJ: @media (max-width: 700px) { CSS A APLICAR }	
+                EJ: @media (max-width: 700px) { 
+                    PROPIEDADES CSS 
+                }   
             2. screen (pantalla). Solo afectamos a los dispositivos que tengan pantalla.
             Es el más común para desarrollo web.
-                EJ: @media screen and (max-width: 700px) { CSS A APLICAR }	
+                EJ: @media screen and (max-width: 700px) { 
+                    PROPIEDADES CSS 
+                }   
             3. print (impresión). Destinado a material impreso y visualización de documentos 
             en una pantalla en el modo de vista previa de impresión. 
         
         En un desarrollo web normal, elegiremos "screen" o lo dejaremos vacio ("all")
 
-        Despues de elegir el Media Type debemos de poner las condiciones. Las condiciones 
+        Después de elegir el Media Type debemos de poner las condiciones. Las condiciones 
         son aquellos casos en las que queremos ejecutar un determinado CSS.
 
         Recordemos que el MEDIA_TYPE sería opcional, y las condiciones van puestas entre
-        parentesis. Si no ponemos MEDIA_TYPE tampoco pondremos la palabra "and"
+        paréntesis. Si no ponemos MEDIA_TYPE tampoco pondremos la palabra "and"
 
-        Ejemplo de condición de que el tamaño máximo sea 700px, para todos los dipositivos
+        Ejemplo de condición de que el tamaño máximo sea 700px, para todos los dispositivos
             @media (max-width: 700px) {  }
 
         Ejemplo de media type screen y la condición de que el tamaño máximo sea 700px.
@@ -76,9 +91,6 @@
         Ejemplo de media type screen, que la condición de que el tamaño min sea 700px o 
         que la orientación sea landscape(notese como el "or" se pone con ",")
             @media screen and (min-width: 700px), (orientation: landscape) { }
-
-        Nota: Landscape y portrait son como se conocen las dos posiciones básicas que podemos
-        hacer en un dispositivo electronico. Ver imagen img/portrait_and_landscape.png
 
         Mas ejemplos:
         https://www.w3schools.com/css/css3_mediaqueries_ex.asp
@@ -123,13 +135,13 @@
         /*
         DISEÑO RESPONSIVO - MEDIA QUERIES
 
-        La pagina esta preparada para que cuando la pantalla sea igual o mayor a 1000px
-        se vera con margenes entre "section" y el final de la pantalla, tanto a la derecha
+        La página está preparada para que cuando la pantalla sea igual o mayor a 1000px
+        se verá con margenes entre "section" y el final de la pantalla, tanto a la derecha
         como a la izquierda
 
         Las media queries actuan de la siguiente manera
 
-        1. Cuando la pantalla ocupe entre 700 y 1000px (normalmente las tabletas), la 
+        1. Cuando la pantalla ocupe entre 700 y 1000px (normalmente las tablets), la 
         etiqueta "section" ocupara un 98% del ancho de la pantalla, es decir, casi sin margenes. 
         Esto sería para aprovechar mejor el espacio.
 

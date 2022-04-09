@@ -72,3 +72,5 @@ Podemos empezar a ver los ejemplos que estan numerados dentro de esta carpeta (0
 ### Varios
 
 - [CV en HTML5 y CSS3](http://www.rleonardi.com/interactive-resume/)
+- [Practicar CSS](https://flukeout.github.io/)
+- [Landscape vs Portrait](https://pickaso.com/2019/landscape-portrait-screenshots-app)

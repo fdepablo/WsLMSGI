@@ -9,28 +9,29 @@
         DEGRADADOS
         ----------
 
-        Los degradados sirven para hacer transacciones de color en el elemento.
+        Los degradados sirven para hacer transacciones de color en el elemento. Estos atributos 
+        e incorporaron en la versión 3 (la última) de CSS.
 
-        Veamos unos ejemplos.
-        
+        Para usar los degradados debemos de usar la propiedad 'background'
+
+        Este atributo funciona de manera diferente según el navegador. 
+        Observa que hemos puesto dos versiones del atributo, 'linear-gradient' y 
+        '–webkit-liner-gradient', el primero sería para Firefox y el segundo para Chromium
+       
     -->
     <style>
 
         .contenedor{
             margin: 50px;
         }
-        /*
-            El primer parámetro es el punto de partida, estamos indicando que el degradado 
-            comience por la izquierda. El resto de argumentos son los puntos de color.
 
-            Este atributo de momento funciona con pocos navegadores, concretamente funciona 
-            con Mozilla Firefox. Observa que hemos puesto dos versiones 
-            (linear-gradient y –webkit-liner-gradient), la segunda versión es para 
-            compatibilizar con navegadores Google Chrome.
-        */
         .div1 {
             border-radius: 25px;
             padding: 10px;
+            /*
+            El primer parámetro es el punto de partida (left). 
+            El resto de argumentos son los puntos de color que queremos hacer en el degradado
+            */
             background: linear-gradient(left, red , blue, green);/*Firefox*/
             background: -webkit-linear-gradient(left, red , blue, green); /*Chromium*/
             display: inline-block;
@@ -54,7 +55,7 @@
         }
 
         /*
-            Tambien pueden formar circulos o elipses.
+            Tambien pueden formar circulos poniendo 'cicle' en el primer parametro.
 
             Si quitamos "circle" de la propiedad, formariamos una elipse.
         */
