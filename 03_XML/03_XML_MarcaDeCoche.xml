@@ -6,12 +6,10 @@
     <modelos>
         <modelo id="01">
             <nombre>Range Rover</nombre>
-            <codigo>001</codigo>
             <tipo_motor>diesel</tipo_motor>
         </modelo>
         <modelo id="02">
             <nombre>Range Rover Sport</nombre>
-            <codigo>002</codigo>
             <tipo_motor>gasolina</tipo_motor>
         </modelo>
     </modelos>
