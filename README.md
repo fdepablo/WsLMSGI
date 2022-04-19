@@ -22,6 +22,11 @@ Se recomienda instalar las siguientes extensiones en VSC
 5. Live Server, para poder arrancar un servidor ligero de manera sencilla. Se recargaran las páginas HTML de manera automática.
 6. Markdown Preview Enhanced, para ver los ficheros con extensión ".md"
 
+Optativas:
+
+1. PrintCode, para imprimir cógigo por impresora.
+2. Markdown PDF, para convertir ficheros ".md" a ".pdf"
+
 Para instalar las extensiones, primero pulsar en el enlace de la barra izquierda de navegación "extensiones", buscarlas e instalarlas.
 
 ![extensiones](img/extensiones.png "extensiones")
