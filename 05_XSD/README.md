@@ -1,6 +1,6 @@
-![XSD](img/Validar_XML.jpg "Validando XML con XSD!!")
+g/Validar_XML.jpg "Validando XML con XSD!!")
 
-# XML Schema Definition  (XSD)
+# XML Schema Definition (XSD)
 
 ## Introducción
 
@@ -8,7 +8,7 @@ Un esquema, al contrario que un DTD, puede definir tipos de datos, lo cual es cl
 
 XSD es más potente que el DTD clásico de XML, ya que permite más flexibilidad. Es un estándar recomendado por el W3C (Word Wide Web Consortium).
 
-Tanto DTD como XSD proporcionan la validación de documentos XML, tanto estructural como formal del documento, para por ejemplo, enviar un documento a un destinatario junto con las condiciones que deben cumplir los documentos.
+Tanto DTD como XSD proporcionan la validación de documentos XML, tanto estructural como formal del documento, por ejemplo, enviar un documento a un destinatario junto con las condiciones que deben cumplir los documentos.
 
 En la actualidad los XSD se utilizan en mayor medida que los DTD para validar XML, ya que son más potentes y además siguen la gramática XML.
 
@@ -17,7 +17,7 @@ En la actualidad los XSD se utilizan en mayor medida que los DTD para validar XM
 Principales diferencias:
 
    1. Los XSD o esquemas son más potentes: permiten describir un XML con mayor detalle y hacer mayores restricciones.
-   2. Permiten utilizar tipos de datos. Mientras que con DTD el tipo de datos siempre era texto, con XSD podemos afinar más y decir que puede ser númerico, string, etc.
+   2. Permiten utilizar tipos de datos. Mientras que con DTD el tipo de datos siempre era texto, con XSD podemos afinar más y decir que puede ser numérico, string, etc.
    3. Los Esquemas pueden implantar reglas mucho más específicas que las DTD sobre el contenido de los elementos y atributos. Son las llamadas restricciones. Por ejemplo, que el texto de una etiqueta nombre no pueda exceder de 20 caracteres.
    4. No se puede describir entidades utilizando esquemas. Necesitaremos utilizar DTDs. para ello.
 
@@ -33,7 +33,7 @@ Esto indica que los elementos utilizados corresponden al espacio de nombres (nam
 
 Por poner una similitud con la programación, el namespace sería como los paquetes, o por dentro de los sistemas informáticos, sería como los directorios.
 
-Existen diversas maneras de vincular un XML a un XSD, una de las mas sencillas es poniendo las siguientes sentencias en el nodo raiz del documento XML
+Existen diversas maneras de vincular un XML a un XSD, una de las más sencillas es poniendo las siguientes sentencias en el nodo raiz del documento XML
 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation= "DIRECCION_XSD"
@@ -73,7 +73,7 @@ Ejemplos:
     <schema  xmlns=“http://www.w3.org/2001/XMLSchema”> 
         <element name=“pelicula”>  
             <complexType>
-                <sequence>	
+                <sequence>  
                     <element name=“titulo” type=“string” />
                     <element name=“minutos” type=“integer” />
                     <element name=“fecha_estreno” type=“date” />
@@ -86,7 +86,7 @@ Ejemplos:
     <schema  xmlns=“http://www.w3.org/2001/XMLSchema”> 
         <element name=“pelicula”>  
             <complexType>
-                <choice>	
+                <choice>    
                     <element name=“titulo” type=“string” />
                     <element name=“minutos” type=“integer” />
                     <element name=“fecha_estreno” type=“date” />
@@ -99,7 +99,7 @@ Ejemplos:
     <schema  xmlns=“http://www.w3.org/2001/XMLSchema”> 
         <element name=“pelicula”>  
             <complexType>
-                <all>	
+                <all>   
                     <element name=“titulo” type=“string” />
                     <element name=“minutos” type=“integer” />
                     <element name=“fecha_estreno” type=“date” />
@@ -114,7 +114,7 @@ En el tercer ejemplo tienen que ir todos los elementos, pero en el orden que se 
 
 ## Cardinalidad de los elementos
 
-Para documentos XML en los que necesitemos definir un elemento que se repitan, podremos utilizar los atributos de element, <b>maxOccurs y minOccurs</b>. Tienen las siguientes caracteristicas:
+Para documentos XML en los que necesitemos definir un elemento que se repitan, podremos utilizar los atributos de element, <b>maxOccurs y minOccurs</b>. Tienen las siguientes características:
 
    1. Son atributos opcionales.
    2. Estos dos atributos indican el mínimo (minOccurs) y máximo (maxOccurs) número de concurrencias del elemento.
@@ -128,7 +128,7 @@ Ejemplos:
     <schema  xmlns=“http://www.w3.org/2001/XMLSchema”> 
         <element name=“persona”>  
             <complexType>
-                <sequence>	
+                <sequence>  
                     <element name=“nombre” type=“string” minOccurs="1" maxOccurs="3"/>
                     <element name=“apellidos” type=“integer” minOccurs="2" maxOccurs="unbounded"/>
                     <element name=“fecha_nacimiento” type=“date”/>
@@ -149,20 +149,20 @@ Para definir atributos se utiliza una sintaxis similar a la que tenemos para los
    <attribute name="NOMBRE_ATRIBUTO" type="TIPO_ATRIBUTO"></attribute>
 ```
 
-Caracteristicas de los atributos:
+Características de los atributos:
 
-   1. Siempre van dentro de la etiqueta "complexType", y AL FINAL del todo, despues de los elementos.
+   1. Siempre van dentro de la etiqueta "complexType", y AL FINAL del todo, después de los elementos.
    2. Son optativos por defecto. Los podemos hacer obligatorios con el atributo 'use="required"'
    3. Se pueden poner valores por defecto y fijos con los atributos "fixed" y "default".
 
 ## Etiqueta annotation (Anotaciones)
 
-A menudo podemos incluir una descripción en nuestros esquema(XSD) como referencia y ayuda para quiénes los vaya a utilizar y para nosotros en un futuro. Para ello se utilizarán las etiquetas "documentation" dentro de las etiquetas "annotation". Suele ir justo despues de la etiqueta "schema"
+A menudo podemos incluir una descripción en nuestros esquema (XSD) como referencia y ayuda para quiénes los vaya a utilizar y para nosotros en un futuro. Para ello se utilizarán las etiquetas "documentation" dentro de las etiquetas "annotation". Suele ir justo después de la etiqueta "schema"
 
 ```
     <annotation>
         <documentation>
-            Esto es una prueba de antoación dentro de un esquema
+            Esto es una prueba de anotación dentro de un esquema
         </documentation>
     </annotation>
 ```
@@ -173,7 +173,7 @@ Las restricciones permiten restringir el valor que se puede dar a un elemento o 
 
 Mediante restricciones podemos indicar que un valor debe estar comprendido en un rango determinado, debe ser un valor de una lista de valores “cerrada”, o debe ser mayor o menor que otro valor…
 
-Utilizan el elemento restriction dentro, a su vez, de la etiqueta "sympleType"
+Utilizan el elemento **restriction** dentro, a su vez, de la etiqueta "sympleType"
 
 Tipos de restricciones:
 
@@ -204,11 +204,11 @@ Ejemplo
         </simpleType>
     </element>
 ```
-Un elemento edad, de tipo numero entero, cuyo valor debe de estar comprendido entre 0 y 100
+Un elemento edad, de tipo número entero, cuyo valor debe de estar comprendido entre 0 y 100
 
 ## Expresiones regulares
 
-Muchas veces los atributos de las restriciones se nos quedan tambien cortos a la hora de validar un xml. Por ejemplo, imaginemos que queremos validar un DNI, que tiene un formato establecido. Pues con los atributos que hemos visto hasta ahora no podríamos hacerlo. Es ahí cuando entran en juego las expresiones regulares que <b>definen una secuencia de caracteres permitida como un patrón. determinado</b>
+Muchas veces los atributos de las restricciones se nos quedan también cortos a la hora de validar un XML. Por ejemplo, imaginemos que queremos validar un DNI, que tiene un formato establecido. Pues con los atributos que hemos visto hasta ahora no podríamos hacerlo. Es ahí cuando entran en juego las expresiones regulares que <b>definen una secuencia de caracteres permitida como un patrón. determinado</b>
 
 ```
     <element name="edad">
@@ -225,21 +225,22 @@ Hacer expresiones regulares simples, es sencillo, pero se pueden volver MUY comp
 
 Reglas:
 
-   1. . Cualquier caracter
-   2. \d cualquier dígito
-   3. \D cualquier no-dígito
-   4. \s espacio en blanco, retorno de carro, línea nueva
-   5. \S cualquier carácter distinto a espacio en blanco
-   6. <code>a*</code> "a" puede aparecer cero o más veces
-   7. <code>a+</code> "a" puede aparecer una o más veces
-   8. a{n} "a" puede aparecer n veces
-   9. [a] uno de los caracteres que aparezcan entre []
-   10. () los parentesis sirven para agrupar las reglas anteriores
+   1. **(punto) .** Cualquier carácter
+   2. **\d** cualquier dígito
+   3. **\D** cualquier no-dígito
+   4. **\s** espacio en blanco, retorno de carro, línea nueva
+   5. **\S** cualquier carácter distinto a espacio en blanco
+   6. **<code>a*</code>** "a" puede aparecer cero o más veces
+   7. **<code>a+</code>** "a" puede aparecer una o más veces
+   8. **a{n}** "a" puede aparecer n veces
+   9. **[a]** uno de los caracteres que aparezcan entre []
+   10. **()** los parentesis sirven para agrupar las reglas anteriores
 
 ## Como comenzar
 
-Podemos empezar a ver los ejemplos que estan numerados dentro de esta carpeta
+Podemos empezar a ver los ejemplos que están numerados dentro de esta carpeta
 
 ## Bibliografía
+
 - <https://www.w3schools.com/xml/schema_intro.asp>
 - <https://www.abrirllave.com/xsd/>

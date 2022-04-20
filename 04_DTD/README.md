@@ -69,7 +69,7 @@ Si queremos describir un elemento que contenga otro elemento pondremos entre par
 
     <!ELEMENT tag (tag1 | tag2, tag3 +, tag4 *, tag5 ?)>
 
-Ejemplos validos:
+Ejemplos válidos:
 
 ```
     <tag>
