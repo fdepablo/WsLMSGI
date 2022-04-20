@@ -1,4 +1,4 @@
-![DTD](img/Validar_XML.jpg "Validando XML!!")
+DTD](img/Validar_XML.jpg "Validando XML!!")
 
 # Document Type Definition (DTD)
 
@@ -18,7 +18,7 @@ DTD describe un formato de datos.
    2. <b>Estructura:</b> en qué orden van las etiquetas en el documento.
    3. <b>Anidamiento:</b> qué etiquetas van dentro de cuáles.
 
-## Sintaxix
+## Sintaxis
 
 El documento XML suele comenzar por una instrucción de procesamiento para el procesador de XML. En esta instrucción se indica el tipo de normalización que sigue el documento según el estándar XML y la codificación.
 
@@ -46,7 +46,6 @@ Ejemplo de un XML con un DTD interno
         <!ATTLIST partido visitanteNombre CDATA #REQUIRED>
         <!ATTLIST partido visitanteGoles CDATA #REQUIRED>
     ]>
-
 
     <ligaDeFutbol>
         <partido localNombre=”Nottingham Presa” localGoles=”0” visitanteNombre=”Inter de Mitente” visitanteGoles=”1” />
@@ -76,16 +75,16 @@ Ejemplos validos:
     <tag>
         <tag2></tag2>
         <tag3></tag3>
-        <tag3></tag3>	
+        <tag3></tag3>   
     </tag>
 
     <tag>
         <tag2></tag2>
         <tag3></tag3>
-        <tag3></tag3>	
-        <tag4></tag4>	
-        <tag4></tag4>	
-        <tag5></tag5>	
+        <tag3></tag3>   
+        <tag4></tag4>   
+        <tag4></tag4>   
+        <tag5></tag5>   
     </tag>
 
 ```
@@ -100,14 +99,13 @@ Ejemplos NO validos:
 
     <tag>
         <tag2></tag2>
-        <tag4></tag4>	
-        <tag4></tag4>	
-        <tag5></tag5>	
+        <tag4></tag4>   
+        <tag4></tag4>   
+        <tag5></tag5>   
     </tag>
 ```
 
-
-### Contenido de los elemento (vacios, nodos texto, etc)
+### Contenido de los elemento (vacíos, nodos texto, etc.)
 
 Para los elementos que no contienen a otros elementos indicaremos si están vacíos (Empty), cualquier contenido (Any) o solo datos ([#PCDATA]).
 
@@ -138,7 +136,7 @@ Ejemplo:
 ```
 En el ejemplo anterior podemos ver que el DTD define las etiquetas que estarán dentro de la etiqueta "note", no permitiendo el uso de las no indicadas (to, from, heading, body e important).
 
-También definimos que cada una de las etiquetas contendrá datos (#PCDATA) e important sera nodo vacio (EMPTY).  
+También definimos que cada una de las etiquetas contendrá datos (#PCDATA) e **important** será nodo vacío (EMPTY).  
 
 De este modo, si falta alguno de los elementos indicados o el contenido no es el indicado, el XML no se validará.
 
@@ -161,11 +159,11 @@ Para definir el tipo del atributo podemos encontrar entre los más importantes:
 Para definir el valor predeterminado del atributo podemos encontrar entre los más importantes:
 
    1. <b>#REQUIRED</b> Indica que el atributo es requerido siempre que se use la etiqueta
-   2. <b>#VALOR</b> Indica un valor que se usará por defecto si no se especiﬁca el valor del atributo
-   3. <b>#IMPLIED</b> Indica un valor que se usará por defecto si no se especiﬁca el valor del atributo. Tambien podemos entenderlo como optativo
-   4. <b>#FIXED</b> Indica que el atributo siempre tiene el valor, aunque no se especiﬁque
+   2. <b>#VALOR</b> Indica un valor que se usará por defecto si no se especifica el valor del atributo
+   3. <b>#IMPLIED</b> Indica un valor que se usará por defecto si no se especiﬁca el valor del atributo. también podemos entenderlo como optativo
+   4. <b>#FIXED</b> Indica que el atributo siempre tiene el valor, aunque no se especifique
 
-Ejemmplos
+Ejemplos
 ```
     <!ATTLIST curso
         director CDATA #REQUIRED
@@ -174,7 +172,7 @@ Ejemmplos
     >
 ```
 
-En el ejemplo de arriba tenenos que la etiqueta curso debe de tener los siguientes atributos:
+En el ejemplo de arriba tenemos que la etiqueta curso debe de tener los siguientes atributos:
 
    1. atributo director de tipo CDATA y obligatorio
    2. atributo horario, cuyos valores pueden ser "mañana", "tarde" o "noche"
@@ -184,7 +182,7 @@ En el ejemplo de arriba tenenos que la etiqueta curso debe de tener los siguient
 
 Las entidades permiten colocar trozos de contenido en cualquier lugar del documento haciendo referencia a su nombre. Para definir una entidad usamos la etiqueta !ENTITY.
 
-Ya hemos visto entidades a lo largo del curso, como la entidad "(&)ntilde;" que sirve para poner la letra "ñ" o la entidad "(&)lt;" que sirve para poner un "<". Nota: se pone el caracter "&" entre parentesis ya que Markdown lo transformaría a "ñ" y a "<" respectivamente cuando lo establezcamos en "preview mode"
+Ya hemos visto entidades a lo largo del curso, como la entidad "(&)ntilde;" que sirve para poner la letra "ñ" o la entidad "(&)lt;" que sirve para poner un "<". Nota: se pone el carácter "&" entre paréntesis ya que Markdown lo transformaría a "ñ" y a "<" respectivamente cuando lo establezcamos en "preview mode"
 
 Podemos distinguir entidades internas o externas
 
@@ -194,7 +192,7 @@ También llamadas macros o constantes de texto. Las entidades internas son las q
 
     <!ENTITY tag "Tony Stark">
 
-Son abreviaturas que se usan dentro del documento para simplificar. Cuando se procese el documento estas abreviaturas serán sustituidas por el nombre completo. Para deﬁnirlas se usa:
+Son abreviaturas que se usan dentro del documento para simplificar. Cuando se procese el documento estas abreviaturas serán sustituidas por el nombre completo. Para definirlas se usa:
 
     <!ENTITY tag "texto sustituyo">
 
@@ -213,9 +211,10 @@ Los parámetros solo se pueden referenciar en la DTD del documento. Se utiliza %
     <!ENTITY %parametro "texto">
 
 ## Como comenzar
-Practicamente toda esta documentación se ha sacado de la unidad formativa 3.2.2 XML. Podemos verla para repasarla
 
-Luego, podemos empezar a ver los ejemplos que estan numerados dentro de esta carpeta
+Podemos empezar a ver los ejemplos que están numerados dentro de esta carpeta
 
 ## Bibliografía
+
 - <https://www.w3schools.com/xml/xml_dtd_intro.asp>
+
