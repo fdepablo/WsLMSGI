@@ -107,3 +107,7 @@ Una vez tenemos el DOM creado, podremos ser capaces de recorrerlo y alterarlo a 
 - [Visualizar HTML desde Github](https://htmlpreview.github.io/)
 - [Can I Use (Compatibilidad de HTML5 con navegadores)](https://caniuse.com/)
 
+### Varios
+
+- [Ejercicios HTML y CSS](http://desarrolloweb.dlsi.ua.es/libros/html-css/ejercicios)
+
