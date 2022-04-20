@@ -54,28 +54,28 @@ Los ficheros de este ejemplo hay que desplegarlos en algún servidor como puede 
 2. Crear un nuevo proyecto dinámico (dinamic web proyect) y lo llamamos "08_XSLT"
 3. Una vez creado, vamos a la carpeta de recursos web (webcontent o webapp) y pegamos todos los ficheros de ejemplo 08_XSLT.
 4. Arrancamos el servidor con el proyecto desplegado
-5. Abrir el navegado e ir al a ruta determinada EJ: http://localhost/08_XSLT/01_XSLT_Cursos.xml
+5. Abrir el navegado e ir al a ruta determinada EJ: http://localhost:8080/08_XSLT/01_XSLT_Cursos.xml
 
 ## Instrucciones para visualizar transformaciones de ficheros de XML a XML
 
-El ejemplo 05 y 06 tratan de hacer una transformación de un XML a otro XML. Si queremos ver la transformación completa, es decir, con las etiquetas resultantes, no podemos usar un navegador de manera normal, ya que estos por defecto quitan las etiquetas de los XML resultantes.
+El ejemplo 05 y 06 tratan de hacer una transformación de un XML a otro XML. Si queremos ver la transformación completa, es decir, con las etiquetas resultantes, no podemos usar un navegador de manera normal, ya que estos por defecto quitan las etiquetas de los XML.
 
-Para ello podemos usar alguna otra aplicación para ver el resultado
+Para ello podemos usar alguna otra aplicación para ver el resultado como NOTEPAD++
 
-### NOTEPAD++
+### Configurando NOTEPAD++ para transformar documentos XML a XML
 
-Esta estupenda aplicación para trabajar con ficheros de texto plano es muy válida para XML
+Esta aplicación se utiliza para trabajar con ficheros en texto plano, y en este caso, para hacer transformaciones de XML a XML.
 
-Para convertir un XML a otro XML mediante XSLT haremos lo siguiente
+Haremos los siguientes pasos:
 
-1. Instalamos Notepad++ [https://notepad-plus-plus.org/downloads/](https://notepad-plus-plus.org/downloads/)
+1. Instalamos Notepad++ <https://notepad-plus-plus.org/downloads/>.
 2. Instalamos el plugin "XML Tools". En la pestaña "plugins" elegimos la opción "administrar plugins" y lo buscamos ahí. Reiniciamos en caso necesario. 
-3. Abriremos el xml con Notepad++
-4. Con el fichero XML en la ventana del notepad, pulsaremos la pestaña "plugins"
-5. Seleccionamos "XML Tools"
-6. Seleccionamos "XML Transformation..." 
-7. El la ventana modal que aparece, buscaremos el fichero XSLT que queremos utilizar
-8. Pulsamos el botón "Transform"
+3. Abriremos el XML que queremos transformar con Notepad++.
+4. Con el fichero XML en la ventana del Notepad++, pulsaremos la pestaña "plugins".
+5. Seleccionamos "XML Tools".
+6. Seleccionamos "XML Transformation...".
+7. En la ventana modal que aparece, buscaremos el fichero XSLT que queremos utilizar.
+8. Pulsamos el botón "Transform".
 
 ## Bibliografía
 
