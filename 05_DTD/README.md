@@ -27,7 +27,7 @@ Un DTD puede ser:
 
 El documento XML suele comenzar por una instrucción de procesamiento para el procesador de XML. En esta instrucción se indica el tipo de normalización que sigue el documento según el estándar XML y la codificación.
 
-    <?XML version="1.0"encoding="UTF-8"?>
+    <?XML version="1.0" encoding="UTF-8"?>
 
 Después suele comenzar el DTD, en caso de que sea interno utilizamos la sintaxis:
 
@@ -37,7 +37,7 @@ Después suele comenzar el DTD, en caso de que sea interno utilizamos la sintaxi
 
 Si se referencia a un DTD externo, se utiliza la palabra **SYSTEM** con la ubicación del DTD:
 
-    <! DOCTYPE etiqueta SYSTEM "documento.dtd">
+    <! DOCTYPE etiqueta_raiz SYSTEM "documento.dtd">
 
 Ejemplo de un XML con un DTD interno
 
@@ -62,7 +62,7 @@ Un elemento en DTD se define con la palabra **!ELEMENT**
 
     <!ELEMENT DEFINICION_DEL_ELEMENTO>
 
-Un elemento normalmente puede contener:
+Cuando definimos un elemento normalmente puede contener:
 
 1. Otros elementos
 2. Datos
@@ -76,7 +76,7 @@ Si queremos describir un elemento que contenga otros elementos, pondremos entre 
 
     <!ELEMENT tag (tag1, tag2,..)>
 
-Pudiendo tener las siguientes cardinalidades:
+Pudiendo tener las siguientes cardinalidades, que se ponen siempre al final del elemento:
 
    1. Si un elemento es opcional pondremos **?**.
    2. Si la cardinalidad de un elemento es entre 0 y N pondremos <b>*</b>.
@@ -127,7 +127,7 @@ Pero **NO** permitiría los siguientes documentos XML:
 Para los elementos que no contienen a otros elementos, indicaremos si tienen datos con **#PCDATA**, están vacíos con **EMPTY**, o cualquier tipo (datos o elementos) con **ANY**.
 
     <!ELEMENT texto #PCDATA>
-    <!ELEMENT salto EMPTY>
+    <!ELEMENT vacio EMPTY>
     <!ELEMENT extra ANY>
 
 Ejemplo:
@@ -162,11 +162,11 @@ De este modo, si falta alguno de los elementos indicados o el contenido no es el
 
 Los atributos permiten añadir información adicional a los elementos de un documento. La principal diferencia entre los elementos y los atributos es que los atributos no pueden ser anidados (no tienen hijos).
 
-Definición de un atributo en un DTD
+Un atributo en DTD lo podemos definir de la siguiente manera:
 
     <!ATTLIST ElementoAsociado NomAtributo TIPO VALOR>
 
-Para definir el tipo del atributo podemos encontrar entre los más importantes:
+Tipos de atributo, entre los más importantes:
 
 1. <b>CDATA</b> Los atributos CDATA (character data) son los más sencillos, y pueden contener casi cualquier cosa. Es el más habitual para usar
 2. <b>ID</b> Nombre que identifica inequívocamente a la etiqueta de todas las demás, es decir, no admitiría que en el documento hubiera dos elementos con el mismo valor del atributo. El valor no puede compenzar por un caracter numérico.
@@ -210,7 +210,7 @@ Son abreviaturas que se usan dentro del documento para simplificar. Cuando se pr
     <!ENTITY tony "Tony Stark">
     <!ENTITY ISO "International Organization for Standadization">
 
-Para referenciar la entidad dentro del documento usamos **&nombre_entidad**
+Para referenciar la entidad dentro del documento usamos **&nombre_entidad;**
     
 Podemos distinguir entidades internas o externas
 
