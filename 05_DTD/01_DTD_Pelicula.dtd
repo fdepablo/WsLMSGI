@@ -1,0 +1,19 @@
+<!ELEMENT pelicula (titulo,fecha,actores,director)>
+
+<!-- Definimos los atributos de la pelicula -->
+<!ATTLIST pelicula id ID #REQUIRED>
+<!ATTLIST pelicula categoria (accion | terror | humor | sci-fi) #REQUIRED>
+<!ATTLIST pelicula calificacion CDATA #IMPLIED>
+<!ATTLIST pelicula edad CDATA "18">
+<!ATTLIST pelicula empresa CDATA #FIXED "Walt Disney">
+
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT actores (actor+)>
+
+<!ELEMENT actor (nombre,edad,super_estrella?)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT edad (#PCDATA)>
+<!ELEMENT super_estrella EMPTY>
+
+<!ELEMENT director (#PCDATA)>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE pelicula [
+    <!ELEMENT pelicula (titulo,fecha,actores,director?)>
+
+    <!ELEMENT titulo (#PCDATA)>
+    <!ELEMENT fecha (#PCDATA)>
+    <!ELEMENT actores (actor+)>
+
+    <!ELEMENT actor (nombre,edad,super_estrella?)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT edad (#PCDATA)>
+    <!ELEMENT super_estrella EMPTY>
+
+    <!ELEMENT director (#PCDATA)>
+
+    <!-- Definimos los atributos de la pelicula -->
+    <!ATTLIST pelicula id ID #REQUIRED>
+    <!ATTLIST pelicula categoria (accion | terror | humor | sci-fi) #REQUIRED>
+    <!ATTLIST pelicula calificacion CDATA #IMPLIED>
+    <!ATTLIST pelicula edad CDATA "18">
+    <!ATTLIST pelicula empresa CDATA #FIXED "Walt Disney">
+
+    <!-- Definimos una entidad -->
+    <!ENTITY leia "Leia Organa">
+]>
+<pelicula id="GAL1" categoria="sci-fi" calificacion="10" edad="34" empresa="Walt Disney">
+    <titulo>La guerra de las galaxias</titulo>
+    <fecha>22/07/1977</fecha>
+    <actores>
+        <actor>
+            <nombre>Luke Skywalker</nombre>
+            <edad>29</edad>
+        </actor>
+        <actor>
+            <nombre>Han Solo</nombre>
+            <edad>39</edad>
+            <super_estrella />
+        </actor>
+        <actor>
+            <nombre>&leia;</nombre>
+            <edad>27</edad>
+        </actor>
+    </actores>
+    <director>George Lucas</director>
+</pelicula>

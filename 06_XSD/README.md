@@ -1,4 +1,4 @@
-g/Validar_XML.jpg "Validando XML con XSD!!")
+![XSD](img/Validar_XML.jpg "Validando XML con XSD!!")
 
 # XML Schema Definition (XSD)
 

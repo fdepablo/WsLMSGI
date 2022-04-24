@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE pelicula SYSTEM "01_DTD_Pelicula.dtd">
-<pelicula id="1" categoria="humor">
+<pelicula id="GAL1" categoria="sci-fi">
     <titulo>La guerra de las galaxias</titulo>
     <fecha>22/07/1977</fecha>
     <actores>
         <actor>
-            <nombre>Luke</nombre>
+            <nombre>Luke Skywalker</nombre>
             <edad>29</edad>
         </actor>
         <actor>
-            <nombre>Han solo</nombre>
+            <nombre>Han Solo</nombre>
             <edad>39</edad>
+            <super_estrella />
         </actor>
     </actores>
-    <director>pepe</director>
+    <director>George Lucas</director>
 </pelicula>
