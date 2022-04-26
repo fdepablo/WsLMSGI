@@ -4,73 +4,91 @@
 
 ## Introducción
 
-Un esquema, al contrario que un DTD, puede definir tipos de datos, lo cual es claramente beneficioso en el intercambio de datos, objetos o bases de datos.
+**XSD** (XML Schema Definition) es un lenguaje de esquema utilizado para describir la estructura y las restricciones de los contenidos de los documentos XML de una forma muy precisa, más allá de las normas sintácticas impuestas por el propio lenguaje XML.
 
-XSD es más potente que el DTD clásico de XML, ya que permite más flexibilidad. Es un estándar recomendado por el W3C (Word Wide Web Consortium).
+Tanto DTD como XSD proporcionan **validación** de documentos XML, pero XSD es más potente que el DTD clásico de XML, ya que permite más felixibilidad. XSD es un estándar recomendado por la **W3C**.
 
-Tanto DTD como XSD proporcionan la validación de documentos XML, tanto estructural como formal del documento, por ejemplo, enviar un documento a un destinatario junto con las condiciones que deben cumplir los documentos.
+Un XSD o esquema, al contrario que un DTD, puede definir tipos de datos, lo cual es claramente beneficioso en el intercambio de datos, objetos o bases de datos.
 
 En la actualidad los XSD se utilizan en mayor medida que los DTD para validar XML, ya que son más potentes y además siguen la gramática XML.
+
+Por contra, XSD puede llegar a ser más complicado que DTD al tener más reglas.
 
 ## XSD vs DTD
 
 Principales diferencias:
 
    1. Los XSD o esquemas son más potentes: permiten describir un XML con mayor detalle y hacer mayores restricciones.
-   2. Permiten utilizar tipos de datos. Mientras que con DTD el tipo de datos siempre era texto, con XSD podemos afinar más y decir que puede ser numérico, string, etc.
-   3. Los Esquemas pueden implantar reglas mucho más específicas que las DTD sobre el contenido de los elementos y atributos. Son las llamadas restricciones. Por ejemplo, que el texto de una etiqueta nombre no pueda exceder de 20 caracteres.
-   4. No se puede describir entidades utilizando esquemas. Necesitaremos utilizar DTDs. para ello.
+   2. Permiten utilizar tipos de datos. Mientras que con DTD el tipo de datos siempre era texto, con XSD podemos afinar más y decir que puede ser numérico, cadenas, etc.
+   3. Los Esquemas pueden implantar reglas mucho más específicas que las DTD sobre el contenido de los elementos y atributos. Son las llamadas restricciones. Por ejemplo, que el texto de una etiqueta "nombre" no pueda exceder de 20 caracteres.
+   4. No se puede describir **entidades** utilizando esquemas. Necesitaremos utilizar DTDs para ello.
 
 ## Definición
 
 XSD es un lenguaje basado en XML, a diferencia de los DTDs.
 
-Al definir el schema es necesario escribir una serie de atributos. El primero es el namespace al que pertenece nuestro esquema o XSD
+Al definir el schema es necesario escribir una serie de atributos. El primero es el **namespace** al que pertenece nuestro esquema o XSD.
 
     xmlns:xs=”http://www.w3.org/2001/XMLSchema”
 
 Esto indica que los elementos utilizados corresponden al espacio de nombres (namespace) definido en esa dirección. Podemos decir que para que no haya ambigüedad entre las etiquetas descritas, siempre se define un espacio de nombres al que pertenecen. Dentro de un espacio de nombres no puede haber dos etiquetas con el mismo nombre.
 
-Por poner una similitud con la programación, el namespace sería como los paquetes, o por dentro de los sistemas informáticos, sería como los directorios.
+Por poner una similitud con la programación, el namespace sería como los paquetes. Dentro de los sistemas informáticos, un los namespaces serían como los directorios.
 
-Existen diversas maneras de vincular un XML a un XSD, una de las más sencillas es poniendo las siguientes sentencias en el nodo raiz del documento XML
+Existen diversas maneras de vincular un XML a un XSD, una de las más sencillas es poniendo las siguientes sentencias en el nodo raíz del documento XML
 
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation= "DIRECCION_XSD"
 
 ## Elementos Simples
 
-Los elementos simples pueden contener cualquier tipo de dato pero no atributos ni otros elementos hijos.
+Los elementos simples pueden contener cualquier tipo de dato, pero no pueden tener atributos ni otros elementos hijos.
 
-```
-   <element name="NOMBRE_DE_LA_ETIQUETA" type="TIPO_DE_DATO"/> 
-```
-Siendo el atributo "name" el nombre de la etiqueta y el type y "tipo" de la etiqueta.
+    <element name="NOMBRE_DE_LA_ETIQUETA" type="TIPO_DE_DATO"/> 
+
+Siendo el atributo "name" el nombre de la etiqueta y el "type" el tipo de la etiqueta.
 
 ### Tipos de Datos de Elementos
 
-   1. string = cadena de texto, ejemplo=“Brazil”
-   2. boolean = valores booleanos: true / false
-   3. byte, short, integer, long = nºs enteros, ejemplo=  -7, 0, 12.
-   4. Float, double, decimal=nºs decimales, -47,1, 1766,86
-   5. date = fecha AAAA-MM-DD, ejemplo= 1999-11-23
-   6. time = hora HH:MM, ejemplo= 23:03
+1. **string** = cadena de texto; "Brazil"
+2. **boolean** = valores booleanos; true / false
+3. **byte, short, integer, long** = números enteros; -7, 0, 12.
+4. **float, double, decimal** = números decimales; -47,1, 1766,86
+5. **date** = fecha en formato AAAA-MM-DD; 1999-11-23
+6. **time** = hora en formato HH:MM; 23:03
+
+Ejemplo:
+
+    <?xml version=“1.0”?>
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+        <xs:element name="persona">
+            <xs:complexType>
+                <xs:sequence>
+                    <element name="nombre" type="xs:string"/> 
+                    <element name="edad" type="xs:integer"/> 
+                    <element name="peso" type="xs:double"/> 
+                    <element name="casado" type="xs:boolean"/> 
+                    <element name="fecha_nacimiento" type="xs:date"/> 
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+    </xs:schema>
 
 ## Elementos Complejos
 
-Para añadir más elementos a un esquema vamos a utilizar la etiqueta "complexType". Todos los elementos irán entre esas etiquetas, indicando que hay un grupo de elementos o un único elemento con atributos.
+Para añadir más elementos a un esquema vamos a utilizar la etiqueta **complexType**. Todos los elementos irán entre esas etiquetas, indicando que hay un grupo de elementos o un único elemento con atributos.
 
 Luego dentro de esta etiqueta normalmente va una de las siguientes tres etiquetas:
 
-   1. "sequence" han de incluirse todos los elementos respetando el orden. Normalmente es la más usada e importante de las tre
-   2. "choice" Es necesario incluir uno de los elementos que haya dentro
-   3. "all" han de incluirse todos los elementos que haya dentro, sin importar el orden.
+1. **sequence** han de incluirse todos los elementos respetando el orden. Normalmente es la más usada e importante de las tres.
+2. **choice** Es necesario incluir uno de los elementos que haya dentro
+3. **all** han de incluirse todos los elementos que haya dentro, sin importar el orden.
 
 Ejemplos:
 
 ```
     <?xml version=“1.0”?>
-    <schema  xmlns=“http://www.w3.org/2001/XMLSchema”> 
+    <schema xmlns=“http://www.w3.org/2001/XMLSchema”> 
         <element name=“pelicula”>  
             <complexType>
                 <sequence>  
@@ -83,7 +101,7 @@ Ejemplos:
     </schema>
 
     <?xml version=“1.0”?>
-    <schema  xmlns=“http://www.w3.org/2001/XMLSchema”> 
+    <schema xmlns=“http://www.w3.org/2001/XMLSchema”> 
         <element name=“pelicula”>  
             <complexType>
                 <choice>    
@@ -96,7 +114,7 @@ Ejemplos:
     </schema>
 
     <?xml version=“1.0”?>
-    <schema  xmlns=“http://www.w3.org/2001/XMLSchema”> 
+    <schema xmlns=“http://www.w3.org/2001/XMLSchema”> 
         <element name=“pelicula”>  
             <complexType>
                 <all>   
@@ -109,21 +127,20 @@ Ejemplos:
     </schema>
 ```
 En el primer ejemplo tienen que ir los tres elementos, y en ese orden establecido.
-En el segundo ejemplo solo pueden ir uno de esos tres elementos
+En el segundo ejemplo solo pueden ir uno de esos tres elementos.
 En el tercer ejemplo tienen que ir todos los elementos, pero en el orden que se quieran.
 
 ## Cardinalidad de los elementos
 
-Para documentos XML en los que necesitemos definir un elemento que se repitan, podremos utilizar los atributos de element, <b>maxOccurs y minOccurs</b>. Tienen las siguientes características:
+Para documentos XML en los que necesitemos definir un elemento que se repitan, podremos utilizar los atributos <b>maxOccurs y minOccurs</b>. Tienen las siguientes características:
 
-   1. Son atributos opcionales.
-   2. Estos dos atributos indican el mínimo (minOccurs) y máximo (maxOccurs) número de concurrencias del elemento.
-   3. El valor por defecto para ambos atributos es 1.
-   4. Si se quiere indicar que el elemento puede aparecer un número ilimitado de veces, el atributo maxOccurs tomará el valor “unbounded”
+1. Son atributos opcionales.
+2. Estos dos atributos indican el mínimo (minOccurs) y máximo (maxOccurs) número de concurrencias del elemento.
+3. El valor por defecto para ambos atributos es 1.
+4. Si se quiere indicar que el elemento puede aparecer un número ilimitado de veces, el atributo maxOccurs tomará el valor “unbounded”
 
-Ejemplos:
+Ejemplo:
 
-```
     <?xml version=“1.0”?>
     <schema  xmlns=“http://www.w3.org/2001/XMLSchema”> 
         <element name=“persona”>  
@@ -137,7 +154,6 @@ Ejemplos:
             </complexType>
         </element>
     </schema>
-```
 
 Nota: Si ponemos a un elemento 'minOccurs="0"', lo estamos haciendo optativo.
 
@@ -145,9 +161,7 @@ Nota: Si ponemos a un elemento 'minOccurs="0"', lo estamos haciendo optativo.
 
 Para definir atributos se utiliza una sintaxis similar a la que tenemos para los elementos.
 
-```
    <attribute name="NOMBRE_ATRIBUTO" type="TIPO_ATRIBUTO"></attribute>
-```
 
 Características de los atributos:
 
@@ -177,24 +191,23 @@ Utilizan el elemento **restriction** dentro, a su vez, de la etiqueta "sympleTyp
 
 Tipos de restricciones:
 
-   1. Valor comprendido en un rango
-   2. El valor está restringido a un conjunto de valores posibles
-   3. Restringir el valor de un elemento a una serie de caracteres
-   4. Longitud de los valores de los elementos
+1. Valor comprendido en un rango
+2. El valor está restringido a un conjunto de valores posibles
+3. Restringir el valor de un elemento a una serie de caracteres
+4. Longitud de los valores de los elementos
 
 Atributos que podemos usar con las restricciones:
 
-   1. <b>enumeration:</b> Establece una lista de valores “aceptados”
-   2. <b>length</b>: Número de caracteres obligatorios
-   3. <b>maxExclusive y maxInclusive</b>: Valor máximo de un rango
-   4. <b>minExclusive y minInclusive</b>: Valor mínimo en un rango
-   5. <b>maxLength y minLength</b>: Número máximo y mínimo de caracteres permitidos
-   6. <b>totalDigits</b>: Número máximo de dígitos permitidos
-   7. <b>fractionDigits</b>: Número máximo de posiciones decimales permitidas, solo para double
+1. <b>enumeration:</b> Establece una lista de valores “aceptados”
+2. <b>length</b>: Número de caracteres obligatorios
+3. <b>maxExclusive y maxInclusive</b>: Valor máximo de un rango
+4. <b>minExclusive y minInclusive</b>: Valor mínimo en un rango
+5. <b>maxLength y minLength</b>: Número máximo y mínimo de caracteres permitidos
+6. <b>totalDigits</b>: Número máximo de dígitos permitidos
+7. <b>fractionDigits</b>: Número máximo de posiciones decimales permitidas, solo para punto flotante.
 
 Ejemplo
 
-```
     <element name="edad">
         <simpleType>
             <restriction base="TIPO">
@@ -203,14 +216,13 @@ Ejemplo
             </restriction>
         </simpleType>
     </element>
-```
+
 Un elemento edad, de tipo número entero, cuyo valor debe de estar comprendido entre 0 y 100
 
 ## Expresiones regulares
 
 Muchas veces los atributos de las restricciones se nos quedan también cortos a la hora de validar un XML. Por ejemplo, imaginemos que queremos validar un DNI, que tiene un formato establecido. Pues con los atributos que hemos visto hasta ahora no podríamos hacerlo. Es ahí cuando entran en juego las expresiones regulares que <b>definen una secuencia de caracteres permitida como un patrón. determinado</b>
 
-```
     <element name="edad">
         <simpleType>
             <restriction base="TIPO">
@@ -219,22 +231,20 @@ Muchas veces los atributos de las restricciones se nos quedan también cortos a 
         </simpleType>
     </element>
 
-```
-
 Hacer expresiones regulares simples, es sencillo, pero se pueden volver MUY complejas.
 
 Reglas:
 
-   1. **(punto) .** Cualquier carácter
-   2. **\d** cualquier dígito
-   3. **\D** cualquier no-dígito
-   4. **\s** espacio en blanco, retorno de carro, línea nueva
-   5. **\S** cualquier carácter distinto a espacio en blanco
-   6. **<code>a*</code>** "a" puede aparecer cero o más veces
-   7. **<code>a+</code>** "a" puede aparecer una o más veces
-   8. **a{n}** "a" puede aparecer n veces
-   9. **[a]** uno de los caracteres que aparezcan entre []
-   10. **()** los parentesis sirven para agrupar las reglas anteriores
+1. **(punto) .** Cualquier carácter
+2. **\d** cualquier dígito
+3. **\D** cualquier no-dígito
+4. **\s** espacio en blanco, retorno de carro, línea nueva
+5. **\S** cualquier carácter distinto a espacio en blanco
+6. **<code>a*</code>** "a" puede aparecer cero o más veces
+7. **<code>a+</code>** "a" puede aparecer una o más veces
+8. **a{n}** "a" puede aparecer n veces
+9. **[a]** uno de los caracteres que aparezcan entre []
+10. **()** los paréntesis sirven para agrupar las reglas anteriores
 
 ## Como comenzar
 

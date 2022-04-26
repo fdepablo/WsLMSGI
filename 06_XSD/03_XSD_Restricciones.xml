@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <superheroe codigo="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
         xsi:noNamespaceSchemaLocation= "03_XSD_Restricciones.xsd">
-
     <dni>12345678P</dni>
     <nombre>Clark Kent</nombre>
     <edad>29</edad>
