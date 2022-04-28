@@ -14,6 +14,8 @@ En la actualidad los XSD se utilizan en mayor medida que los DTD para validar XM
 
 Por contra, XSD puede llegar a ser más complicado que DTD al tener más reglas.
 
+La idea de este documento es ver las reglas más importantes que debemos saber para trabajar con XSD.
+
 ## XSD vs DTD
 
 Principales diferencias:
