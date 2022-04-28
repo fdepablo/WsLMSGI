@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Libro id="2" precio="30.50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-        xsi:noNamespaceSchemaLocation= "02_XSD_Libro.xsd">
+        xsi:noNamespaceSchemaLocation= "03_XSD_Libro.xsd">
     <Titulo>Fray Perico y su borrico</Titulo>
     <Autor>Yo no</Autor>
     <Editorial>

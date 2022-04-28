@@ -1,4 +1,4 @@
-<!ELEMENT pelicula (titulo,fecha,actores,director)>
+<!ELEMENT pelicula (titulo,fecha,actores,director?)>
 
 <!-- Definimos los atributos de la pelicula -->
 <!ATTLIST pelicula id ID #REQUIRED>

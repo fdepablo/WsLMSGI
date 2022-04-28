@@ -49,7 +49,7 @@
                         </simpleContent>
                     </complexType>
                 </element>
-            </sequence>
+              </sequence>
             <!-- Los atributos son optativos por defecto-->
             <attribute name="precio" type="double"></attribute>
             <!-- Podemos hacer los atributos obligatorios -->

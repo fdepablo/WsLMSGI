@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!-- Este ejemplo es muy parecido a la validación de la Pelicula por DTD. Se han quitado las
+validaciones más complicadas para hacer el ejemplo lo más sencillo posible-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="pelicula">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="titulo" type="xs:string"/>
+                <xs:element name="fecha" type="xs:string" />
+                <xs:element name="actores">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="actor" minOccurs="1" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="nombre" type="xs:string"></xs:element>
+                                        <xs:element name="edad" type="xs:integer"></xs:element>
+                                        <!-- Hemos quitado etiqueta super estrella, pero se verá
+                                            como hacerla más adelante -->
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="director" type="xs:string" minOccurs="0"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:string" use="required"/>
+            <!-- Para que la categoria pudiera tener solamente unos valores, deberiamos de hacer
+            una restricción, veremos un ejemplo más adelante -->
+            <xs:attribute name="categoria" type="xs:string" use="required"/>
+            <!-- No hace falta decir que es opcional, los atributos en XSD son opcionales
+            por defecto -->
+            <xs:attribute name="calificacion" type="xs:integer"/>
+            <xs:attribute name="edad" type="xs:integer"/>
+            <!-- Para que la empresa fuera siempre Walt Disney deberíamos hacer una
+            restricción, veremos un ejemplo más adelante -->
+            <xs:attribute name="empresa" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

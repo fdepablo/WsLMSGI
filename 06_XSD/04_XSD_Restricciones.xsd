@@ -25,7 +25,7 @@
                     <xs:simpleType>
                         <xs:restriction base="xs:integer">
                             <xs:minInclusive value="1"></xs:minInclusive>
-                            <xs:maxExclusive value="20001"></xs:maxExclusive>
+                            <xs:maxExclusive value="20000"></xs:maxExclusive>
                         </xs:restriction>
                     </xs:simpleType>
                 </xs:element>
@@ -40,10 +40,12 @@
                     </xs:simpleType>
                 </xs:element>
             </xs:sequence>
+            <!-- Tambien podemos poner restricciones a los atributos, en este caso el código
+                tiene que estar en la etiqueta raíz y tiene como máximo 3 digitos -->
             <xs:attribute name="codigo" use="required">
                 <xs:simpleType>
                     <xs:restriction base="xs:integer">
-                        <xs:totalDigits value="1"></xs:totalDigits>
+                        <xs:totalDigits value="3"></xs:totalDigits>
                     </xs:restriction>
                 </xs:simpleType>
             </xs:attribute>

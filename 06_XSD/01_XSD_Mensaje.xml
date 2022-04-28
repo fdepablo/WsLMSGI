@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<note id="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+<persona id="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
         xsi:noNamespaceSchemaLocation= "01_XSD_Mensaje.xsd">
-        <to>Steve Rogers</to>
-        <from>Tony Stark</from>
-        <heading>Matar a Thanos</heading>
-        <body>Ey! Capi! Tengo el guantelete del infinito! Quedamos para patearle el culo?</body>
-</note>
+        <nombre>Tony Stark</nombre>
+        <edad>45</edad>
+        <peso>85.5</peso>
+        <casado>false</casado>
+        <fecha_nacimiento>1970-05-29</fecha_nacimiento>
+</persona>

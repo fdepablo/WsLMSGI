@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<pelicula xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+            xsi:noNamespaceSchemaLocation= "02_XSD_Pelicula.xsd" 
+            id="GAL1" categoria="sci-fi" calificacion="10" edad="34" empresa="Walt Disney">
+    <titulo>La guerra de las galaxias</titulo>
+    <fecha>22/07/1977</fecha>
+    <actores>
+        <actor>
+            <nombre>Luke Skywalker</nombre>
+            <edad>29</edad>
+        </actor>
+        <actor>
+            <nombre>Han Solo</nombre>
+            <edad>39</edad>
+        </actor>
+        <actor>
+            <nombre>Leia Organa</nombre>
+            <edad>27</edad>
+        </actor>
+    </actores>
+    <director>George Lucas</director>
+</pelicula>
