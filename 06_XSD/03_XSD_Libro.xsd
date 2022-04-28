@@ -1,4 +1,6 @@
 <?xml version="1.0"?>
+<!-- Para este ejemplo se ha eliminado el nombre del esquema (xs), por lo que ya no hace falta
+    poner "xs" delante de cada etiqueta -->
 <schema xmlns="http://www.w3.org/2001/XMLSchema">
     <annotation>
         <documentation>

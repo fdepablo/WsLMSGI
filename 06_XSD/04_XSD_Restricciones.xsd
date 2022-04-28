@@ -1,4 +1,6 @@
 <?xml version="1.0"?>
+<!-- Para este ejemplo se ha eliminado el nombre del esquema (xs), por lo que ya no hace falta
+    poner "xs" delante de cada etiqueta -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:element name="superheroe">
         <xs:complexType>
