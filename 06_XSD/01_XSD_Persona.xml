@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persona id="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-        xsi:noNamespaceSchemaLocation= "01_XSD_Mensaje.xsd">
+        xsi:noNamespaceSchemaLocation= "01_XSD_Persona.xsd">
         <nombre>Tony Stark</nombre>
         <edad>45</edad>
         <peso>85.5</peso>
