@@ -32,10 +32,8 @@ validaciones más complicadas para hacer el ejemplo lo más sencillo posible-->
             <!-- No hace falta decir que es opcional, los atributos en XSD son opcionales
             por defecto -->
             <xs:attribute name="calificacion" type="xs:integer"/>
-            <xs:attribute name="edad" type="xs:integer"/>
-            <!-- Para que la empresa fuera siempre Walt Disney deberíamos hacer una
-            restricción, veremos un ejemplo más adelante -->
-            <xs:attribute name="empresa" type="xs:string"/>
+            <xs:attribute name="edad" type="xs:integer" default="18"/>
+            <xs:attribute name="empresa" type="xs:string" fixed="Walt Disney"/>
         </xs:complexType>
     </xs:element>
 </xs:schema>
