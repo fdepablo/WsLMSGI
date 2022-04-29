@@ -121,6 +121,7 @@ Un documento XML es válido si **está bien formado y además se ajusta a una es
 - <https://desarrolloweb.com/manuales/18/>
 - <https://developer.mozilla.org/es/docs/Web/XML/XML_introduction>
 - <https://www.w3.org/XML/>
+- <https://www.liquid-technologies.com/tutorials>
 
 ### Validadores online
 
