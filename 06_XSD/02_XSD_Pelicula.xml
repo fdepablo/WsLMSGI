@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <pelicula xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
             xsi:noNamespaceSchemaLocation= "02_XSD_Pelicula.xsd" 
-            id="GAL1" categoria="sci-fi" calificacion="10" edad="34" empresa="Walt Disney">
+            id="GAL1" categoria="sci-fi" calificacion="10" edad="35" empresa="Walt Disney">
     <titulo>La guerra de las galaxias</titulo>
     <fecha>22/07/1977</fecha>
     <actores>
@@ -12,6 +12,7 @@
         <actor>
             <nombre>Han Solo</nombre>
             <edad>39</edad>
+            <super_estrella />
         </actor>
         <actor>
             <nombre>Leia Organa</nombre>

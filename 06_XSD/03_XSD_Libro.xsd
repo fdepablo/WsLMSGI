@@ -7,7 +7,7 @@
             Esquema que marca la estructura de un libro de la libreria "Paco's Library"
          </documentation>
     </annotation>
-    <!-- El nodo raiz se llama Libro-->
+    <!-- El nodo raíz se llama Libro-->
     <element name="Libro">
         <complexType>
             <sequence>
@@ -24,11 +24,9 @@
                 <!-- Optativa la fecha de edicion -->
                 <element name="fecha_edicion" type="date" minOccurs="0"></element>
 
-                <!-- Algunos casos mas particulares -->
+                <!-- Algunos casos más particulares -->
                 <!--
-                Elemento vacio simple, estos elementos deberian de ser autoexplicativos y que
-                el tener la etiqueta o no tenerla ya aportaria información.            
-                Al poner minOccurs a 0, lo estamos haciendo optativo
+                Elemento vacio simple. Al poner minOccurs a 0, lo estamos haciendo optativo
                 -->
                 <element name="bestseller" minOccurs="0">
                     <complexType />
@@ -41,7 +39,7 @@
                     </complexType>
                 </element>
 
-                <!-- Ejemplo de nodo simple de tipo String pero con atributos -->
+                <!-- Ejemplo de elemento simple de tipo String pero con atributos -->
                 <element name="prologo">
                     <complexType>
                         <simpleContent>
@@ -51,7 +49,7 @@
                         </simpleContent>
                     </complexType>
                 </element>
-              </sequence>
+            </sequence>
             <!-- Los atributos son optativos por defecto-->
             <attribute name="precio" type="double"></attribute>
             <!-- Podemos hacer los atributos obligatorios -->

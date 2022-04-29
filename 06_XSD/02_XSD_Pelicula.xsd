@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<!-- Este ejemplo es muy parecido a la validación de la Pelicula por DTD. Se han quitado las
-validaciones más complicadas para hacer el ejemplo lo más sencillo posible-->
+<!-- Este ejemplo es muy parecido a la validación de la Pelicula por DTD. Se ha quitado alguna
+validación complicadas para hacer el ejemplo lo más sencillo posible-->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:element name="pelicula">
         <xs:complexType>
@@ -15,8 +15,10 @@ validaciones más complicadas para hacer el ejemplo lo más sencillo posible-->
                                     <xs:sequence>
                                         <xs:element name="nombre" type="xs:string"></xs:element>
                                         <xs:element name="edad" type="xs:integer"></xs:element>
-                                        <!-- Hemos quitado etiqueta super estrella, pero se verá
-                                            como hacerla más adelante -->
+                                        <!-- Super estrella es un elemento vacio y opcional -->
+                                        <xs:element name="super_estrella" minOccurs="0">
+                                            <xs:complexType />
+                                        </xs:element>
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
@@ -27,7 +29,7 @@ validaciones más complicadas para hacer el ejemplo lo más sencillo posible-->
             </xs:sequence>
             <xs:attribute name="id" type="xs:string" use="required"/>
             <!-- Para que la categoria pudiera tener solamente unos valores, deberiamos de hacer
-            una restricción, veremos un ejemplo más adelante -->
+            una restricción con enumerados, veremos ejemplos con restricciones más adelante -->
             <xs:attribute name="categoria" type="xs:string" use="required"/>
             <!-- No hace falta decir que es opcional, los atributos en XSD son opcionales
             por defecto -->
