@@ -10,9 +10,7 @@ Tanto DTD como XSD proporcionan **validación** de documentos XML, pero XSD es m
 
 Un XSD o esquema, al contrario que un DTD, puede definir tipos de datos, lo cual es claramente beneficioso en el intercambio de datos, objetos o bases de datos.
 
-En la actualidad los XSD se utilizan en mayor medida que los DTD para validar XML, ya que son más potentes y además siguen la gramática XML.
-
-Por contra, XSD puede llegar a ser más complicado que DTD al tener más reglas.
+En la actualidad los XSD se utilizan en mayor medida que los DTD para validar XML, ya que son más potentes y además siguen la gramática XML. Por contra, XSD puede llegar a ser más complicado que DTD ya que tiene más reglas.
 
 La idea de este documento es ver las reglas más importantes que debemos saber para trabajar con XSD.
 
@@ -20,17 +18,19 @@ La idea de este documento es ver las reglas más importantes que debemos saber p
 
 Principales diferencias:
 
-   1. Permiten utilizar tipos de datos. Mientras que con DTD el tipo de datos siempre era texto, con XSD podemos afinar más y decir que puede ser numérico, cadenas, etc.
-   2. Los Esquemas pueden implantar reglas mucho más específicas que las DTD sobre el contenido de los elementos y atributos. Son las llamadas restricciones. Por ejemplo, que el texto de una etiqueta "nombre" no pueda exceder de 20 caracteres.
-   3. No se puede describir **entidades** utilizando esquemas. Necesitaremos utilizar DTDs para ello.
+   1. XSD permite utilizar tipos de datos. Mientras que con DTD el tipo de datos siempre era texto, con XSD podemos afinar más y decir que puede ser numérico, cadenas, etc.
+   2. Los XSD pueden implantar reglas mucho más específicas que los DTD sobre el contenido de los elementos y atributos. Son las llamadas restricciones. Por ejemplo, que el texto de una etiqueta "nombre" no pueda exceder de 20 caracteres.
+   3. En XSD no se pueden describir **entidades**. Necesitaremos utilizar DTDs para ello.
 
 ## Definición
 
-XSD es un lenguaje basado en XML, a diferencia de los DTDs.
+XSD es un lenguaje basado en XML, a diferencia de los DTDs. Un XSD siempre lo pondremos en un fichero con extensión **.xsd** y empieza con la etiqueta **xs:schema**.
 
 Al definir el schema es necesario escribir una serie de atributos. El primero es el **namespace** al que pertenece nuestro esquema o XSD (http://www.w3.org/2001/XMLSchema) y asignarle un nombre (xs).
 
-    xmlns:xs=”http://www.w3.org/2001/XMLSchema”
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    </xs:schema>
 
 Esto indica que los elementos utilizados corresponden al espacio de nombres (namespace) definido en esa dirección. Podemos decir que para que no haya ambigüedad entre las etiquetas descritas dentro del mismo documento, podemos definir un espacio de nombres al que pertenecen. Dentro de un espacio de nombres no puede haber dos etiquetas con el mismo nombre. En este caso estamos diciendo que las etiquetas que comiencen por **xs** pertenecen al espacio de nombres **http://www.w3.org/2001/XMLSchema**. Un XSD siempre pertenecerá al espacio de nombres **http://www.w3.org/2001/XMLSchema** pero no todos los XMLs tiene porque usar el mismo espacio de nombres.
 
@@ -64,7 +64,7 @@ Algunos de los tipos de datos más importantes son los siguientes:
 
 Ejemplo práctico de un persona:
 
-    <?xml version=“1.0”?>
+    <?xml version="1.0"?>
     <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
         <xs:element name="persona">
             <xs:complexType>
@@ -83,11 +83,11 @@ Ejemplo práctico de un persona:
 
 Si en la definición del XSD no incluimos un nombre al namespace (quitamos la parte de **xs**), no tenemos que poner el nombre al principio de todas las etiquetas. Es decir, si definimos el namespace de la siguiente manera:
 
-    xmlns=”http://www.w3.org/2001/XMLSchema”
+    xmlns="http://www.w3.org/2001/XMLSchema"
 
 Podemos hacer nuestro XSD sin poner **xs** al principio de cada etiqueta:
 
-    <?xml version=“1.0”?>
+    <?xml version="1.0"?>
     <schema xmlns="http://www.w3.org/2001/XMLSchema">
         <element name="persona">
             <complexType>
@@ -106,12 +106,12 @@ Este ejemplo lo podemos ver en **01_XSD_Persona** junto con un atributo obligato
 
 ## Elementos Complejos
 
-Para añadir más elementos a un esquema vamos a utilizar la etiqueta **complexType**. Todos los elementos irán entre esas etiquetas, indicando que hay un grupo de elementos o un único elemento con atributos.
+Para añadir más elementos a un esquema vamos a utilizar la etiqueta **complexType** dentro de la etiqueta **element**. Todos los elementos irán entre esas etiquetas, indicando que hay un grupo de elementos o un único elemento con atributos.
 
-Luego dentro de esta etiqueta normalmente va una de las siguientes tres etiquetas:
+Luego dentro de la etiqueta **complexType** normalmente va una de las siguientes tres etiquetas:
 
-1. **sequence** han de incluirse todos los elementos respetando el orden. Normalmente es la más usada e importante de las tres.
-2. **choice** Es necesario incluir uno de los elementos que haya dentro
+1. **sequence** han de incluirse todos los elementos que haya dentro respetando el orden. Normalmente es la más usada e importante de las tres.
+2. **choice** Es necesario incluir uno de los elementos que haya dentro.
 3. **all** han de incluirse todos los elementos que haya dentro, sin importar el orden.
 
 Ejemplos:
@@ -161,7 +161,7 @@ En el tercer ejemplo tienen que ir todos los elementos, pero en el orden que se 
 
 ## Cardinalidad de los elementos
 
-Para documentos XML en los que necesitemos definir elementos que se repitan, podremos utilizar los atributos **maxOccurs y minOccurs**. Tienen las siguientes características:
+Para documentos XML en los que necesitemos definir elementos que se repitan, podremos utilizar los atributos **maxOccurs y minOccurs** dentro de la etiqueta **element**. Tienen las siguientes características:
 
 1. Son atributos opcionales.
 2. Estos dos atributos indican el mínimo (minOccurs) y máximo (maxOccurs) número de ocurrencias del elemento.
@@ -194,7 +194,7 @@ Para definir atributos se utiliza una sintaxis similar a la que tenemos para los
 
 Características de los atributos:
 
-   1. Siempre van dentro de la etiqueta "complexType" y **AL FINAL** de la misma.
+   1. Siempre van dentro de la etiqueta **complexType** del elemento al que queremos que pertenezca el atributo y **AL FINAL** de la misma.
    2. Son optativos por defecto. Los podemos hacer obligatorios con el atributo **use="required"**.
    3. Se pueden poner valores por defecto con el atributo **default="valor"**.
    4. Se pueden poner valores fijados (solo puede tener un determinado valor) con el atributo **fixed="Valor"**.
@@ -211,8 +211,8 @@ Ejemplo:
                     <xs:element name="fecha_nacimiento" type="xs:date"/>
                     <xs:element name="direccion" type="xs:string" minOccurs="0"/>
                 </xs:sequence>
+                <attribute name="id" type="xs:integer" use="required" default="1"></attribute>
             </xs:complexType>
-            <attribute name="id" type="xs:integer"></attribute>
         </xs:element>
     </xs:schema>
 
