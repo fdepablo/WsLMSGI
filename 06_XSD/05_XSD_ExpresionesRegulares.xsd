@@ -54,6 +54,22 @@
                         </restriction>
                     </simpleType>
                 </element>
+                <element name="ejemplo_cardinalidad_uno_muchos">
+                    <simpleType>
+                        <restriction base="string">
+                            <!-- Un rango de letras pero 8 letras exactamente -->
+                            <pattern value="[a-zA-Z]+"></pattern>
+                        </restriction>
+                    </simpleType>
+                </element>
+                <element name="ejemplo_cardinalidad_cero_muchos">
+                    <simpleType>
+                        <restriction base="string">
+                            <!-- Un rango de letras pero 8 letras exactamente -->
+                            <pattern value="[a-zA-Z]*"></pattern>
+                        </restriction>
+                    </simpleType>
+                </element>
                 <element name="ejemplo_llaves">
                     <simpleType>
                         <restriction base="string">
@@ -65,7 +81,7 @@
                 <element name="ejemplo_llaves_2">
                     <simpleType>
                         <restriction base="string">
-                            <!-- Un rengo de letras de 1 a 8 coincidencias -->
+                            <!-- Un rengo de letras de 2 a 8 coincidencias -->
                             <pattern value="[a-zA-Z]{2,8}"></pattern>
                         </restriction>
                     </simpleType>
@@ -106,15 +122,7 @@
                     <simpleType>
                         <restriction base="string">
                             <!-- nombre seguido de un espacio en blanco y luego un apellido-->
-                            <pattern value="[A-Z]([a-z])+\s[A-Z]([a-z])+"></pattern>
-                        </restriction>
-                    </simpleType>
-                </element>
-                <element name="nombre_apellidos">
-                    <simpleType>
-                        <restriction base="string">
-                            <!-- nombre seguido de un espacio en blanco y luego un apellido-->
-                            <pattern value="([A-Z]([a-z])+(\s){0,1})+"></pattern>
+                            <pattern value="[A-Za-z]+\s[A-Za-z]+"></pattern>
                         </restriction>
                     </simpleType>
                 </element>

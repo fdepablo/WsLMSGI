@@ -2,18 +2,19 @@
 <persona xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
         xsi:noNamespaceSchemaLocation= "05_XSD_ExpresionesRegulares.xsd">
     <fijo>abc</fijo>
-    <posicion>1</posicion>
+    <posicion>3</posicion>
     <letra>G</letra>
     <rango_numerico>4</rango_numerico>
-    <rango_de_letras_minusculas>e</rango_de_letras_minusculas>
+    <rango_de_letras_minusculas>v</rango_de_letras_minusculas>
     <rango_de_letras>R</rango_de_letras>
+    <ejemplo_cardinalidad_uno_muchos>aZaZtTRr</ejemplo_cardinalidad_uno_muchos>
+    <ejemplo_cardinalidad_cero_muchos></ejemplo_cardinalidad_cero_muchos>
     <ejemplo_llaves>abcdefgh</ejemplo_llaves>
-    <ejemplo_llaves_2>abcdefgh</ejemplo_llaves_2>
-    <DNI>12345678K</DNI>
+    <ejemplo_llaves_2>abcde</ejemplo_llaves_2>
+    <DNI>12345678Z</DNI>
     <conjunto_letras>a</conjunto_letras>
     <conjunto_letras_con_repeticion>abcAZ</conjunto_letras_con_repeticion>
-    <matricula>1234-FTG</matricula>
+    <matricula>1234-FTF</matricula>
     <nombre_apellido>Steve Rogers</nombre_apellido>
-    <nombre_apellidos>Tony Stark Martinez</nombre_apellidos>
-    <email>felix@uem.com</email>
+    <email>ironman@avengers.com</email>
 </persona>

@@ -259,7 +259,7 @@ Ejemplo de un elemento "edad", de tipo número entero, cuyo valor debe de estar 
 
     <xs:element name="edad">
         <xs:simpleType>
-            <xs:restriction base="TIPO">
+            <xs:restriction base="xs:integer">
                 <xs:minInclusive value="0"/>
                 <xs:maxInclusive value="100"/>
             </xs:restriction>
@@ -295,9 +295,10 @@ Algunas reglas importantes:
 7. **<code>a+</code>** "a" puede aparecer una o más veces
 8. **a{n}** "a" puede aparecer n veces
 9. **[]** los corchetes sirven para establecer caracteres válidos. Los caracteres que pongamos dentro serán los caracteres válidos.
-10. **[^a]*** Negación, "a" no puede aparecer.
-11. <b>(Barra invertida) \</b>, para escapar caracteres, por ejemplo si queremos decir que tiene que aparcer un "." pondriamos "\.", ya que el "." implica por defecto que puede aparecer cualquier caracter.
-12. **()** los paréntesis sirven para agrupar reglas.
+10. **[a-z]** el guion sirve para establecer rangos, en este caso cualquier letra entre la a-z minúscula.
+11. **[^a]** Negación, "a" no puede aparecer.
+12. <b>(Barra invertida) \ </b>, para escapar caracteres, por ejemplo si queremos decir que tiene que aparcer un "." pondriamos "<code> \ </code>.", ya que el "." implica por defecto que puede aparecer cualquier caracter.
+13. **()** los paréntesis sirven para agrupar reglas.
 
 Ver Ejemplo **05_XSD_ExpresionesRegulares** para ver algunos usos.
 

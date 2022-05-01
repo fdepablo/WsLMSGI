@@ -1,6 +1,4 @@
 <?xml version="1.0"?>
-<!-- Para este ejemplo se ha eliminado el nombre del esquema (xs), por lo que ya no hace falta
-    poner "xs" delante de cada etiqueta -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:element name="superheroe">
         <xs:complexType>
@@ -22,7 +20,7 @@
                         </xs:restriction>
                     </xs:simpleType>
                 </xs:element>
-                <!-- La edad debe de estar comprendida entre 1 y 20000-->
+                <!-- La edad debe de estar comprendida entre 1 y 19999-->
                 <xs:element name="edad">
                     <xs:simpleType>
                         <xs:restriction base="xs:integer">
