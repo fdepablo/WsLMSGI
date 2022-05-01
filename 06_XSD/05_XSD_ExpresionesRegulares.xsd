@@ -5,6 +5,14 @@
     <element name="persona">
         <complexType>
             <sequence>
+                <element name="fijo">
+                    <simpleType>
+                        <restriction base="string">
+                             <!-- Tiene que ser "abc" exclusivamente -->
+                            <pattern value="abc"></pattern>
+                        </restriction>
+                    </simpleType>
+                </element>
                 <element name="posicion">
                     <simpleType>
                         <restriction base="string">
@@ -24,7 +32,7 @@
                 <element name="rango_numerico">
                     <simpleType>
                         <restriction base="integer">
-                            <!-- Un rango comprendido entre el 0 y el 5 -->
+                            <!-- Valores entre el 0 y el 5 -->
                             <pattern value="[012345]"></pattern>
                         </restriction>
                     </simpleType>
@@ -105,7 +113,7 @@
                 <element name="nombre_apellidos">
                     <simpleType>
                         <restriction base="string">
-                            <!-- nombre seguido de un espacio en blanco y luego un apeelido-->
+                            <!-- nombre seguido de un espacio en blanco y luego un apellido-->
                             <pattern value="([A-Z]([a-z])+(\s){0,1})+"></pattern>
                         </restriction>
                     </simpleType>
@@ -113,7 +121,8 @@
                 <element name="email">
                     <simpleType>
                         <restriction base="string">
-                            <!-- nombre seguido de un espacio en blanco y luego un apeelido-->
+                            <!-- Muchas veces es mejor buscar validaciones por internet porque
+                            es facil equivocarse con las validaciones complejas -->
                             <pattern value="[^@]+@[^\.]+\..+"></pattern>
                         </restriction>
                     </simpleType>

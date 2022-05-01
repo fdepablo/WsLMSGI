@@ -220,7 +220,7 @@ Ver **02_XSD_Pelicula** para un ejemplo más completo de elementos y atributos.
 
 ## Etiqueta annotation
 
-A menudo podemos incluir una descripción en nuestros esquemas como referencia y ayuda para quiénes los vaya a utilizar y para nosotros en un futuro. Para ello se utilizarán las etiquetas **xs:documentation** dentro de las etiquetas **xs:annotation**. Suele ir justo después de la etiqueta **xs:schema**
+A menudo podemos incluir una descripción en nuestros esquemas como referencia y ayuda para quiénes los vaya a utilizar y para nosotros en un futuro. Para ello se utilizarán las etiquetas **xs:documentation** dentro de la etiqueta **xs:annotation**. Suele ir justo después de la etiqueta **xs:schema**
 
     <xs:annotation>
         <xs:documentation>
@@ -284,20 +284,22 @@ Sintaxis básica:
 
 Hacer expresiones regulares simples, es sencillo, pero se pueden volver MUY complejas.
 
-Reglas:
+Algunas reglas importantes:
 
-1. **(punto) .** Cualquier carácter
-2. **\d** cualquier dígito
-3. **\D** cualquier no-dígito
-4. **\s** espacio en blanco, retorno de carro, línea nueva
-5. **\S** cualquier carácter distinto a espacio en blanco
+1. **(punto) .** Puede aparecer cualquier caracter.
+2. **\d** cualquier dígito.
+3. **\D** cualquier no-dígito.
+4. **\s** espacio en blanco, retorno de carro, línea nueva.
+5. **\S** cualquier caracter distinto a espacio en blanco.
 6. **<code>a*</code>** "a" puede aparecer cero o más veces
 7. **<code>a+</code>** "a" puede aparecer una o más veces
 8. **a{n}** "a" puede aparecer n veces
-9. **[a]** uno de los caracteres que aparezcan entre []
-10. **()** los paréntesis sirven para agrupar las reglas anteriores
+9. **[]** los corchetes sirven para establecer caracteres válidos. Los caracteres que pongamos dentro serán los caracteres válidos.
+10. **[^a]*** Negación, "a" no puede aparecer.
+11. <b>(Barra invertida) \</b>, para escapar caracteres, por ejemplo si queremos decir que tiene que aparcer un "." pondriamos "\.", ya que el "." implica por defecto que puede aparecer cualquier caracter.
+12. **()** los paréntesis sirven para agrupar reglas.
 
-Ver Ejemplo **05_XSD_ExpresionesRegulares** para más ejemplos.
+Ver Ejemplo **05_XSD_ExpresionesRegulares** para ver algunos usos.
 
 ## Bibliografía
 
@@ -305,3 +307,4 @@ Ver Ejemplo **05_XSD_ExpresionesRegulares** para más ejemplos.
 - <https://www.abrirllave.com/xsd/>
 - <https://www.tutorialspoint.com/xsd/index.htm>
 - <https://www.liquid-technologies.com/tutorials>
+- [Expresiones regulares](http://www.datypic.com/books/defxmlschema/chapter09.html)

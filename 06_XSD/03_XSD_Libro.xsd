@@ -4,7 +4,7 @@
 <schema xmlns="http://www.w3.org/2001/XMLSchema">
     <annotation>
         <documentation>
-            Esquema que marca la estructura de un libro de la libreria "Paco's Library"
+            Esquema que marca la estructura de un libro de la libreria "Tony's Library"
          </documentation>
     </annotation>
     <!-- El nodo raíz se llama Libro-->

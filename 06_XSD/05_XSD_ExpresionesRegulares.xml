@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persona xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
         xsi:noNamespaceSchemaLocation= "05_XSD_ExpresionesRegulares.xsd">
+    <fijo>abc</fijo>
     <posicion>1</posicion>
     <letra>G</letra>
     <rango_numerico>4</rango_numerico>
