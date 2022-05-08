@@ -11,7 +11,7 @@
 		salida del xml en este caso queremos mostrar un HTML, pero podria ser cualquier 
 		formato (texto plano, otro xml, csv, etc).
 
-		El primer paso es crear un templete, y dentro pondremos todo el codigo nuevo que
+		El primer paso es crear un template, y dentro pondremos todo el codigo nuevo que
 		queremos crear.
 		
 		El atributo "match" establece en que parte del XML nos queremos
@@ -25,16 +25,16 @@
 		<html>
 		<head>		
 			<title>Cruceros</title>
-		<!-- Tambien podriamos meter un CSS al html resultante, es decir, renderizarlo
+		<!-- Tambien podemos meter un CSS al html resultante, es decir, renderizarlo
 		con un XSL y añadirle estilos CSS (colores, formas, responsive...) -->
-		<!-- <link rel="stylesheet" href="css/estilos.css" /> -->
+		<link rel="stylesheet" href="css/estilos.css" />
 		</head>
 		<body>
 		<!-- Con esta etiqueta (value-of select) seleccionamos el texto del nodo que queramos 
 			y dentro de select la expresion XPATH que queramos (en este ejemplo, es una expresion
 			relativa)
 		-->
-		<h1 style="color:red"><xsl:value-of select="cruceros/informacion"/></h1>
+		<h1><xsl:value-of select="cruceros/informacion"/></h1>
 		<!-- 
 		For-each : 
 			Esto representa una estructura de control repetitiva que se ejecuta para 
