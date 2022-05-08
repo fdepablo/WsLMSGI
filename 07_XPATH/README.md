@@ -40,16 +40,17 @@ Dentro de esa vista podemos ejecutar las expresiones XPath.
 
 XPath usa **expresiones de ruta** para seleccionar nodos o un conjunto de nodos en un documento XML. Estas expresiones se parecen mucho a las rutas que usas en un sistema tradicional de ficheros.
 
-    /pelicula/actores/actor/nombre
+    XPath -> /pelicula/actores/actor/nombre
+    Sistema de ficheros -> C:/carpeta1/carpeta2/fichero.txt
 
-Vamos a ver las **expresiones XPath** más importantes con algunos ejemplos sobre el XML de “Película” y de "Cruceros":
+Vamos a ver las **expresiones XPath** y **operadores** más importantes con algunos ejemplos sobre el XML de “Pelicula” y de "Cruceros":
 
 1. **NOMBRE_DEL_NODO** : Selecciona todos los nodos con el nombre 'NOMBRE_DE_NODO'. La selección es **relativa** desde el nodo que nos encontremos. Para ello debemos situarnos en un nodo específico, a partir de ahí, las búsquedas serían relativas a ese nodo. Esto cobra más sentido cuando trabajamos con XSLT, en esta lección vamos a usar las rutas que empiezan por **/** (siguiente punto).
 
         'titulo' -> selecciona todos los nodos 'titulo' desde el nodo que nos encontremos
         'actores/actor' -> selecciona todos los nodos 'actor' que sean hijos directos de 'actores' desde el nodo que nos encontremos
 
-2. **(barra normal) <code>/</code>** : Selección del nodo raíz del documento. Las rutas que empiezan por '/' las podemos entender como absolutas al documento ya que empezamos seleccionando el nodo raíz.
+2. **(barra normal) <code>/</code>** : Selección del nodo 'document'. Las rutas que empiezan por '/' las podemos entender como absolutas.
 
         '/pelicula/titulo' -> selecciona los nodos 'titulo' que sean hijos directos de '/pelicula'
         '/pelicula/actores/actor' -> selecciona los nodos 'actor' que sean hijos directos de '/pelicula/actores'
@@ -57,7 +58,7 @@ Vamos a ver las **expresiones XPath** más importantes con algunos ejemplos sobr
         '/cruceros/crucero/detalles/informacion' -> selecciona los nodos 'informacion' que sean hijos directos de '/cruceros/crucero/detalles'
         '/cruceros/informacion' -> selecciona los nodos 'informacion' que sean hijos directos de '/cruceros'
     
-3. **(doble barra normal) <code>//</code>** : Selección de nodos desde el nodo actual en cualquier parte del documento, sin importar de donde se encuentren. Es muy útil para hacer búsquedas sin conocer la estructura del documento.
+3. **(doble barra normal) <code>//</code>** : Selección de nodos desde el nodo actual en cualquier parte del documento, sin importar donde se encuentren. Es muy útil para hacer búsquedas sin conocer la estructura del documento.
 
         '//actor' -> selecciona todos los nodos 'actor' en cualquier parte del documento
         '//titulo' -> selecciona todos los nodos 'titulo' en cualquier parte del documento
@@ -91,7 +92,7 @@ Vamos a ver las **expresiones XPath** más importantes con algunos ejemplos sobr
 
 Los predicados son condiciones que le ponemos a las expresiones XPATH para que filtre la búsqueda, son usados para encontrar un nodo especifico o un nodo que contenga un valor especifico. 
 
-Los predicados van entre corchetes **[]**, y será evaluado como un 'Boolean'. Si el 'Boolean' se evalua como **true**, el nodo es incluido en el conjunto seleccionado, si se evalúa como **false** será excluido. Veamos algunos reglas
+Los predicados van entre corchetes **[]**, y será evaluado como un 'Boolean' cuando lo combinamos con operadores. Si el 'Boolean' se evalua como **true**, el nodo es incluido en el conjunto seleccionado, si se evalúa como **false** será excluido. También dentro de un predicado puede haber un valor que representa el número de nodo que queremos. Veamos algunos reglas
 
 1. Dentro de los predicados podemos poner el número de nodo que queremos que nos seleccione, y así evitar seleccionar todos los nodos que cumplan con la expresión.
 
@@ -108,6 +109,8 @@ Los predicados van entre corchetes **[]**, y será evaluado como un 'Boolean'. S
         '/cruceros/crucero/escalas/escala[@dia]' -> selecciona todos los nodos 'escala' que tengan el atributo 'dia'
         '/cruceros/crucero[1]/escalas/escala[@dia]' -> selecciona del primer crucero todos los nodos 'escala' que tengan el atributo 'dia'.
         '/cruceros/crucero[1]/escalas/escala[@dia = 2]' -> selecciona del primer crucero todos los nodos 'escala' que tengan el atributo 'dia' igual a '2'
+        '/cruceros/crucero[detalles/cia/text() = 'Costa cruceros']/detalles/dias' -> selecciona los dias de los cruceros cuya compañia sea 'Costa cruceros'
+        '/cruceros/crucero[detalles/dias/text() = 7]/escalas/escala[@dia = 2]/parada' -> seleciona las paradas de la escala del día 2 de los cruceros cuya duración de días es 7
 
 3. También admiten algunas funciones, como **last()** que selecciona el último nodo, útil cuando no conocemos el número exacto de nodos:
 
@@ -136,7 +139,7 @@ Vamos a ver algunos otros operadores que podemos usar en XPath dentro de los pre
 5. **(simbolo igual) <code> = </code>** : Igual.
 
         '/cruceros/crucero[detalles/cia = "MSC Cruceros"]' -> selecciona los cruceros cuya 'cia' sea igual a "MSC Cruceros"
-        '/cruceros/crucero[detalles/cia @eq "MSC Cruceros"]/detalles/fechaSalida' -> selecciona la fecha de salida de los cruceros cuya 'cia' sea igual a "MSC Cruceros"
+        '/cruceros/crucero[detalles/cia = "MSC Cruceros"]/detalles/fechaSalida' -> selecciona la fecha de salida de los cruceros cuya 'cia' sea igual a "MSC Cruceros"
 
 6. **<code> != </code>** : Distinto.
 
@@ -156,6 +159,10 @@ Vamos a ver algunos otros operadores que podemos usar en XPath dentro de los pre
 12. **<code> and </code>** : "Y" lógico.
 
         '//actor[edad < 35 and edad > 28]/nombre' -> selecciona el nombre de los actores cuya edad sea menor que 35 y mayor que 28
+
+13. **<code> () </code>** : Con los parentesis podemos agrupar estructuras lógicas.
+
+        '//actor[edad > 35 or (edad < 28 and edad > 20)]/nombre' -> selecciona el nombre de los actores cuya edad sea mayor que 35 o menor que 28
 
 ## Bibliografía
 
