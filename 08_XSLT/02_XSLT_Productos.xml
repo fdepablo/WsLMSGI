@@ -16,7 +16,7 @@
     en otra aplicación que no sea un navegador, ya que estos por defecto quitan las 
     etiquetas y muestran solo el texto. Ver el "README.md" para más detalles
 -->
-<?xml-stylesheet type="text/xsl" href="06_XSLT_Productos.xsl"?>
+<?xml-stylesheet type="text/xsl" href="02_XSLT_Productos.xsl"?>
 <productos>
   <item type="tienda" nombre="amazon" codigo="1102" producto="tablet 7 pulgadas" precio="28.875"/>
   <item type="tienda" nombre="tiendaPC" codigo="1104" producto="tablet 10  pulgadas" precio="92.250"/>

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<!-- 
-		Para usar este XSL debemos de poner la siguiente sentencia
-		en el XML
+		Para usar este XSL debemos de poner la siguiente sentencia en el XML
 		<?xml-stylesheet type="text/xsl" href="03_XSLT_Cruceros.xsl"?>
 		
 		XSL es un motor para mostrar XML en el formato que queramos.

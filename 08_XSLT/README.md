@@ -1,5 +1,6 @@
 ![XSLT](img/xslt.png "Aprende XSLT!!")
-# EXtensible Stylesheet Language Transformations (XSLT)
+
+# XSLT (EXtensible Stylesheet Language Transformations)
 
 Permite convertir documentos XML a otros formatos (por ejemplo, HTML). Una plantilla podra ser la siguiente (fichero con extension xsl):
 
@@ -15,16 +16,6 @@ Para enlazar un fichero XSL con un fichero XML debemos de poner la siguiente lí
     <?xml-stylesheet type="text/xsl" href="cruceros.xsl"?>
     
 Después de la línea
-
-    <?xml version="1.0" encoding="UTF-8"?>
-
-## Estilos CSS
-
-Son estilos y formatos que se pueden aplicar a XML o HTML Para meter los estilos al fichero "cruceros.xml" debemos de poner la siguiente línea:
-
-    <?xml-stylesheet type="text/css" href="cruceros.css" ?>
-
-Después de 
 
     <?xml version="1.0" encoding="UTF-8"?>
 
@@ -58,18 +49,18 @@ Los ficheros de este ejemplo hay que desplegarlos en algún servidor como puede 
 
 ## Instrucciones para visualizar transformaciones de ficheros de XML a XML
 
-El ejemplo 05 y 06 tratan de hacer una transformación de un XML a otro XML. Si queremos ver la transformación completa, es decir, con las etiquetas resultantes, no podemos usar un navegador de manera normal, ya que estos por defecto quitan las etiquetas de los XML.
+El ejemplo **02_XSLT_Productos** trata de hacer una transformación de un XML a otro XML. Si queremos ver la transformación completa, es decir, con las etiquetas resultantes, no podemos usar un navegador de manera normal, ya que estos por defecto quitan las etiquetas de los XML y solo se visualizan los nodos texto.
 
-Para ello podemos usar alguna otra aplicación para ver el resultado como NOTEPAD++
+Para ello podemos usar alguna otra aplicación para ver el resultado, como [Notepad++](https://notepad-plus-plus.org)
 
-### Configurando NOTEPAD++ para transformar documentos XML a XML
+### Configurando Notepad++ para transformar documentos XML a XML
 
-Esta aplicación se utiliza para trabajar con ficheros en texto plano, y en este caso, para hacer transformaciones de XML a XML.
+Esta aplicación se utiliza para trabajar con ficheros en texto plano, y en este caso, para visualizar transformaciones de XML a XML.
 
 Haremos los siguientes pasos:
 
 1. Instalamos Notepad++ <https://notepad-plus-plus.org/downloads/>.
-2. Instalamos el plugin "XML Tools". En la pestaña "plugins" elegimos la opción "administrar plugins" y lo buscamos ahí. Reiniciamos en caso necesario. 
+2. Instalamos el plugin "XML Tools". En la pestaña "plugins" elegimos la opción "administrar plugins" y lo buscamos. Reiniciamos en caso necesario. 
 3. Abriremos el XML que queremos transformar con Notepad++.
 4. Con el fichero XML en la ventana del Notepad++, pulsaremos la pestaña "plugins".
 5. Seleccionamos "XML Tools".

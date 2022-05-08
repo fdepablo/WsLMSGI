@@ -3,9 +3,9 @@
 	<!-- Nos situamos en el nodo raiz -->
 	<xsl:template match="/">	
 		<html>
-		<head>
-		<title>Cruceros</title>
-		</head>
+			<head>
+				<title>Cruceros</title>
+			</head>
 		<body>
 			<h1 style="color:red">Ejemplos de uso de expresiones XPATH</h1>
 			<!-- Busqueda absoluta de un detalle de un crucero 
@@ -106,7 +106,6 @@
 			<xsl:value-of select="/cruceros/crucero[detalles/dias=7]" />
 			<hr/>
 		</body>
-		</html>
-		
+		</html>		
 	</xsl:template>
 </xsl:stylesheet>

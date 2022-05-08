@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 
-	Podemos parsear un xml sea leido aplicando reglas de CSS o de XSL
-	CSS -> <?xml-stylesheet type="text/css" href="css/cruceros.css"?>
-	XSL -> <?xml-stylesheet type="text/xsl" href="03_XSLT_Cruceros.xsl"?>
--->
-<?xml-stylesheet type="text/xsl" href="04_XSLT_Cruceros.xsl"?>
+<?xml-stylesheet type="text/css" href="css/cruceros.css"?>
 <cruceros>
 	<informacion>Cruceros por el mundo!</informacion>
 	<crucero codigo="CRUMED21">
