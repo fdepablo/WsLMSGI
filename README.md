@@ -17,8 +17,8 @@ Se recomienda instalar las siguientes extensiones en VSC
 
 1. Beautify, para trabajar con HTML y CSS
 2. Open in Browser, para poder abrir carpetas desde VSC
-3. XML, para poder trabajar con XML, principalmente
-4. XML Tools, para poder trabajar con, XPATH principalmente
+3. XML, para poder trabajar con XML principalmente
+4. XML Tools, para poder trabajar con XPath principalmente
 5. Live Server, para poder arrancar un servidor ligero de manera sencilla. Se recargaran las páginas HTML de manera automática.
 6. Markdown Preview Enhanced, para ver los ficheros con extensión ".md"
 
@@ -48,6 +48,8 @@ Debería quedar algo parecido a la siguiente imagen
 ![settingsjson](img/settingsjson.png "settingsjson")
 
 ## Bibliografía
+
+Dentro de cada unidad podremos encontrar bibliografía especifica. Las siguientes páginas podemos considerarlas como bibliografía genérica.
 
 - <https://www.w3schools.com>
 - <https://www.w3.org/standards/webdesign/htmlcss>
