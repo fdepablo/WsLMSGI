@@ -30,8 +30,8 @@ La estructura sería la siguiente:
 
     SELECTOR { 
         PROPIEDAD_1:VALOR_1;
-        PROPIEDAD_1:VALOR_2;
-        PROPIEDAD_1:VALOR_3;
+        PROPIEDAD_2:VALOR_2;
+        PROPIEDAD_3:VALOR_3;
         ...
     }
 
