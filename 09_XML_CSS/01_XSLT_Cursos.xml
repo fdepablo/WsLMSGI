@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- 
-	Con la siguiente etiqueta, decimos que queremos dar estilos CSS al fichero XML
-	cuando se visualice en un navegador
+	Con la siguiente instrucción de procesamiento, decimos que queremos dar estilos 
+	CSS al fichero XML
 -->
 <?xml-stylesheet type="text/css" href="css/cursos.css" ?>
 <cursos>
