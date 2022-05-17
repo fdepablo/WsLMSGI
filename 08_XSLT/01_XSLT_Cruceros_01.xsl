@@ -29,55 +29,58 @@
 		 -->
 		<xsl:for-each select="cruceros/crucero">
 			<!-- Ahora las rutas relativas son relativas al nodo "cruceros/crucero" -->
-			<p>Destino: <xsl:value-of select="destino"/> </p>
+			<h2>Destino: <xsl:value-of select="destino"/> </h2>
 			<p>Información del crucero: <xsl:value-of select="detalles/informacion"/> </p>
 			<p>Compañia: <xsl:value-of select="detalles/cia"/> </p>
 			<p>Días: <xsl:value-of select="detalles/dias"/> </p>
 			<p>Fecha salida: <xsl:value-of select="detalles/fechaSalida"/> </p>
 			<!-- 
 				Condición para pintar "H3" cuando el número de días sea superior a 6.
-				Como el simbolo ">" representa cierre de etiqueta, debemos de usar
+				Como el simbolo ">" representa cierre de etiqueta, podemos usar
 				la entidad "&gt;"
 				En este caso la consulta es relativa a donde está situado el elemento
 				"for-each" (nodo cruceros/crucero)
 			-->
 			<xsl:if test="detalles/dias &gt; 6">
-				<h3>El crucero dura una semana o más.</h3>
+				<h4>El crucero dura una semana o más.</h4>
 			</xsl:if>
 
 			<!-- Valoramos las distintas fechas de salida para mostrar un texto de cuando salimos -->
 			<xsl:choose>
   				<xsl:when test="detalles/fechaSalida = '2018-12-26'">
-    				<h2> Salimos despues de navidad!!! </h2>
+    				<h4> Salimos despues de navidad!!! </h4>
   				</xsl:when>
 				<xsl:when test="detalles/fechaSalida = '2019-02-13'">
-    				<h2> Salimos en febrero!!! </h2>
+    				<h4> Salimos en febrero!!! </h4>
   				</xsl:when>
   				<xsl:otherwise>
-    				<h2> No se cuando salimos :(</h2>
+    				<h4> No se cuando salimos :(</h4>
   				</xsl:otherwise>
 			</xsl:choose>
 
 			<table border="1">
-				<tr>
-					<th>Día</th>
-					<th>Parada</th>
-					<th>Llegada</th>
-					<th>Salida</th>
-				</tr>
-				<xsl:for-each select="escalas/escala">
+				<thead>
 					<tr>
-						<!-- Con arroba (@) accedemos a los atributos -->
-						<td><xsl:value-of select="@dia"/></td>
-						<td><xsl:value-of select="parada"/></td>
-						<td><xsl:value-of select="llegada"/></td>
-						<td><xsl:value-of select="salida"/></td>
+						<th>Día</th>
+						<th>Parada</th>
+						<th>Llegada</th>
+						<th>Salida</th>
 					</tr>
-				</xsl:for-each> <!-- Fin de for each de escala-->
+				</thead>
+				<tbody>
+					<xsl:for-each select="escalas/escala">
+						<tr>
+							<!-- Con arroba (@) accedemos a los atributos -->
+							<td><xsl:value-of select="@dia"/></td>
+							<td><xsl:value-of select="parada"/></td>
+							<td><xsl:value-of select="llegada"/></td>
+							<td><xsl:value-of select="salida"/></td>
+						</tr>
+					</xsl:for-each> <!-- Fin de for each de escala-->
+				</tbody>
 			</table>
 		</xsl:for-each> <!-- Fin de for each de crucero-->
 		</body>
-	</html>
-		
+		</html>		
 	</xsl:template>
 </xsl:stylesheet>

@@ -49,12 +49,13 @@
 			Las etiquetas "informacion" de los cruceros.
 			En este caso, las vamos a iterar
 			-->
+			<h4>información</h4>
 			<xsl:for-each select="cruceros/crucero/detalle/informacion">
 				<!-- 
 				Como queremos acceder a la propia información del nodo que estamos iterando 
 				debemos de poner un "."
 				-->
-				<xsl:value-of select="." /> - 
+				<xsl:value-of select="." /> --- 
 			</xsl:for-each>
 			<hr/>
 

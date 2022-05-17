@@ -36,7 +36,7 @@
               Creamos la etiqueta "codigo" y dentro le ponemoes el valor del atributo
               "codigo" dentro de la etiqueta tienda.
             -->
-            <codigo><xsl:value-of select="@precio"/></codigo>
+            <codigo><xsl:value-of select="@codigo"/></codigo>
             <!-- 
               Creamos la etiqueta "codigo" y dentro le ponemoes el valor del atributo
               "precio" dentro de la etiqueta tienda.
