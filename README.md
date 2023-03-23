@@ -15,17 +15,15 @@ Este Workspace está realizado con <b>Visual Studio Code (VSC)</b>, pero puede s
 
 Se recomienda instalar las siguientes extensiones en VSC
 
-1. Beautify, para trabajar con HTML y CSS
-2. Open in Browser, para poder abrir carpetas desde VSC
-3. XML, para poder trabajar con XML principalmente
-4. XML Tools, para poder trabajar con XPath principalmente
-5. Live Server, para poder arrancar un servidor ligero de manera sencilla. Se recargaran las páginas HTML de manera automática.
-6. Markdown Preview Enhanced, para ver los ficheros con extensión ".md"
+1. Open in Browser, para poder abrir carpetas desde VSC
+2. XML, para poder trabajar con XML principalmente
+3. XML Tools, para poder trabajar con XPath principalmente
+4. Live Server, para poder arrancar un servidor ligero de manera sencilla. Se recargaran las páginas HTML de manera automática.
+5. Markdown Preview Enhanced, para ver los ficheros con extensión ".md"
 
 Optativas:
 
-1. PrintCode, para imprimir cógigo por impresora.
-2. Markdown PDF, para convertir ficheros ".md" a ".pdf"
+1. Markdown PDF, para convertir ficheros ".md" a ".pdf"
 
 Para instalar las extensiones, primero pulsar en el enlace de la barra izquierda de navegación "extensiones", buscarlas e instalarlas.
 
