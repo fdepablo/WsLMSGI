@@ -69,7 +69,7 @@ Podemos empezar a ver los ejemplos que estan numerados dentro de esta carpeta (0
 - <https://mediaqueri.es/>
 - <http://www.webcreme.com/>
 
-### Frameswork CSS
+### Frameworks CSS
 
 - [Bootstrap](https://tailwindcss.com/)
 - [W3.css](https://www.w3schools.com/w3css/w3css_downloads.asp)
