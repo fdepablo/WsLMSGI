@@ -56,5 +56,6 @@ Dentro de cada unidad podremos encontrar bibliografía especifica. Las siguiente
 
 ## Otros enlaces de interes
 
+- [Tutorial de Git con VSC](https://lemoncode.net/lemoncode-blog/2017/12/12/git-y-visual-studio-code)
 - [Tutorial de MarkDown](https://www.markdownguide.org/basic-syntax/)
 
