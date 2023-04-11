@@ -89,6 +89,7 @@ Una vez tenemos el DOM creado, podremos ser capaces de recorrerlo y alterarlo a 
 
 - [Enlace Lorem Ipsum para copiar textos ficticios](http://es.lipsum.com/)
 - [Enlace Chiquito Ipsum](https://www.chiquitoipsum.com/)
+- [Enlace con generadores de Lorem Imsum de diferentes temáticas](https://fungenerators.com/lorem-ipsum/)
 
 ### Fotos
 - <https://morguefile.com/>
