@@ -6,100 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS HTML5</title>
     <!--
-        HTML5
-        -----
+        HTML5 y CSS
+        -----------
 
-        Ejemplo sacado de los apuntes de de como poder crear estilos CSS en una página web con 
-        las etiquetas semanticas de HTML5.
-
+        Ejemplo de de como poder crear estilos CSS en una página web con las etiquetas 
+        semánticas de HTML5.
     -->
     <style>
         body {
-            margin: auto;
             width: 960px;
+            margin: auto;/*Para centrar el body en la página*/
             margin-bottom: 10px;
+            margin-top: 10px;
             padding: 10px;
-            border: 1px solid #006;
-            overflow: auto;
+            border: 3px solid #006;
         }
 
         /* 
-        En este ejemplo hay algun selector especial.
+        Aquí nos vamos a encontrar con un selector especial.
 
         El selector 'body header' selecciona aquel elemento 'header' que sea hijo
-        del 'body'. Hacemos esto para evitar confusión con el 'header' que es hijo de 'section' 
+        del elemento 'body'. 
+        Hacemos esto para evitar confusión con el 'header' que es hijo de 'section' 
         (ver más abajo, ya que tenemos un 'header' general para la página y un 'header' para
         la sección).     
         */
         body header {
             width: 100%;
             height: 100px;
-            background: #999;
+            background-color: #999;
             margin-bottom: 10px;
         }
 
-        nav {
-            margin-left: auto;
-            margin-right: 10px;
-            margin-bottom: 10px;
-
+        nav {            
             width: 260px;
             height: 600px;
-            background: #999;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            background-color: #999;
             float: left;
         }
 
         section {
-            margin-right: 10px;
             width: 400px;
             height: 600px;
-            background: #999;
-            float: left;
+            margin-right: 10px;
             margin-bottom: 10px;
+            background-color: #999;
+            float: left;
         }
 
-        /* Selector para el 'header' que sea hijo de la etiqueta 'section' */
+        /* Selector para la etiqueta 'header' que sea hijo de la etiqueta 'section' */
         section header {
+            width: 380px;
+            height: 100px;
             margin-top: 10px;
             margin-left: 10px;
             margin-right: 10px;
-            width: 380px;
-            height: 100px;
-            background: #FFF;
+            background-color: #FFF;
         }
 
         article {
-            margin-top: 10px;
-            margin-left: 10px;
-            margin-right: 10px;
             width: 380px;
             height: 200px;
-            background: #FFF;
-        }
-
-        /* Selector para el 'footer' que sea hijo de la etiqueta 'section' */
-        section footer {
             margin-top: 10px;
             margin-left: 10px;
             margin-right: 10px;
+            background-color: #FFF;
+        }
+
+        /* Selector para la etiqueta 'footer' que sea hijo de la etiqueta 'section' */
+        section footer {
             width: 380px;
             height: 50px;
-            background: #FFF;
+            margin-top: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            background-color: #FFF;
         }
 
         aside {
             width: 280px;
             height: 600px;
-            background: #999;
-            float: left;
             margin-bottom: 10px;
+            background-color: #999;
+            float: left;/* Para este último no importaría poner la propiedad a 'right'*/
         }
 
         footer {
-            clear: both;
             width: 100%;
             height: 100px;
-            background: #999;
+            background-color: #999;
+            clear: both;
         }
     </style>
 </head>
