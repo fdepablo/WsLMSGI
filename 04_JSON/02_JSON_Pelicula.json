@@ -1,0 +1,32 @@
+{"pelicula":{
+    "titulo": "La guerra de las galaxias",
+    "fecha_estreno": 1977,
+    "director": "George Lucas",
+    "actores" :[
+        {
+            "id": 1,
+            "dni": "52345678D",
+            "nombre": "Luke yo soy tu padre",
+            "edad" : 42,
+            "peso": 75.3
+        },
+        {
+            "id": 2,
+            "dni": "675328282",
+            "nombre": "princesa leia",
+            "edad" : 40,
+            "peso": 62.3
+        },
+        {
+            "id": 3,
+            "dni": "76998877R",
+            "nombre": "R2D2",
+            "edad" : 500,
+            "peso": 90
+        }
+    ],
+    "extranjera": false,
+    "pais" : "Francia",
+    "codigo_html_pelicula" : "<html><head><title>Pagina web de la pelicula</title></head><body><h1>La guerra de las galaxias</h1></body></html>"
+  }
+ }
