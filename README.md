@@ -18,7 +18,7 @@ Se recomienda instalar las siguientes extensiones en VSC
 1. Open in Browser, para poder abrir carpetas desde VSC
 2. XML, para poder trabajar con XML principalmente
 3. XML Tools, para poder trabajar con XPath principalmente
-4. Live Server, para poder arrancar un servidor ligero de manera sencilla. Se recargaran las páginas HTML de manera automática.
+4. Live Server, para poder arrancar un servidor ligero de manera sencilla. Se recargarán las páginas HTML de manera automática.
 5. Markdown Preview Enhanced, para ver los ficheros con extensión ".md"
 
 Optativas:
@@ -31,7 +31,7 @@ Para instalar las extensiones, primero pulsar en el enlace de la barra izquierda
 
 ## Configuraciones especiales
 
-Si queremos hacer que los simbolos especiales esten coloreados, como por ejemplo los simbolos **()[]{}** y conseguir que el código sea más legible, debemos añadir las siguientes líneas de código en el fichero de configuración **settings.json** (al final de fichero, antes del cierre **}**): 
+Si queremos hacer que los simbolos especiales estén coloreados, como por ejemplo los símbolos **()[]{}** y conseguir que el código sea más legible, debemos añadir las siguientes líneas de código en el fichero de configuración **settings.json** (al final de fichero, antes del cierre **}**): 
 
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs":"active"
@@ -54,7 +54,7 @@ Dentro de cada unidad podremos encontrar bibliografía especifica. Las siguiente
 - <https://developer.mozilla.org/es/docs/Web>
 - <https://uniwebsidad.com/>
 
-## Otros enlaces de interes
+## Otros enlaces de interés
 
 - [Tutorial de Git con VSC](https://lemoncode.net/lemoncode-blog/2017/12/12/git-y-visual-studio-code)
 - [Tutorial de MarkDown](https://www.markdownguide.org/basic-syntax/)
