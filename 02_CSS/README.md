@@ -18,7 +18,7 @@ La revisión de HTML 4 aportó la creación del etiquetado de estilos para defin
 
 Para aplicar estilos a nuestras páginas podemos hacerlo de tres formas:
 
-1. En la propia página HTML con una etiqueta "style". No es muy recomendable ya que no permite la reutilización de código.
+1. En la propia página HTML con el atributo "style". No es muy recomendable ya que no permite la reutilización de código.
 2. Dentro de una etiqueta HTML llamada "style". Tampoco sería muy recomendable ya que tampoco permite la reutilización de código, también lo sobrecarga y muchas veces complica el código de manera innecesaria.
 3. En una hoja de estilos independiente. Este es el método recomendado ya que permite reutilización y separa claramente el HTML y el CSS.
 
