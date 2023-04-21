@@ -15,7 +15,7 @@
     </modelos>
     <!-- Cuando ponenemos un nodo con CDATA lo que estamos diciendo es que no 
         procese el texto que hay dentro y lo escriba en bruto, si no pusieramos CDATA, 
-        los programas interpretarían ese codigo como si fuera un xml-->
+        los programas interpretarían ese código como si fuera un XML-->
     <codigo_html_Land_Rover>
         <![CDATA[
         <!-- comentarios html-->

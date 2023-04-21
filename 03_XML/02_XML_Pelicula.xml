@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- la instrucción de procesamiento de arriba se suele llamar 'prologo' y siempre tiene
+<!-- La instrucción de procesamiento de arriba se suele llamar 'prologo' y siempre tiene
 que ir en la primera línea-->
 <pelicula>
     <!-- Comentario, escribimos la pelicula en XML -->
@@ -23,15 +23,15 @@ que ir en la primera línea-->
     </actores>
     <extranjera pais="Fracia"/>
     <!-- Si queremos mandar simobolos especiales, como "<" podemos utilizar entidades para hacerlo
-        ya que de otra manera no nos dejaria -->
+        ya que de otra manera no nos dejaría -->
     <cararcteres_especiales>&lt;etiqueta&gt;</cararcteres_especiales>
-    <!-- Si queremos escribir codigo que no queremos que se procese, podemos utilizar la 
+    <!-- Si queremos escribir código que no queremos que se procese, podemos utilizar la 
         etiqueta "<![CDATA[    ]]>" -->
     <codigo_html_pelicula>
         <![CDATA[ 
         <html>
             <head>
-                <title>Pagina web de la pelicula</title>
+                <title>Página web de la pelicula</title>
             </head>
             <body>
                 <h1>La guerra de las galaxias</h1>
