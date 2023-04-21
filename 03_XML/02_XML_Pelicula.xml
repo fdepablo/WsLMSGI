@@ -14,12 +14,12 @@ que ir en la primera línea-->
             <peso>75.3</peso>
         </actor>
         <actor id="2" dni="675328282" nombre="princesa leia" edad="40" peso="62.3"></actor>
-        <!-- La informacion que aportan las dos etiquetas actor de arriba es exactemente la misma,
+        <!-- La información que aportan las dos etiquetas actor de arriba es exactemente la misma,
             solo que una lo hace combinando atributos y etiquetas hijas y la otra lo hace con 
             atributos exclusivamente. ¿Cuál es mejor? para mi es mejor la primera, creo que esta más 
-            ordenada y es más visual. Teoricamente los atributos representan metainformación de la 
+            ordenada y es más visual. Teóricamente los atributos representan meta información de la 
             etiqueta (id). -->
-        <actor>1 76998877R 500 90 R2D2</actor><!-- Esta manera seria horrible -->
+        <actor>3 76998877R 500 90 R2D2</actor><!-- Esta manera seria horrible -->
     </actores>
     <extranjera pais="Fracia"/>
     <!-- Si queremos mandar simobolos especiales, como "<" podemos utilizar entidades para hacerlo
