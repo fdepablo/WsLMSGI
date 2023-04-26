@@ -27,6 +27,7 @@
     ],
     "extranjera": false,
     "pais" : "Francia",
+    "cararcteres_especiales" : "<etiqueta>",
     "codigo_html_pelicula" : "<html><head><title>Pagina web de la pelicula</title></head><body><h1>La guerra de las galaxias</h1></body></html>"
   }
  }
