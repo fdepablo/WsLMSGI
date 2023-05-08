@@ -59,6 +59,8 @@ Podemos empezar a ver los ejemplos que estan numerados dentro de esta carpeta (0
 
 ### Herramientas
 
+- [Responsively App - App para trabajar con diseño responsivo](https://responsively.app/download)
+- [Responsively Viewer - Plugin Chrome para trabajar con diseño responsivo](https://chrome.google.com/webstore/detail/responsive-viewer/inmopeiepgfljkpkidclfgbgbmfcennb)
 - [Editor de fotografía on-line](https://pixlr.com/)
 - [Creación de bocetos](https://ninjamock.com/)
 - [Degradados CSS](http://www.colorzilla.com/gradient-editor/)
