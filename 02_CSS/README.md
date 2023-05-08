@@ -64,6 +64,7 @@ Podemos empezar a ver los ejemplos que estan numerados dentro de esta carpeta (0
 - [Editor de fotografía on-line](https://pixlr.com/)
 - [Creación de bocetos](https://ninjamock.com/)
 - [Redimensionar imagenes](https://www.resizepixel.com/es/edit)
+- [CSS e imagenes](https://karlcleveland.com/235/css-samples/css-images.htm)
 - [Degradados CSS - Colorzilla](http://www.colorzilla.com/gradient-editor/)
 - [Degradados CSS - Cssgradient](https://cssgradient.io/) 
 
