@@ -4,7 +4,7 @@
 
 ## Introducción
 
-Hasta ahora hemos visto como hacer documentos XML que estén bien formados, pero muchas veces tambien vamos a querer que los documentos XML cumplan con una estructura y unas etiquetas determinadas. DTD nos va a ayudar a hacer que cumplan con una estructura específica.
+Hasta ahora hemos visto cómo hacer documentos XML que estén bien formados, pero muchas veces también vamos a querer que los documentos XML cumplan con una estructura y unas etiquetas determinadas. DTD nos va a ayudar a hacer que cumplan con una estructura específica.
 
 Un **DTD** es un conjunto de reglas sintácticas para definir etiquetas y validar documentos XML. Nos indica qué etiquetas se pueden usar en un documento, en qué orden deben aparecer, cuáles pueden aparecer dentro de otras, cuáles tienen atributos, etc.
 
@@ -66,7 +66,7 @@ Cuando definimos un elemento normalmente puede contener:
 
 1. Otros elementos
 2. Datos
-3. Ser un elemento vacio
+3. Ser un elemento vacío
 
 Por lo que tenemos reglas diferentes para definir cada uno de los contenidos.
 
@@ -169,7 +169,7 @@ Un atributo en DTD lo podemos definir de la siguiente manera:
 Tipos de atributo, entre los más importantes:
 
 1. <b>CDATA</b> Los atributos CDATA (character data) son los más sencillos, y pueden contener casi cualquier cosa. Es el más habitual para usar
-2. <b>ID</b> Nombre que identifica inequívocamente a la etiqueta de todas las demás, es decir, no admitiría que en el documento hubiera dos elementos con el mismo valor del atributo. El valor no puede compenzar por un caracter numérico.
+2. <b>ID</b> Nombre que identifica inequívocamente a la etiqueta de todas las demás, es decir, no admitiría que en el documento hubiera dos elementos con el mismo valor del atributo. El valor no puede comenzar por un carácter numérico.
 3. <b>Lista de nombres </b> Si se especifica una lista de nombres separados por "pipes", indica que al usar el atributo se debe seleccionar uno de esa lista.
 4. <b>ENTITY</b> Es el valor de una entidad o entidades separadas por coma.
 
@@ -177,8 +177,8 @@ Para definir el valor predeterminado del atributo podemos encontrar entre los m�
 
 1. <b>#REQUIRED</b> Indica que el atributo es obligatorio.
 2. <b>#IMPLIED</b> Indica que el atributo es optativo.
-3. <b>#FIXED</b> Indica que el atributo siempre tendrá el mismo valor. Despues de #FIXED debemos de poner el valor con comillas simples o dobles. También sería de caracter optativo.
-4. <b>'VALOR'</b> Indica un valor predeterminado si no se especifica el valor del atributo. El valor debe de ir con comillas simples o dobles. También sería de caracter optativo.
+3. <b>#FIXED</b> Indica que el atributo siempre tendrá el mismo valor. Después de #FIXED debemos de poner el valor con comillas simples o dobles. También sería de carácter optativo.
+4. <b>'VALOR'</b> Indica un valor predeterminado si no se especifica el valor del atributo. El valor debe de ir con comillas simples o dobles. También sería de carácter optativo.
 
 Ejemplos
 ```
@@ -199,7 +199,7 @@ En el ejemplo de arriba tenemos que la etiqueta curso debe de tener los siguient
 
 También llamadas macros o constantes de texto. Las entidades permiten colocar trozos de contenido en cualquier lugar del documento haciendo referencia a su nombre. Para definir una entidad usamos la etiqueta !ENTITY.
 
-Ya hemos visto entidades a lo largo del curso, como por ejemplo
+Ya hemos visto entidades a lo largo del curso, por ejemplo
     
     &ntilde; -> pone la letra "ñ"
     &lt; -> pone la letra "<"
@@ -232,4 +232,3 @@ Podemos empezar a ver los ejemplos que están numerados dentro de esta carpeta
 
 - <https://www.w3schools.com/xml/xml_dtd_intro.asp>
 - <https://www.liquid-technologies.com/tutorials>
-
