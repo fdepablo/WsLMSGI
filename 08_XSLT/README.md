@@ -17,7 +17,7 @@ Un fichero XSLT tiene la extensión **.xsl** y normalmente tiene la siguiente es
         </xsl:template>
     </xsl:stylesheet>
 
-El atributo **match** establece en que parte del XML que queremos transformar nos queremos situar por defecto. Dentro iría una expresión XPath, aunque normalmente empezaremos por el nodo raíz para poder recorrer todo el documento XML.
+El atributo **match** establece en que parte del XML que queremos transformar nos queremos situar por defecto. Dentro iría una expresión **XPATH** con cualquier expresión, aunque normalmente empezaremos por el nodo raíz para poder recorrer todo el documento XML.
 
 Por otra parte, el fichero **XML** debe de tener la siguiente estructura para que pueda ser procesado por XSLT
 
@@ -31,13 +31,13 @@ Es decir, en el fichero **XML** debemos de poner el enlace al fichero **XSLT** q
 
 Dentro de la etiqueta **template** pondremos todas las etiquetas **XSLT** que necesitemos para realizar la transformación. Entre las más importante podemos encontrar:
 
-1. **xsl:value-of select="Expresion_XPath"** : Con esta etiqueta seleccionamos el nodo texto del nodo al que estemos apuntando. El atributo **select** nos permite establecer la expresión XPath    para buscar dicho nodo.
-2. **xsl:for-each select="Expresion_XPath"** : Con esta etiqueta iteraremos todos los nodos que cumplan con la expresión XPath que pongamos en el atributo **select**. Dento de la etiqueta podremos
+1. **xsl:value-of select="Expresion_XPath"** : Con esta etiqueta seleccionamos el nodo texto del nodo al que estemos apuntando. El atributo **select** nos permite establecer la expresión XPath para buscar dicho nodo.
+2. **xsl:for-each select="Expresion_XPath"** : Con esta etiqueta iteraremos todos los nodos que cumplan con la expresión XPath que pongamos en el atributo **select**. Dentro de la etiqueta podremos
 realizar las acciones que estimemos para cada uno de los nodos.
 3. **xsl:if test="Expresion_XPath_Booleana"** : Con esta etiqueta valoraremos la expresión XPath que establezcamos dentro del atributo **test**. La expresión XPath debe de devolver un **boolean**. En caso de devolver **true**, lo que pongamos dentro de esta etiqueta se ejecutará, en caso contrario no lo hará.
 4. **xsl:choose** : Parecida a la etiqueta **xsl:if** pero con esta etiqueta podemos valorar varias codiciones. Dentro de esta etiqueta debemos usar la etiqueta **xsl:when test="Expresion_XPath_Booleana"** para valorar cada una de las condiciones que queramos. También podemos usar la etiqueta optativa **xsl:otherwise** que se ejecutará cuando no se cumpla ninguna condición **when**. El uso es muy parecido al de una estructura **switch**.
 
-Todas las expresiones XPath de estas etiquetas serán relativas a la expresión XPath de la etiqueta que la contenga.
+Todas las expresiones XPath que usemos en estas etiquetas serán **relativas** a la expresión XPath de la etiqueta que la contenga, como por ejemplo una etiqueta **template**.
 
 ## Transformación de fichero XML a HTML
 
@@ -63,7 +63,7 @@ De esta manera, los ficheros del primer ejemplo **01_XSLT_Cruceros**, hay que de
 ### ECLIPSE + TOMCAT
 
 1. Configurar eclipse con el servidor TOMCAT
-2. Crear un nuevo proyecto dinámico (dinamic web proyect) y lo llamamos "08_XSLT"
+2. Crear un nuevo proyecto dinámico (dinamic web proyect) y lo llamaremos "08_XSLT"
 3. Una vez creado, vamos a la carpeta de recursos web (webcontent o webapp) y pegamos todos los ficheros de ejemplo 08_XSLT.
 4. Arrancamos el servidor con el proyecto desplegado
 5. Abrir el navegado e ir al a ruta determinada. Ej. <http://localhost:8080/08_XSLT/01_XSLT_Cursos.xml>
