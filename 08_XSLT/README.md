@@ -29,6 +29,8 @@ Por otra parte, el fichero **XML** debe de tener la siguiente estructura para qu
 
 Es decir, en el fichero **XML** debemos de poner el enlace al fichero **XSLT** que queremos que haga la transformación. Para ello usaremos la etiqueta **xml-stylesheet**.
 
+## Etiquetas
+
 Dentro de la etiqueta **template** pondremos todas las etiquetas **XSLT** que necesitemos para realizar la transformación. Entre las más importante podemos encontrar:
 
 1. **xsl:value-of select="Expresion_XPath"** : Con esta etiqueta seleccionamos el nodo texto del nodo al que estemos apuntando. El atributo **select** nos permite establecer la expresión XPath para buscar dicho nodo.
@@ -49,8 +51,8 @@ De esta manera, los ficheros del primer ejemplo **01_XSLT_Cruceros**, hay que de
 
 1. Bajarse la extensión **Live Server**. Nos permite utilizar un servidor que está escuchando en el puerto **5500**
 2. Abrir la carpeta 08_XSLT dentro del VSC
-3. Ponerse sobre el fichero **01_XSLT_Cursos.xml**, pulsar botón derecho y elegir la opción **Open With Live Server**
-4. En la página web que se nos abre, navegar hasta el fichero **01_XSLT_Cursos.xml**
+3. Ponerse sobre el fichero **01_XSLT_Cruceros.xml**, pulsar botón derecho y elegir la opción **Open With Live Server**
+4. En la página web que se nos abre, navegar hasta el fichero **01_XSLT_Cruceros.xml**
 
 ### APACHE
 
@@ -58,7 +60,7 @@ De esta manera, los ficheros del primer ejemplo **01_XSLT_Cruceros**, hay que de
 2. Ir a la carpeta "HTDOCS" donde tengamos instalado nuestro APACHE
 3. Dentro de esta carpeta pegar la carpeta 08_XSLT
 4. Arrancar el servidor apache
-4. Abrir el navegado e ir al a ruta determinada. Ej. <http://localhost/08_XSLT/01_XSLT_Cursos.xml>
+4. Abrir el navegado e ir al a ruta determinada. Ej. <http://localhost/08_XSLT/01_XSLT_Cruceros.xml>
 
 ### ECLIPSE + TOMCAT
 
@@ -66,7 +68,7 @@ De esta manera, los ficheros del primer ejemplo **01_XSLT_Cruceros**, hay que de
 2. Crear un nuevo proyecto dinámico (dinamic web proyect) y lo llamaremos "08_XSLT"
 3. Una vez creado, vamos a la carpeta de recursos web (webcontent o webapp) y pegamos todos los ficheros de ejemplo 08_XSLT.
 4. Arrancamos el servidor con el proyecto desplegado
-5. Abrir el navegado e ir al a ruta determinada. Ej. <http://localhost:8080/08_XSLT/01_XSLT_Cursos.xml>
+5. Abrir el navegado e ir al a ruta determinada. Ej. <http://localhost:8080/08_XSLT/01_XSLT_Cruceros.xml>
 
 ## Transformación de fichero XML a XML
 

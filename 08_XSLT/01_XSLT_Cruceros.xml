@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="01_XSLT_Cruceros_02.xsl"?>
+<?xml-stylesheet type="text/xsl" href="01_XSLT_Cruceros_01.xsl"?>
 <cruceros>
 	<informacion>Cruceros por el mundo!</informacion>
 	<crucero codigo="CRUMED21">

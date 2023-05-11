@@ -35,7 +35,7 @@
             <p>Días: <xsl:value-of select="detalles/dias"/> </p>
             <p>Fecha salida: <xsl:value-of select="detalles/fechaSalida"/> </p>
             <!-- 
-                Condición para pintar "H3" cuando el número de días sea superior a 6.
+                Condición para pintar "H4" cuando el número de días sea superior a 6.
                 Como el símbolo ">" representa cierre de etiqueta, podemos usar
                 la entidad "&gt;"
                 En este caso la consulta es relativa a donde está situado el elemento
