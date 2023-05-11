@@ -8,8 +8,16 @@
                 <codigo>1102</codigo>
                 <precio>28.875</precio>
             </tienda>
-            ....
-            ....
+            <tienda marca="Perifericos PC">
+                <identificacion>tablet 10  pulgadas</identificacion>
+                <codigo>1104</codigo>
+                <precio>92.250</precio>
+            </tienda>
+            <tienda marca="Perifericos PC">
+                <identificacion>tablet 14 pulgadas</identificacion>
+                <codigo>1105</codigo>
+                <precio>20.313</precio>
+            </tienda>
         </tiendas>
 -->
 <?xml-stylesheet type="text/xsl" href="02_XSLT_Productos.xsl"?>

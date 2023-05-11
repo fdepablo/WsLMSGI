@@ -80,11 +80,13 @@ Para transformar HTML no es obligatorio ponerla porque por defecto la salida es 
 
 El atributo **encoding** establece la codificación de los caracteres. El atributo **indent** establece que el XML resultante quede sangrado.  
 
-El ejemplo **02_XSLT_Productos** trata de hacer una transformación de un XML a otro XML. Si queremos ver la transformación completa, es decir, con las etiquetas resultantes, no podemos usar un servidor con un navegador, ya que los navegadores por defecto quitan las etiquetas de los XML y solo se visualizan los nodos texto.
-
-Para ello, podemos usar alguna otra aplicación para ver el resultado, como puede ser [Notepad++](https://notepad-plus-plus.org)
+En el ejemplo **02_XSLT_Productos** podemos ver como hacer una transformación de un XML a otro XML. En el fichero **02_XSLT_Productos.xml** está el XML orginal, y en el fichero **02_XSLT_Productos.xsl** podemos encontrar las reglas de transformación.
 
 ### Configurando Notepad++ para transformar documentos XML a XML
+
+Si queremos ver la transformación completa, es decir, con las etiquetas resultantes, no podemos usar un servidor con un navegador, ya que los navegadores por defecto quitan las etiquetas de los XML resultantes, y solo se visualizan los nodos texto.
+
+Para ello, podemos usar alguna otra aplicación para ver el resultado final de la transformación, como puede ser [Notepad++](https://notepad-plus-plus.org)
 
 Esta aplicación se utiliza para trabajar con ficheros en texto plano, y en este caso, para visualizar transformaciones de XML a XML.
 
@@ -98,6 +100,7 @@ Haremos los siguientes pasos:
 6. Seleccionamos "XML Transformation..."
 7. En la ventana modal que aparece, buscaremos el fichero XSLT que queremos utilizar para hacer la transformación, en este caso **02_XSLT_Productos.xsl**
 8. Pulsamos el botón "Transform". Se deberá de aparecer una nueva pestaña con la transformación.
+9. Si queremos hacer que el XML resultante esté indentado, podemos abrir de nuevo la pestaña "XML Tools" y ejecutar "Pretty print"
 
 ## Bibliografía
 
