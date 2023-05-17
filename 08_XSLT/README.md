@@ -107,3 +107,7 @@ Haremos los siguientes pasos:
 - <https://www.w3schools.com/xml/xsl_intro.asp>
 - <https://www.mclibre.org/consultar/xml/lecciones/xml-xslt.html>
 
+## Otros enlaces de interés
+
+-<https://superuser.com/questions/1071161/how-to-replace-unicode-character-in-notepad>
+
