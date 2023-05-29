@@ -67,6 +67,7 @@ Podemos empezar a ver los ejemplos que estan numerados dentro de esta carpeta (0
 - [CSS e imagenes](https://karlcleveland.com/235/css-samples/css-images.htm)
 - [Degradados CSS - Colorzilla](http://www.colorzilla.com/gradient-editor/)
 - [Degradados CSS - Cssgradient](https://cssgradient.io/) 
+- [Backgrounds CSS](https://www.magicpattern.design/tools/css-backgrounds)
 
 ### Inspiración:
 - <https://www.awwwards.com/>
