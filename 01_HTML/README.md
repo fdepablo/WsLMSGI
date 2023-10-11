@@ -97,6 +97,7 @@ Una vez tenemos el DOM creado, podremos ser capaces de recorrerlo y alterarlo a 
 - <https://www.pexels.com/>
 - <https://unsplash.com/>
 - <http://realisticshots.com/>
+- [Herramienta para redimensionar imagenes](https://squoosh.app/)
 
 ### Iconos
 - <https://www.iconfinder.com/>
