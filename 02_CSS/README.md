@@ -65,6 +65,8 @@ Podemos empezar a ver los ejemplos que estan numerados dentro de esta carpeta (0
 - [Creación de bocetos](https://ninjamock.com/)
 - [Redimensionar imagenes](https://www.resizepixel.com/es/edit)
 - [CSS e imagenes](https://karlcleveland.com/235/css-samples/css-images.htm)
+- [Paleta colores CSS 1](https://coolors.co/palettes/trending)
+- [Paleta colores CSS 2](https://www.w3schools.com/colors/colors_complementary.asp)
 - [Degradados CSS - Colorzilla](http://www.colorzilla.com/gradient-editor/)
 - [Degradados CSS - Cssgradient](https://cssgradient.io/) 
 - [Backgrounds CSS](https://www.magicpattern.design/tools/css-backgrounds)
