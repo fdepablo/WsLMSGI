@@ -57,7 +57,7 @@
                 <element name="ejemplo_cardinalidad_uno_muchos">
                     <simpleType>
                         <restriction base="string">
-                            <!-- Un rango de letras pero 8 letras exactamente -->
+                            <!-- Un rango de letras mayusculas o minusculas y puede haber 1 o mas -->
                             <pattern value="[a-zA-Z]+"></pattern>
                         </restriction>
                     </simpleType>
@@ -65,7 +65,7 @@
                 <element name="ejemplo_cardinalidad_cero_muchos">
                     <simpleType>
                         <restriction base="string">
-                            <!-- Un rango de letras pero 8 letras exactamente -->
+                            <!-- Un rango de letras mayusculas o minusculas y puede haber 0 o mas -->
                             <pattern value="[a-zA-Z]*"></pattern>
                         </restriction>
                     </simpleType>
