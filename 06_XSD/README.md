@@ -298,7 +298,8 @@ Algunas reglas importantes:
 10. **[a-z]** el guion sirve para establecer rangos, en este caso cualquier letra entre la a-z minúscula.
 11. **[^a]** Negación, "a" no puede aparecer.
 12. <b>(Barra invertida) \ </b>, para escapar caracteres, por ejemplo si queremos decir que tiene que aparcer un "." pondriamos "<code> \ </code>.", ya que el "." implica por defecto que puede aparecer cualquier caracter.
-13. **()** los paréntesis sirven para agrupar reglas.
+13. **()** los paréntesis sirven para agrupar reglas. También llamados grupos de captura
+14. **\w** representa cualquier caracter de palabra. Es más restrictivo que el **"."**, mientras que este admite cualquier caracter, **\w** solo admite letras del alfabeto ingles (en mayúsculas y minúsculas), dígitos numéricos (0-9) y guión bajo (_). El **"."** tambien admitiría símbolos (como !, @, #, $, %), espacios en blanco, caracteres especiales, etc.
 
 Ver Ejemplo **05_XSD_ExpresionesRegulares** para ver algunos usos.
 
