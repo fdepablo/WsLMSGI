@@ -291,16 +291,17 @@ Algunas reglas importantes:
 3. **\D**, cualquier no-dígito.
 4. **\s**, espacio en blanco, retorno de carro, línea nueva.
 5. **\S**, cualquier caracter distinto a espacio en blanco.
-6. **<code>a*</code>**, "a" puede aparecer cero o más veces
-7. **<code>a+</code>**, "a" puede aparecer una o más veces
-8. **a{n}**, cardinalidad exacta, en este caso "a" debe aparecer "n" veces. Existe la variante **a{n,m}**, en este caso "a" debe aparecer entre un mínimo de "n" veces y un máximo de "m" veces.
-9. **[]**, los corchetes sirven para establecer caracteres válidos. Los caracteres que pongamos dentro serán los caracteres válidos. Ej: [abc], debe aparecer un caracter "a", "b" o "c".
-10. **[a-z]**, el guion sirve para establecer rangos, en este caso cualquier letra entre la a-z minúscula.
-11. **[^a]**, negación, en este caso "a" no puede aparecer.
-12. <b>\</b>, barra invertida. Sirve para escapar caracteres, por ejemplo si queremos decir que tiene que aparcer un "." pondriamos "<code> \ </code>.", ya que el "." implica por defecto que puede aparecer cualquier caracter.
-13. **()**, los paréntesis sirven para agrupar reglas. También llamados grupos de captura.
-14. **\w**, representa cualquier caracter de palabra. Es más restrictivo que el **"."**, mientras que este admite cualquier caracter, **\w** solo admite letras del alfabeto ingles (en mayúsculas y minúsculas), dígitos numéricos (0-9) y guión bajo (_). El **"."** tambien admitiría símbolos (como !, @, #, $, %), espacios en blanco, caracteres especiales, etc. Esencialmente, **\w** es un atajo para el conjunto de caracteres [a-zA-Z0-9_].
-15. **?**, opcional, el caracter puede aparecer o no. Sería equivalente a **{0,1}**
+6. **<code>a*</code>**, "a" puede aparecer cero o más veces.
+7. **<code>a+</code>**, "a" puede aparecer una o más veces.
+8. **<code>a?</code>**, "a" puede aparecer 0 o 1 vez.
+9. **a{n}**, cardinalidad exacta, en este caso "a" debe aparecer "n" veces. Existe la variante **a{n,m}**, en este caso "a" debe aparecer entre un mínimo de "n" veces y un máximo de "m" veces.
+10. **[]**, los corchetes sirven para establecer caracteres válidos. Los caracteres que pongamos dentro serán los caracteres válidos. Ej: [abc], debe aparecer un caracter "a", "b" o "c".
+11. **[a-z]**, el guion sirve para establecer rangos, en este caso cualquier letra entre la a-z minúscula.
+12. **[^a]**, negación, en este caso "a" no puede aparecer.
+13. <b>\</b>, barra invertida. Sirve para escapar caracteres, por ejemplo si queremos decir que tiene que aparcer un "." pondriamos "<code> \ </code>.", ya que el "." implica por defecto que puede aparecer cualquier caracter.
+14. **()**, los paréntesis sirven para agrupar reglas. También llamados grupos de captura.
+15. **\w**, representa cualquier caracter de palabra. Es más restrictivo que el **"."**, mientras que este admite cualquier caracter, **\w** solo admite letras del alfabeto ingles (en mayúsculas y minúsculas), dígitos numéricos (0-9) y guión bajo (_). El **"."** tambien admitiría símbolos (como !, @, #, $, %), espacios en blanco, caracteres especiales, etc. Esencialmente, **\w** es un atajo para el conjunto de caracteres [a-zA-Z0-9_].
+
 
 Ver Ejemplo **05_XSD_ExpresionesRegulares** para ver algunos usos.
 
