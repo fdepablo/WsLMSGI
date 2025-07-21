@@ -312,3 +312,4 @@ Ver Ejemplo **05_XSD_ExpresionesRegulares** para ver algunos usos.
 - <https://www.tutorialspoint.com/xsd/index.htm>
 - <https://www.liquid-technologies.com/tutorials>
 - [Expresiones regulares](http://www.datypic.com/books/defxmlschema/chapter09.html)
+- [Expresiones regulares con JS](https://es.javascript.info/regular-expressions)
